@@ -1,0 +1,11 @@
+{
+  "name": "@reuters-graphics/style-rule",
+  "version": "0.0.1",
+  "description": "",
+  "main": "scss/style.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT"
+}

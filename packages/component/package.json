@@ -1,0 +1,11 @@
+{
+  "name": "@reuters-graphics/style-component",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT"
+}
