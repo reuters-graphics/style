@@ -1,0 +1,57 @@
+{
+  "name": "@reuters-graphics/style-guide",
+  "version": "0.0.1",
+  "description": "",
+  "main": "scss/style.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config config/webpack.dev.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@hobbes7878/eslint-config": "^0.0.2",
+    "@politico/markdown-react-loader": "^0.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "eslint": "^6.7.2",
+    "file-loader": "^5.0.2",
+    "gray-matter": "^4.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "lerna": "^3.19.0",
+    "node-sass": "^4.13.0",
+    "portfinder": "^1.0.25",
+    "recursive-readdir-sync": "^1.0.6",
+    "resolve-url-loader": "*",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "stylelint-config-standard": "^19.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-virtual-modules": "^0.2.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@reuters-graphics/style-main": "*",
+    "@reuters-graphics/style-color": "*",
+    "classnames": "*",
+    "copy-to-clipboard": "^3.2.0",
+    "prismjs": "^1.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-refractor": "^1.0.1",
+    "react-router-dom": "^5.1.2",
+    "refractor": "^2.10.0"
+  }
+}

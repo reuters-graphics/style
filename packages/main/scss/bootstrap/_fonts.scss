@@ -1,0 +1,93 @@
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:     "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:           $font-family-serif;
+$font-family-font-awesome:   "FontAwesome";
+
+// our default display font
+$font-family-knowledge: Knowledge, 'Source Sans Pro', Arial, sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-size-base:       1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xs:         0.8rem !default;
+$font-size-sm:         0.875rem !default;
+$font-size-base:       1rem !default;
+$font-size-article:    1.05rem !default;
+$font-size-lg:         1.25rem !default;
+$font-size-xl:         1.5rem;
+$font-size-2xl:        2.4rem;
+$font-size-3xl:        2.8rem;
+
+$font-weight-light:    300 !default;
+$font-weight-normal:   400 !default;
+$font-weight-bold:     700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$font-size-h1:                $font-size-base * 2.5 !default;
+$font-size-h2:                $font-size-base * 2 !default;
+$font-size-h3:                $font-size-base * 1.75 !default;
+$font-size-h4:                $font-size-base * 1.5 !default;
+$font-size-h5:                $font-size-base * 1.25 !default;
+$font-size-h6:                $font-size-base !default;
+
+
+$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        $font-family-knowledge;
+$headings-font-weight:        700;
+$headings-line-height:        1.2 !default;
+$headings-color:              $gray-dark;
+
+$display1-size:               6rem !default;
+$display2-size:               5.5rem !default;
+$display3-size:               4.5rem !default;
+$display4-size:               3.5rem !default;
+
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;
+
+$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-weight:            300 !default;
+
+$small-font-size:             80% !default;
+
+$text-muted:                  $gray-500;
+
+$blockquote-small-color:      $gray-500;
+$blockquote-font-size:        ($font-size-base * 1.5);
+$blockquote-border-color: $gray-lighter !default;
+$blockquote-border-width: 0.25rem !default;
+
+
+$hr-border-color:             rgba($black, 0.1) !default;
+
+
+$mark-padding:                0.2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$kbd-box-shadow:              inset 0 -0.1rem 0 rgba($black, 0.25) !default;
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         0.5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$hr-margin-y:                 $spacer !default;

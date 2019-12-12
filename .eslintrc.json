@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": "@hobbes7878/eslint-config"
+}

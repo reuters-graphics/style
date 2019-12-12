@@ -1,0 +1,10 @@
+hex, variables
+#f7f7f7, $gray-100 $gray-lightest $light
+#f4f1ee, $gray-200
+#e9e7e5, $gray-300
+#dbdbdb, $gray-400 $gray-lighter
+#aaaaaa, $gray-500 $gray-light
+#6b6a6b, $gray-600 $gray $secondary
+#383f3a, $gray-700
+#333333, $gray-800 $gray-dark $dark
+#222824, $gray-900

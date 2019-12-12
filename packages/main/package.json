@@ -1,0 +1,15 @@
+{
+  "name": "@reuters-graphics/style-main",
+  "version": "0.0.1",
+  "description": "",
+  "main": "scss/main.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@reuters-graphics/style-color": "*",
+    "bootstrap": "^4.4.1"
+  }
+}

@@ -1,0 +1,15 @@
+hex, variables
+#ffffff, $white $background-color $body-background-color
+#007bff, $blue
+#6610f2, $indigo
+#6f42c1, $purple
+#e83e8c, $pink
+#dc3545, $red $danger
+#fd7e14, $orange
+#ffc107, $yellow $warning
+#28a745, $green $success
+#20c997, $teal
+#17a2b8, $cyan $info
+#444444, $gray-border $dark-theme-border
+#222222, $dark-theme-bg
+#000000, $black

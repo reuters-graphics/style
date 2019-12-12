@@ -2,10 +2,29 @@
   "name": "@reuters-graphics/style-color",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "module": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config config/rollup.config.js && npx ./bin/scss.js"
+  },
+  "dependencies": {
+    "hex-rgb": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "csv-parse": "^4.8.2",
+    "esm": "^3.2.25",
+    "mkdirp": "^0.5.1",
+    "recursive-readdir-sync": "^1.0.6",
+    "rollup": "^1.27.11",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-dsv": "^1.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
 }

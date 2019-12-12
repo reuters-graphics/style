@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
   },
   "homepage": "https://github.com/reuters-graphics/style#readme",
   "devDependencies": {
-    "lerna": "^3.19.0",
+    "@hobbes7878/eslint-config": "^0.0.2",
+    "eslint": "^6.7.2",
     "stylelint-config-standard": "^19.0.0"
   }
 }
