@@ -54,7 +54,6 @@ module.exports = (env, argv) => (merge(common, {
       }, {
         loader: 'css-loader',
         options: {
-          modules: true,
           sourceMap: true,
         },
       }],

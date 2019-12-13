@@ -10,9 +10,5 @@ $breakpoint: 900px;
     @media screen and (max-width: $breakpoint) {
       margin-left: auto;
     }
-
-    & > .container > .row {
-      height: 100vh;
-    }
   }
 }
