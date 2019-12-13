@@ -1,0 +1,11 @@
+@keyframes blinker {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blinker {
+  to {
+    visibility: hidden;
+  }
+}
