@@ -2,8 +2,10 @@ $breakpoint: 900px;
 
 .component :global {
   .well {
+    padding: 2em 1em;
     margin-left: 225px;
-    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
 
     @media screen and (max-width: $breakpoint) {
       margin-left: auto;
