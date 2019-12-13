@@ -1,0 +1,16 @@
+$breakpoint: 900px;
+
+.component :global {
+  .well {
+    margin-left: 225px;
+    height: 100vh;
+
+    @media screen and (max-width: $breakpoint) {
+      margin-left: auto;
+    }
+
+    & > .container > .row {
+      height: 100vh;
+    }
+  }
+}

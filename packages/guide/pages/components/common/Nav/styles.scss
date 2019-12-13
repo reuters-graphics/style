@@ -1,3 +1,143 @@
+@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-main/scss/variables/fonts";
+
+$breakpoint: 900px;
+
 .component :global {
-  
+  .nav-container {
+    z-index: 999;
+    height: 100vh;
+    width: 225px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $gray-dark;
+    color: $white;
+    transition: left 0.2s;
+    font-family: $font-family-sans-serif;
+
+    @media screen and (max-width: $breakpoint) {
+      left: -250px;
+    }
+
+
+    button.toggle {
+      border: none;
+      outline: none;
+    }
+
+    button.close-menu {
+      background: none;
+      display: none;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 20px;
+      color: $gray-600;
+      cursor: pointer;
+
+      &:hover {
+        color: $white;
+      }
+
+      @media screen and (max-width: $breakpoint) {
+        display: inline;
+      }
+    }
+
+    button.open-menu {
+      display: none;
+      position: fixed;
+      top: 5px;
+      left: 5px;
+      color: $gray-400;
+      font-size: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 4px 10px;
+      border-radius: 10px;
+
+      @media screen and (max-width: $breakpoint) {
+        display: inline;
+      }
+
+      &:hover {
+        color: $gray-500;
+      }
+    }
+
+    &.visible {
+      left: 0;
+
+      button.open-menu {
+        display: none;
+      }
+    }
+
+    .home-link {
+      .container {
+        padding: 10px;
+        max-width: calc(100% - 30px);
+        margin: 0;
+      }
+
+      svg {
+        fill: $orange;
+        margin-right: 7px;
+      }
+
+      .team-logo {
+        svg {
+          fill: $white;
+          margin-left: 1px;
+          margin-top: 6px;
+          margin-bottom: 2px;
+          display: block;
+        }
+
+        font-family: $font-family-knowledge;
+        font-weight: 300;
+        color: $gray-600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+    }
+
+    nav {
+      padding: 10px 15px;
+
+      .nav-item {
+        max-height: calc(100vh - 258px);
+        overflow-y: scroll;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 200;
+        color: $gray-600;
+        font-size: 18px;
+        transition: padding-left 0.2s;
+
+        &:hover,
+        &.active {
+          padding-left: 5px;
+        }
+
+        &.active {
+          color: $white;
+          font-weight: 400;
+        }
+      }
+    }
+
+
+
+    a {
+      color: $white;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
 }

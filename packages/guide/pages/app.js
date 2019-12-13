@@ -9,22 +9,26 @@ import Nav from 'Components/common/Nav';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Snippets from 'Components/sections/Snippets';
+import classnames from 'classnames';
+import { component } from './styles.scss';
 
 const App = () => (
   <Router>
-    <div className='container-fluid'>
+    <div className={component}>
+      <Nav />
+      <div className='well'>
+        <div className='container'>
 
-      <div className='row'>
-        <div className='col col-sm-2'>
-          <Nav />
-        </div>
-        <div className='col col-sm-auto'>
-          <Switch>
-            <Route path='/fonts/' component={Fonts} />
-            <Route path='/colors/' component={Colors} />
-            <Route path='/snippets/' component={Snippets} />
-            <Route path='/' component={Home} />
-          </Switch>
+          <div className='row no-gutters'>
+            <div className='col-12'>
+              <Switch>
+                <Route path='/fonts/' component={Fonts} />
+                <Route path='/colors/' component={Colors} />
+                <Route path='/snippets/' component={Snippets} />
+                <Route path='/' component={Home} />
+              </Switch>
+            </div>
+          </div>
         </div>
       </div>
     </div>

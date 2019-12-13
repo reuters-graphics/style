@@ -1,5 +1,3 @@
-$reuters-font-path: '//graphics.thomsonreuters.com/fonts';
-
 /* REUTERS KNOWLEDGE */
 @font-face {
   font-family: 'Knowledge';
@@ -8,7 +6,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Ultra Light'),
     local('KnowledgeUltraLight'),
-    url('#{$reuters-font-path}/KnowledgeUltraLight.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeUltraLight.woff') format('woff');
 }
 
 @font-face {
@@ -18,7 +16,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Light'),
     local('KnowledgeLight'),
-    url('#{$reuters-font-path}/KnowledgeLight.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeLight.woff') format('woff');
 }
 
 @font-face {
@@ -28,7 +26,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Regular'),
     local('KnowledgeRegular'),
-    url('#{$reuters-font-path}/KnowledgeRegular.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeRegular.woff') format('woff');
 }
 
 @font-face {
@@ -38,7 +36,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Regular Italic'),
     local('KnowledgeRegularItalic'),
-    url('#{$reuters-font-path}/KnowledgeRegularItalic.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeRegularItalic.woff') format('woff');
 }
 
 @font-face {
@@ -48,7 +46,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Medium'),
     local('KnowledgeMedium'),
-    url('#{$reuters-font-path}/KnowledgeMedium.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeMedium.woff') format('woff');
 }
 
 @font-face {
@@ -58,7 +56,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Bold'),
     local('KnowledgeBold'),
-    url('#{$reuters-font-path}/KnowledgeBold.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeBold.woff') format('woff');
 }
 
 @font-face {
@@ -68,7 +66,7 @@ $reuters-font-path: '//graphics.thomsonreuters.com/fonts';
   src:
     local('Knowledge Bold Italic'),
     local('KnowledgeBoldItalic'),
-    url('#{$reuters-font-path}/KnowledgeBoldItalic.woff') format('woff');
+    url('//graphics.thomsonreuters.com/fonts/KnowledgeBoldItalic.woff') format('woff');
 }
 
 /* SOURCE SANS PRO */

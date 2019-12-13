@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "scss/main.scss",
+  "files": [
+    "scss/**/*.scss"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"

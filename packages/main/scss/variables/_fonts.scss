@@ -1,3 +1,5 @@
+@import "spacing";
+
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -11,7 +13,7 @@ $font-family-base:           $font-family-serif;
 $font-family-font-awesome:   "FontAwesome";
 
 // our default display font
-$font-family-knowledge: Knowledge, 'Source Sans Pro', Arial, sans-serif;
+$font-family-knowledge: 'Knowledge', 'Source Sans Pro', Arial, sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:       1rem !default; // Assumes the browser default, typically `16px`
