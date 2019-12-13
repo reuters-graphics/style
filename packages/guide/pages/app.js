@@ -9,11 +9,10 @@ import Nav from 'Components/common/Nav';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Snippets from 'Components/sections/Snippets';
-import classnames from 'classnames';
 import { component } from './styles.scss';
 
 const App = () => (
-  <Router>
+  <Router basename='/style'>
     <div className={component}>
       <Nav />
       <div className='well'>
