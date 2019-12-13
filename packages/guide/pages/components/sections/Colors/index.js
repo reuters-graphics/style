@@ -2,10 +2,10 @@ import React from 'react';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 
-const Home = (props) => (
+const Colors = (props) => (
   <div className={classnames(component)}>
-    <h5>Home</h5>
+    <h5>Colors</h5>
   </div>
 );
 
-export default Home;
+export default Colors;

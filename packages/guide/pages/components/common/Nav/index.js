@@ -11,8 +11,10 @@ const Nav = (props) => (
     </NavLink>
 
     <nav className='nav flex-column'>
-      <NavItem name='Home' link='/home/' />
+      <h5>Basey</h5>
+      <NavItem name='Fonts' link='/fonts/' />
       <NavItem name='Colors' link='/colors/' />
+      <NavItem name='Snippets' link='/snippets/' />
     </nav>
   </div>
 );

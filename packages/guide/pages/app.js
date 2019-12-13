@@ -1,10 +1,14 @@
 import './theme/main.scss';
 
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import Colors from 'Components/sections/Colors';
+import Fonts from 'Components/sections/Fonts';
+import Home from 'Components/sections/Home';
 import Nav from 'Components/common/Nav';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Snippets from 'Snippets';
+import Snippets from 'Components/sections/Snippets';
 
 const App = () => (
   <Router>
@@ -15,7 +19,12 @@ const App = () => (
           <Nav />
         </div>
         <div className='col col-sm-auto'>
-          <h1>Content</h1>
+          <Switch>
+            <Route path='/fonts/' component={Fonts} />
+            <Route path='/colors/' component={Colors} />
+            <Route path='/snippets/' component={Snippets} />
+            <Route path='/' component={Home} />
+          </Switch>
         </div>
       </div>
     </div>
