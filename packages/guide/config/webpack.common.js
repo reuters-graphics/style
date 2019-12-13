@@ -13,6 +13,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       Components: path.resolve(__dirname, '../pages/components/'),
+      Theme: path.resolve(__dirname, '../pages/theme/'),
     },
   },
   module: {

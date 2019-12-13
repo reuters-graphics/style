@@ -1,7 +1,6 @@
 @import "~@reuters-graphics/style-color/scss/main";
 @import "~@reuters-graphics/style-main/scss/variables/fonts";
-
-$breakpoint: 900px;
+@import "~Theme/variables";
 
 .component :global {
   .nav-container {

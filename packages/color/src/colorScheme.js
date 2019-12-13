@@ -62,13 +62,18 @@ function createColorScheme(rows) {
   const aliasObjects = rows.map(row => createColorAliasObjects(row));
   const aliasScheme = Object.assign({}, ...aliasObjects);
 
-  return Object.assign({}, aliasScheme, {
+  const colorScheme = Object.assign({}, aliasScheme, {
     all: rows.map(row =>
       Object.assign({
         variables: row.variables.trim().split(' '),
       }, createColorValues(row.hex))
     ),
   });
+
+  colorScheme.first = () => colorScheme.all[0];
+  colorScheme.last = () => colorScheme.all[colorScheme.all.length - 1];
+
+  return colorScheme;
 }
 
 export default createColorScheme;

@@ -143,13 +143,23 @@ function createColorScheme(rows) {
     return createColorAliasObjects(row);
   });
   var aliasScheme = Object.assign.apply(Object, [{}].concat(_toConsumableArray(aliasObjects)));
-  return Object.assign({}, aliasScheme, {
+  var colorScheme = Object.assign({}, aliasScheme, {
     all: rows.map(function (row) {
       return Object.assign({
         variables: row.variables.trim().split(' ')
       }, createColorValues(row.hex));
     })
   });
+
+  colorScheme.first = function () {
+    return colorScheme.all[0];
+  };
+
+  colorScheme.last = function () {
+    return colorScheme.all[colorScheme.all.length - 1];
+  };
+
+  return colorScheme;
 }
 
 var base = createColorScheme(baseScheme);
