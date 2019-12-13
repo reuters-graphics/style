@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "scss/style.scss",
+  "homepage": "https://reuters-graphics.github.io/style/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
@@ -10,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "webpack --mode=production --config config/webpack.prod.js"
+    "build": "webpack --mode=production --config config/webpack.prod.js",
+    "postbuild": "react-snap"
   },
   "reactSnap": {
     "source": "./../../docs/",

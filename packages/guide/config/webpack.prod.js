@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => (merge(common, {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].js',
     path: path.join(__dirname, '../../../docs'),
-    publicPath: '/',
+    publicPath: '/style/',
   },
   module: {
     rules: [{
