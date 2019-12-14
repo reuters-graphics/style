@@ -1,13 +1,11 @@
 import { Route, Switch } from 'react-router-dom';
 
 import React from 'react';
+import Search from './Search';
+import Snippet from './Snippet';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 import { withRouter } from 'react-router';
-
-const Search = () => <h5>Snippets Search</h5>;
-
-const Snip = () => <h5>Snippet</h5>;
 
 class Snippets extends React.Component {
   constructor(props) {
@@ -20,9 +18,8 @@ class Snippets extends React.Component {
 
     return (
       <div className={classnames(component)}>
-        <h5>Snippets</h5>
         <Switch>
-          <Route path={`${match.url}/:snippetId`} component={Snip} />
+          <Route path={`${match.url}/:snippetId/`} component={Snippet} />
           <Route path={`${match.url}/`} component={Search} />
         </Switch>
       </div>

@@ -12,7 +12,7 @@ recursiveReadSync(SNIPPETS_DIR).forEach((file) => {
   const filePath = path.resolve(SNIPPETS_DIR, file);
   const relativePath = path.relative(SNIPPETS_DIR, filePath);
   const contents = fs.readFileSync(path.resolve(SNIPPETS_DIR, file));
-  snippets[relativePath.replace('.md', '')] = matter(contents).data;
+  snippets[relativePath.replace('.md', '').replace('/', '-')] = matter(contents);
 });
 
 const virtualModules = new VirtualModulesPlugin({
