@@ -1,5 +1,5 @@
 ![](badge.svg)
 
-# Style
+# style
 
 Reuters Graphic's web fashions and style guide.
