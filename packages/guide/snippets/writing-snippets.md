@@ -9,6 +9,7 @@ categories:
 
 Snippets are a great way to share and document tips and tricks on the team.
 
+
 ### Prereqs
 
 Snippets are written in [markdown](https://www.markdownguide.org/) syntax, which is a shorthand for writing the web-friendly content. If you're unfamiliar with markdown, have a look at [GitHub's friendly introduction](https://guides.github.com/features/mastering-markdown/).

@@ -29,6 +29,23 @@ var baseScheme = [ { hex:"#ffffff",
   { hex:"#000000",
     variables:"$black" } ];
 
+var blueScheme = [ { hex:"#deebf7",
+    variables:"$blue-1" },
+  { hex:"#c6dbef",
+    variables:"$blue-2" },
+  { hex:"#9ecae1",
+    variables:"$blue-3" },
+  { hex:"#6baed6",
+    variables:"$blue-4" },
+  { hex:"#4292c6",
+    variables:"$blue-5" },
+  { hex:"#2171b5",
+    variables:"$blue-6" },
+  { hex:"#08519c",
+    variables:"$blue-7" },
+  { hex:"#08306b",
+    variables:"$blue-8" } ];
+
 var brandScheme = [ { hex:"#0275d8",
     variables:"$brand-primary" },
   { hex:"#5cb85c",
@@ -58,6 +75,110 @@ var grayScheme = [ { hex:"#f7f7f7",
     variables:"$gray-800 $gray-dark $dark" },
   { hex:"#222824",
     variables:"$gray-900" } ];
+
+var greenScheme = [ { hex:"#e5f5e0",
+    variables:"$green-1" },
+  { hex:"#c7e9c0",
+    variables:"$green-2" },
+  { hex:"#a1d99b",
+    variables:"$green-3" },
+  { hex:"#74c476",
+    variables:"$green-4" },
+  { hex:"#41ab5d",
+    variables:"$green-5" },
+  { hex:"#238b45",
+    variables:"$green-6" },
+  { hex:"#006d2c",
+    variables:"$green-7" },
+  { hex:"#00441b",
+    variables:"$green-8" } ];
+
+var purpleGreenScheme = [ { hex:"#762a83",
+    variables:"$purple-green-1" },
+  { hex:"#9970ab",
+    variables:"$purple-green-2" },
+  { hex:"#c2a5cf",
+    variables:"$purple-green-3" },
+  { hex:"#e7d4e8",
+    variables:"$purple-green-4" },
+  { hex:"#d9f0d3",
+    variables:"$purple-green-5" },
+  { hex:"#a6dba0",
+    variables:"$purple-green-6" },
+  { hex:"#5aae61",
+    variables:"$purple-green-7" },
+  { hex:"#1b7837",
+    variables:"$purple-green-8" } ];
+
+var purpleScheme = [ { hex:"#efedf5",
+    variables:"$purple-1" },
+  { hex:"#dadaeb",
+    variables:"$purple-2" },
+  { hex:"#bcbddc",
+    variables:"$purple-3" },
+  { hex:"#9e9ac8",
+    variables:"$purple-4" },
+  { hex:"#807dba",
+    variables:"$purple-5" },
+  { hex:"#6a51a3",
+    variables:"$purple-6" },
+  { hex:"#54278f",
+    variables:"$purple-7" },
+  { hex:"#3f007d",
+    variables:"$purple-8" } ];
+
+var redBlueScheme = [ { hex:"#b2182b",
+    variables:"$red-blue-1" },
+  { hex:"#d6604d",
+    variables:"$red-blue-2" },
+  { hex:"#f4a582",
+    variables:"$red-blue-3" },
+  { hex:"#fddbc7",
+    variables:"$red-blue-4" },
+  { hex:"#d1e5f0",
+    variables:"$red-blue-5" },
+  { hex:"#92c5de",
+    variables:"$red-blue-6" },
+  { hex:"#4393c3",
+    variables:"$red-blue-7" },
+  { hex:"#2166ac",
+    variables:"$red-blue-8" } ];
+
+var redScheme = [ { hex:"#fee0d2",
+    variables:"$red-1" },
+  { hex:"#fcbba1",
+    variables:"$red-2" },
+  { hex:"#fc9272",
+    variables:"$red-3" },
+  { hex:"#fb6a4a",
+    variables:"$red-4" },
+  { hex:"#ef3b2c",
+    variables:"$red-5" },
+  { hex:"#cb181d",
+    variables:"$red-6" },
+  { hex:"#a50f15",
+    variables:"$red-7" },
+  { hex:"#67000d",
+    variables:"$red-8" } ];
+
+var redYellowGreenScheme = [ { hex:"#d73027",
+    variables:"$red-yellow-green-1" },
+  { hex:"#f46d43",
+    variables:"$red-yellow-green-2" },
+  { hex:"#fdae61",
+    variables:"$red-yellow-green-3" },
+  { hex:"#fee08b",
+    variables:"$red-yellow-green-4" },
+  { hex:"#ffffbf",
+    variables:"$red-yellow-green-5" },
+  { hex:"#d9ef8b",
+    variables:"$red-yellow-green-6" },
+  { hex:"#a6d96a",
+    variables:"$red-yellow-green-7" },
+  { hex:"#66bd63",
+    variables:"$red-yellow-green-8" },
+  { hex:"#1a9850",
+    variables:"$red-yellow-green-9" } ];
 
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
@@ -163,13 +284,27 @@ function createColorScheme(rows) {
 }
 
 var base = createColorScheme(baseScheme);
-var gray = createColorScheme(grayScheme);
 var brand = createColorScheme(brandScheme);
+var blue = createColorScheme(blueScheme);
+var gray = createColorScheme(grayScheme);
+var green = createColorScheme(greenScheme);
+var purple = createColorScheme(purpleScheme);
+var red = createColorScheme(redScheme);
+var purpleGreen = createColorScheme(purpleGreenScheme);
+var redBlue = createColorScheme(redBlueScheme);
+var redYellowGreen = createColorScheme(redYellowGreenScheme);
 var index = {
   base: base,
+  brand: brand,
+  blue: blue,
   gray: gray,
-  brand: brand
+  green: green,
+  purple: purple,
+  red: red,
+  purpleGreen: purpleGreen,
+  redBlue: redBlue,
+  redYellowGreen: redYellowGreen
 };
 
 export default index;
-export { base, brand, gray };
+export { base, blue, brand, gray, green, purple, purpleGreen, red, redBlue, redYellowGreen };
