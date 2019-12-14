@@ -1,3 +1,3 @@
-![](badge.jpg)
+![](badge.svg)
 
 # style
