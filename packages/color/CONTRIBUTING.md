@@ -2,11 +2,13 @@
 
 # Contributing
 
-### Changing colors or SCSS variables
+Colors schemes are kept as CSV files in this repo, which are then imported into a custom library and rendered to SCSS files.
 
-1. Change colors or SCSS variables within one of the CSVs in the `schemes/` directory.
+### Changing schemes
 
-2. Rebuild and publish the package from the root of `style` with lerna.
+1. Change colors within one of the CSVs in the `schemes/` directory.
+
+2. Rebuild and publish the package from the root of `style` with [lerna](https://lerna.js.org/).
 
   ```
   $ lerna run build
@@ -15,12 +17,13 @@
 
 ### Adding new schemes
 
-1. Create a new CSV in the `schemes/` directory and add colors and SCSS variables. Your CSV should be in this format:
+1. Create a new CSV in the `schemes/` directory and add colors and SCSS variables (space-separated). Your CSV should be in the following format:
 
   ```
   hex, variables
-  #ffffff, $white
+  #ffffff, $white $background
   ```
+
 2. Import the your new scheme in `src/index.js` and add it to the default export:
 
   ```javascript
