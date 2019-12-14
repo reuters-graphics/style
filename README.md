@@ -2,7 +2,7 @@
 
 # style
 
-Reuters Graphic's web fashions and [style guide](https://reuters-graphics.github.io/style/).
+Reuters graphics web fashions and [style guide](https://reuters-graphics.github.io/style/).
 
 ### Contains
 
