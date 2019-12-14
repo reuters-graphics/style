@@ -20,6 +20,22 @@
       left: -250px;
     }
 
+    .github-bug {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      color: rgba(0, 0, 0, 0.1);
+      font-size: 28px;
+
+      @media screen and (max-width: $breakpoint) {
+        display: none;
+      }
+
+      &:hover {
+        color: $gray-dark;
+      }
+    }
+
 
     button.toggle {
       border: none;

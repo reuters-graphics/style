@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
+  "private": true,
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
@@ -58,6 +59,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@reuters-graphics/style-color": "*",

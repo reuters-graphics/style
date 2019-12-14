@@ -8,6 +8,7 @@ import Reuters from 'Components/common/icons/Reuters';
 import Ring from 'Components/common/icons/Ring';
 import classnames from 'classnames';
 import { component } from './styles.scss';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Nav = (props) => {
   const [visible, setVisible] = useState(false);
@@ -15,6 +16,11 @@ const Nav = (props) => {
   return (
     <div className={classnames(component)}>
       <div className={classnames('nav-container', { visible })}>
+        <a
+          className='github-bug'
+          href='https://github.com/reuters-graphics/style/'
+        ><FontAwesomeIcon icon={faGithub} />
+        </a>
         <button
           className='open-menu toggle'
           onClick={() => setVisible(true)}
