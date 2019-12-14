@@ -47,6 +47,10 @@
         margin-bottom: 0;
         transition: margin-left 0.2s;
         margin-left: -25px;
+
+        svg {
+          color: $orange;
+        }
       }
 
       p {
