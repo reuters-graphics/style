@@ -1,15 +1,11 @@
 import CodeRenderer from 'Components/common/markdown/CodeRenderer';
-import ColorSchemes from '@reuters-graphics/style-color';
 import Content from './content.md';
+import Explorer from './Explorer/';
 import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';
 import React from 'react';
 import classnames from 'classnames';
 import { component } from './styles.scss';
-
-window.colorSchemes = ColorSchemes;
-
-console.log('colorSchemes', ColorSchemes);
 
 const Colors = (props) => (
   <div className={classnames(component, 'markdown-default')}>
@@ -22,7 +18,7 @@ const Colors = (props) => (
         paragraph: ParagraphRenderer,
       }}
     />
-    <h2 id='color-explorer'>Color explorer</h2>
+    <Explorer />
   </div>
 );
 

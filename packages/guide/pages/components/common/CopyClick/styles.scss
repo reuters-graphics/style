@@ -1,0 +1,17 @@
+@import "~@reuters-graphics/style-color/scss/main";
+
+.component :global {
+  display: inline;
+
+  span {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+}
