@@ -1,3 +1,3 @@
 ![](../../badge.svg)
 
-# style-main
+# @reuters-graphics/style-main

@@ -1,6 +1,6 @@
 ![](../../badge.svg)
 
-# style-color
+# @reuters-graphics/style-color
 
 Color schemes for Reuters graphics.
 

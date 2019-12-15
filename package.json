@@ -24,6 +24,9 @@
   "devDependencies": {
     "@hobbes7878/eslint-config": "^0.0.2",
     "eslint": "^6.7.2",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-scss": "^3.13.0"
   }
 }

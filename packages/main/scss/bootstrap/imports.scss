@@ -21,6 +21,6 @@
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 
-// Need fixes...
 
-@import "fixme";
+// This should go somewhere...
+$hr-border-width: $border-width !default;

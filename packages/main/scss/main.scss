@@ -1,5 +1,11 @@
-@import "typography/faces";
+@import "fonts/font-faces";
+
+// Variables
 @import "~@reuters-graphics/style-color/scss/main";
-@import "variables/spacing";
-@import "variables/fonts";
-@import "bootstrap/_all";
+@import "spacing/variables";
+@import "fonts/variables";
+@import "typography/variables";
+
+// Bootstrap
+@import "bootstrap/imports";
+@import "fonts/rules";

@@ -1,7 +1,6 @@
 import ColorSchemes from '@reuters-graphics/style-color';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const SchemePicker = (props) => (
   <div className='scheme-options'>
@@ -18,13 +17,8 @@ const SchemePicker = (props) => (
         <div
           className='scheme-option'
           key={key}
+          onClick={() => props.updateScheme(key)}
         >
-          <div
-            className='inline button'
-            onClick={() => props.updateScheme(key)}
-          >
-            <FontAwesomeIcon icon={faArrowCircleRight} />
-          </div>
           <div className='inline'>
             <div>{key}</div>
             <div className='swatch-rail'>{swatches}</div>

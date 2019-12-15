@@ -1,20 +1,5 @@
-@import "spacing";
-
-// Fonts
-//
-// Font, line-height, and color for body text, headings, and more.
-
-// stylelint-disable value-keyword-case
-// Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:     "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:      Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:           $font-family-serif;
-$font-family-font-awesome:   "FontAwesome";
-
-// our default display font
-$font-family-knowledge: 'Knowledge', 'Source Sans Pro', Arial, sans-serif;
-// stylelint-enable value-keyword-case
+@import "../spacing/variables";
+@import "../fonts/variables";
 
 $font-size-base:       1rem !default; // Assumes the browser default, typically `16px`
 $font-size-xs:         0.8rem !default;

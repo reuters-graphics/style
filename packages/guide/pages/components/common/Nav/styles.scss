@@ -1,5 +1,5 @@
 @import "~@reuters-graphics/style-color/scss/main";
-@import "~@reuters-graphics/style-main/scss/variables/fonts";
+@import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
 
 .component :global {
@@ -47,8 +47,8 @@
       display: none;
       position: absolute;
       top: 5px;
-      right: 10px;
-      font-size: 20px;
+      right: 5px;
+      font-size: 24px;
       color: $gray-600;
       cursor: pointer;
 
@@ -62,18 +62,19 @@
     }
 
     button.open-menu {
-      display: none;
       position: fixed;
-      top: 5px;
+      top: -50px;
       left: 5px;
       color: $gray-400;
       font-size: 20px;
       background-color: rgba(255, 255, 255, 0.8);
       padding: 4px 10px;
       border-radius: 10px;
+      transition: top 0.2s;
+      transition-delay: 0.1s;
 
       @media screen and (max-width: $breakpoint) {
-        display: inline;
+        top: 5px;
       }
 
       &:hover {
@@ -85,7 +86,8 @@
       left: 0;
 
       button.open-menu {
-        display: none;
+        top: -50px;
+        opacity: 0;
       }
     }
 

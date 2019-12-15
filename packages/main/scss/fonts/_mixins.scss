@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin font-sans {
+  font-family: $font-family-sans-serif;
+}
+
+@mixin font-serif {
+  font-family: $font-family-serif;
+}
+
+@mixin font-monospace {
+  font-family: $font-family-monospace;
+}
+
+@mixin font-display {
+  font-family: $font-family-display;
+}

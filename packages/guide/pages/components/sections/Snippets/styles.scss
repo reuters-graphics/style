@@ -1,7 +1,6 @@
 @import "~@reuters-graphics/style-color/scss/main";
-@import "~@reuters-graphics/style-main/scss/variables/fonts";
+@import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
-@import "~@reuters-graphics/style-color/scss/base";
 
 .component :global {
   .search-form {
@@ -37,19 +36,17 @@
       overflow-x: hidden;
       color: $dark;
 
-      &:hover {
-        h4 {
-          margin-left: 0;
+      h4 {
+        margin-bottom: 0;
+
+        svg {
+          color: $gray-500;
         }
       }
 
-      h4 {
-        margin-bottom: 0;
-        transition: margin-left 0.2s;
-        margin-left: -25px;
-
-        svg {
-          color: $orange;
+      &:hover {
+        h4 {
+          text-decoration: underline;
         }
       }
 

@@ -4,17 +4,27 @@
 yarn add @reuters-graphics/style-color
 ```
 
-## How to use colors
+## Working with colors
 
 #### SCSS
 
-Import the SCSS color variables directly from the library and then use them to style your elements.
+Import the SCSS color variables directly from the library.
 
 ```scss
+// Import colors from all our color schemes
 @import "~@reuters-graphics/style-color/scss/main";
+
+// ... or just one scheme.
+@import "~@reuters-graphics/style-color/scss/gray";
+```
+
+ Then use them to style your elements.
+
+```scss
 
 circle {
   fill: $cyan;
+  stroke: $gray-1;
 }
 
 ```
@@ -24,9 +34,12 @@ circle {
 Import a color scheme from the library.
 
 ```javascript
-// Import a color scheme
 import { gray } from '@reuters-graphics/style-color';
+```
 
+Work with colors in the scheme.
+
+```javascript
 
 // See all colors in the sheme
 gray.all
@@ -47,14 +60,18 @@ gray.all[0].rgbaArray(0.25)
 // See the SCSS variables associated with that color
 gray.all[0].variables
 // ["$gray-100", "$gray-lightest", "$light"]
+```
 
+There are a few alternative ways to access colors in the scheme.
+
+```javascript
 // Use the camel-cased variable name to access a color directly
 gray.grayLightest
 // {hex: "#f7f7f7", rgba: ƒ, rgbaArray: ƒ}
 
 
 // Schemes are guaranteed to be in order, so for sequential scales,
-// you can access the max and min color values easily.
+// you can access the min/max color values easily with first/last.
 
 gray.first()
 // {variables: Array(3), hex: "#f7f7f7", rgba: ƒ, rgbaArray: ƒ}

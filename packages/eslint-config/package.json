@@ -1,0 +1,25 @@
+{
+  "name": "@reuters-graphics/eslint-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "babel-eslint": "*",
+    "eslint-config-standard": "*",
+    "eslint-config-standard-react": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-standard": "*"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  }
+}

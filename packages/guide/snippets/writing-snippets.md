@@ -7,12 +7,12 @@ categories:
 
 # Writing snippets
 
-Snippets are a great way to share and document tips and tricks on the team.
+Snippets are a way to quickly and easily share and document tips on the team.
 
 
 ### Prereqs
 
-Snippets are written in [markdown](https://www.markdownguide.org/) syntax, which is a shorthand for writing the web-friendly content. If you're unfamiliar with markdown, have a look at [GitHub's friendly introduction](https://guides.github.com/features/mastering-markdown/).
+Snippets are written in [markdown](https://www.markdownguide.org/) syntax. If you're unfamiliar with markdown, have a look at [GitHub's friendly introduction](https://guides.github.com/features/mastering-markdown/).
 
 ### Steps
 
@@ -22,7 +22,7 @@ Here's how to publish your Snippet:
 
 2. Create a new markdown file in `packages/guide/snippets`. For example, `reusable-charts.md`.
 
-3. We use YAML front matter in each snippet file to make it searchable within the style guide. You should add at least a title to yours, but are encouraged to add a description and category tags.
+3. We use YAML front matter in each snippet file to make it searchable within the style guide. You should add at least a title to yours, but are encouraged to add a description and category tags like this:
 
   ```
   ---
@@ -35,7 +35,7 @@ Here's how to publish your Snippet:
 
   ```
 
-4. Write your snippet using markdown.
+4. Write your snippet using markdown with code blocks, images and rich text.
 
 5. When you're done writing, rebuild the style guide from the root of the repo using this [lerna](https://lerna.js.org/) command:
 
