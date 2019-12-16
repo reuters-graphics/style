@@ -6,4 +6,10 @@ Install the graphics generator.
 yarn add @reuters-graphics/generator-graphics
 ```
 
-TK.
+Start the generator:
+
+```
+yo graphics
+```
+
+TK TK TK
