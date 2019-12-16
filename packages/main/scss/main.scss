@@ -2,10 +2,13 @@
 
 // Variables
 @import "~@reuters-graphics/style-color/scss/main";
-@import "spacing/variables";
-@import "fonts/variables";
-@import "typography/variables";
+@import "variables";
+
+// Mixins
+@import "mixins";
 
 // Bootstrap
 @import "bootstrap/imports";
+
+// Styles
 @import "fonts/rules";

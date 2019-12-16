@@ -50,6 +50,7 @@ const Nav = (props) => {
         <nav className='nav flex-column'>
           <NavItem name='Fonts' link='/fonts/' />
           <NavItem name='Colors' link='/colors/' />
+          <NavItem name='Linters' link='/linters/' />
           <NavItem name='Snippets' link='/snippets/' />
         </nav>
       </div>
