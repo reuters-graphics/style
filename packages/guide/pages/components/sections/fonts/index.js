@@ -3,11 +3,9 @@ import Content from './content.md';
 import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';
 import React from 'react';
-import classnames from 'classnames';
-import { component } from './styles.scss';
 
 const Fonts = (props) => (
-  <div className={classnames(component, 'markdown-default')}>
+  <div className='markdown-default'>
     <Content
       escapeHtml={false}
       linkTarget='_blank'

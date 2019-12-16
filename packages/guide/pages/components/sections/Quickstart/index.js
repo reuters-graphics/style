@@ -4,7 +4,7 @@ import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';
 import React from 'react';
 
-const Linters = (props) => (
+const Quickstart = (props) => (
   <div className='markdown-default'>
     <Content
       escapeHtml={false}
@@ -18,4 +18,4 @@ const Linters = (props) => (
   </div>
 );
 
-export default Linters;
+export default Quickstart;

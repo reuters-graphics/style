@@ -6,7 +6,8 @@ import Colors from 'Components/sections/Colors';
 import Fonts from 'Components/sections/Fonts';
 import Home from 'Components/sections/Home';
 import Linters from 'Components/sections/Linters';
-import Nav from 'Components/common/Nav';
+import Nav from 'Components/Nav';
+import Quickstart from 'Components/sections/Quickstart';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Snippets from 'Components/sections/Snippets';
@@ -22,6 +23,7 @@ const App = () => (
           <div className='row no-gutters'>
             <div className='col-12'>
               <Switch>
+                <Route path='/quickstart/' component={Quickstart} />
                 <Route path='/fonts/' component={Fonts} />
                 <Route path='/colors/' component={Colors} />
                 <Route path='/linters/' component={Linters} />
