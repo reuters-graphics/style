@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "start": "lerna run start"
   },
   "repository": {

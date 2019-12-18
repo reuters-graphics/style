@@ -20,3 +20,7 @@ Reuters graphics web fashions and [style guide](https://reuters-graphics.github.
 - [`@reuters-graphics/stylelint-config`](https://github.com/reuters-graphics/style/tree/master/packages/stylelint-config)
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
+### Contributing
+
+See the [docs](CONTRIBUTING.md).
