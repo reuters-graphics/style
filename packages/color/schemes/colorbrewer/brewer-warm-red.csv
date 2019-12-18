@@ -1,0 +1,10 @@
+variables,hex
+$brew-warm-red-100,#fff5eb
+$brew-warm-red-200,#fee6ce
+$brew-warm-red-300,#fdd0a2
+$brew-warm-red-400,#fdae6b
+$brew-warm-red-500,#fd8d3c
+$brew-warm-red-600,#f16913
+$brew-warm-red-700,#d94801
+$brew-warm-red-800,#a63603
+$brew-warm-red-900,#7f2704
