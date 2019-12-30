@@ -1,6 +1,11 @@
-hex, variables
-#0275d8, $brand-primary
-#5cb85c, $brand-success
-#5bc0de, $brand-info
-#f0ad4e, $brand-warning
-#d9534f, $brand-danger
+hex,variables
+#ff8000,$brand $brand-primary
+#666666,$brand-secondary
+#ffffff,$brand-background $brand-inverted-secondary
+#86888b,$brand-nav
+#313132,$brand-nav-active
+#333333,$brand-inverted-background
+#999999,$brand-inverted-nav
+#cccccc,$brand-inverted-nav-active
+#313132,$brand-text $brand-text-primary
+#717375,$brand-text-secondary

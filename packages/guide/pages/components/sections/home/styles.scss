@@ -1,4 +1,4 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/brand";
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
 
@@ -13,19 +13,19 @@
     .team-logo {
       svg {
         display: inline-block;
-        fill: $black;
+        fill: $brand-text;
         margin-top: -7px;
         margin-right: 0;
 
         &:first-child {
-          fill: $orange;
+          fill: $brand-primary;
           margin-right: 5px;
         }
       }
 
       font-family: $font-family-knowledge;
       font-weight: 400;
-      color: $gray-500;
+      color: $brand-text-secondary;
       font-size: 29px;
       letter-spacing: 0.5px;
       text-transform: uppercase;

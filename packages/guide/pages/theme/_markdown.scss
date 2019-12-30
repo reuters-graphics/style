@@ -1,4 +1,6 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/base";
+@import "~@reuters-graphics/style-color/scss/gray";
+@import "~@reuters-graphics/style-color/scss/brand";
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 
 .markdown-default {
@@ -37,12 +39,12 @@
 
   h4 {
     font-size: 1.25em;
-    color: $gray-500;
+    color: $gray;
   }
 
   h5 {
     font-size: 1em;
-    color: $gray-500;
+    color: $gray;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -53,7 +55,7 @@
   }
 
   code {
-    background-color: $gray-lighter;
+    background-color: $gray-200;
     border-radius: 2px;
     padding: 0 4px;
     font-family: $font-family-monospace;
@@ -69,10 +71,10 @@
 
     thead {
       font-family: $font-family-monospace;
-      color: $gray-500;
+      color: $gray;
       font-weight: 300;
       font-size: 0.8em;
-      border-bottom: 2px solid $gray-dark;
+      border-bottom: 2px solid $gray-600;
 
       th {
         font-weight: 500;
@@ -86,7 +88,7 @@
 
       td {
         padding: 2px 5px;
-        border-right: 1px solid $gray-600;
+        border-right: 1px solid $gray;
 
         &:last-child {
           border-right: 0;
@@ -94,7 +96,7 @@
       }
 
       tr:nth-child(even) {
-        background-color: $gray-lighter;
+        background-color: $gray-200;
       }
     }
   }

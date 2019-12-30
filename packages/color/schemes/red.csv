@@ -1,9 +1,7 @@
-hex, variables
-#fee0d2, $red-1
-#fcbba1, $red-2
-#fc9272, $red-3
-#fb6a4a, $red-4
-#ef3b2c, $red-5
-#cb181d, $red-6
-#a50f15, $red-7
-#67000d, $red-8
+variables,hex
+$red-100,#FBC9BA
+$red-200,#F8AB98
+$red-300,#F37B68
+$red-400,#EC2033
+$red-500,#C31729
+$red-600,#82000D

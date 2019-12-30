@@ -1,9 +1,7 @@
-hex, variables
-#e5f5e0, $green-1
-#c7e9c0, $green-2
-#a1d99b, $green-3
-#74c476, $green-4
-#41ab5d, $green-5
-#238b45, $green-6
-#006d2c, $green-7
-#00441b, $green-8
+variables,hex
+$green-100,#CBE1C8
+$green-200,#AED3AB
+$green-300,#7DBE80
+$green-400,#0AA74B
+$green-500,#008C3E
+$green-600,#005E25

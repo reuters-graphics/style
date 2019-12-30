@@ -1,10 +1,10 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/brand";
 
 .component :global {
   position: relative;
 
   pre {
-    background-color: $gray-dark;
+    background-color: $brand-inverted-background;
     border-radius: 10px;
     margin: 30px 5px 40px;
     padding: 0.75em 1em;
@@ -13,7 +13,7 @@
 
   button {
     border: 0;
-    background-color: $gray-dark;
+    background-color: $brand-inverted-background;
     color: white;
     position: absolute;
     right: 10px;
@@ -23,11 +23,11 @@
     font-size: 14px;
 
     &:hover {
-      color: $orange;
+      color: $brand-primary;
     }
 
     &:active {
-      border: 1px solid $orange;
+      border: 1px solid $brand-primary;
     }
 
     &.copy {

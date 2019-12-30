@@ -1,4 +1,4 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/brand";
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
 
@@ -7,11 +7,11 @@
     margin-top: 20px;
     padding: 5px 10px;
     border-radius: 20px;
-    border: 1px solid $gray-lighter;
+    border: 1px solid $brand-inverted-nav;
     font-size: 24px;
 
     svg.fa-search {
-      color: $gray-500;
+      color: $brand-inverted-nav;
       margin-right: 10px;
     }
 
@@ -34,14 +34,10 @@
     .search-item {
       margin-bottom: 30px;
       overflow-x: hidden;
-      color: $dark;
+      color: $brand-text;
 
       h4 {
         margin-bottom: 0;
-
-        svg {
-          color: $gray-500;
-        }
       }
 
       &:hover {
@@ -57,12 +53,12 @@
 
       .tag {
         display: inline-block;
-        background-color: $gray-600;
+        background-color: $brand-inverted-nav;
         padding: 2px 5px;
         font-family: $font-family-monospace;
         font-size: 12px;
         margin-right: 4px;
-        color: $white;
+        color: $brand-background;
         border-radius: 4px;
       }
     }

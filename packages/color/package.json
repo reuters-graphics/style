@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config config/rollup.config.js && npx ./bin/scss.js"
+    "build": "rm -rf scss/ && rollup --config config/rollup.config.js && npx ./bin/scss.js"
   },
   "dependencies": {
     "hex-rgb": "^4.1.0"

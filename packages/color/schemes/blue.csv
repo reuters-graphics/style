@@ -1,9 +1,7 @@
-hex, variables
-#deebf7, $blue-1
-#c6dbef, $blue-2
-#9ecae1, $blue-3
-#6baed6, $blue-4
-#4292c6, $blue-5
-#2171b5, $blue-6
-#08519c, $blue-7
-#08306b, $blue-8
+variables,hex
+$blue-100,#C8DAF0
+$blue-200,#ABC8E8
+$blue-300,#7AADDC
+$blue-400,#1F8FCE
+$blue-500,#1B78AC
+$blue-600,#044F74

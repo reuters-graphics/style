@@ -1,9 +1,7 @@
-hex, variables
-#efedf5, $purple-1
-#dadaeb, $purple-2
-#bcbddc, $purple-3
-#9e9ac8, $purple-4
-#807dba, $purple-5
-#6a51a3, $purple-6
-#54278f, $purple-7
-#3f007d, $purple-8
+variables,hex
+$purple-100,#CABDDC
+$purple-200,#B19CC9
+$purple-300,#8D6EAE
+$purple-400,#653290
+$purple-500,#552479
+$purple-600,#360451

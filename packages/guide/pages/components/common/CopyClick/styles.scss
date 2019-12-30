@@ -1,4 +1,4 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/brand";
 
 .component :global {
   display: inline;
@@ -11,7 +11,7 @@
     }
 
     &:active {
-      color: $orange;
+      color: $brand-primary;
     }
   }
 }

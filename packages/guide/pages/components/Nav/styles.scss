@@ -1,4 +1,4 @@
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/brand";
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
 
@@ -11,10 +11,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: $gray-dark;
-    color: $white;
+    background: $brand-inverted-background;
+    color: $brand-inverted-secondary;
     transition: left 0.2s;
     font-family: $font-family-sans-serif;
+    border-right: 1px solid $brand-background;
 
     @media screen and (max-width: $breakpoint) {
       left: -250px;
@@ -32,7 +33,7 @@
       }
 
       &:hover {
-        color: $gray-dark;
+        color: $brand-nav-active;
       }
     }
 
@@ -48,12 +49,12 @@
       position: absolute;
       top: 5px;
       right: 5px;
-      font-size: 24px;
-      color: $gray-600;
+      font-size: 20px;
+      color: $brand-inverted-nav;
       cursor: pointer;
 
       &:hover {
-        color: $white;
+        color: $brand-inverted-secondary;
       }
 
       @media screen and (max-width: $breakpoint) {
@@ -65,7 +66,7 @@
       position: fixed;
       top: -50px;
       left: 5px;
-      color: $gray-400;
+      color: $brand-nav;
       font-size: 20px;
       background-color: rgba(255, 255, 255, 0.8);
       padding: 4px 10px;
@@ -78,7 +79,7 @@
       }
 
       &:hover {
-        color: $gray-500;
+        color: $brand-nav-active;
       }
     }
 
@@ -99,13 +100,13 @@
       }
 
       svg {
-        fill: $orange;
+        fill: $brand-primary;
         margin-right: 7px;
       }
 
       .team-logo {
         svg {
-          fill: $white;
+          fill: $brand-inverted-secondary;
           margin-left: 1px;
           margin-top: 6px;
           margin-bottom: 2px;
@@ -114,7 +115,7 @@
 
         font-family: $font-family-knowledge;
         font-weight: 300;
-        color: $gray-600;
+        color: $brand-inverted-nav;
         font-size: 14px;
         line-height: 16px;
         letter-spacing: 0.5px;
@@ -131,7 +132,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: 200;
-        color: $gray-600;
+        color: $brand-inverted-nav;
         font-size: 18px;
         transition: padding-left 0.2s;
 
@@ -141,14 +142,14 @@
         }
 
         &.active {
-          color: $white;
+          color: $brand-inverted-secondary;
           font-weight: 400;
         }
       }
     }
 
     a {
-      color: $white;
+      color: $brand-inverted-secondary;
 
       &:hover {
         text-decoration: none !important;

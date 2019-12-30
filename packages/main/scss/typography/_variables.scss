@@ -37,7 +37,7 @@ $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        $font-family-knowledge;
 $headings-font-weight:        700;
 $headings-line-height:        1.2 !default;
-$headings-color:              $gray-dark;
+$headings-color:              $brand-text-primary;
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
@@ -55,11 +55,11 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-500;
+$text-muted:                  $brand-text-secondary;
 
-$blockquote-small-color:      $gray-500;
+$blockquote-small-color:      $brand-text-secondary;
 $blockquote-font-size:        ($font-size-base * 1.5);
-$blockquote-border-color: $gray-lighter !default;
+$blockquote-border-color: $gray-200 !default;
 $blockquote-border-width: 0.25rem !default;
 
 
