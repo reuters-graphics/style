@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-color",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.35+53fc3bc",
   "private": false,
   "description": "Color schemes for Reuters graphics",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -31,5 +31,6 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-dsv": "^1.2.0",
     "rollup-plugin-node-resolve": "^5.2.0"
-  }
+  },
+  "gitHead": "53fc3bcdaa2fe47d6cf6452897b306248aa8074a"
 }

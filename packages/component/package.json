@@ -7,6 +7,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
-  },
-  "license": "MIT"
+  }
 }

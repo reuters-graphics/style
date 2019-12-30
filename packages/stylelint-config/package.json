@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/stylelint-config",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.35+53fc3bc",
   "private": false,
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "main": "index.js",
@@ -16,5 +16,6 @@
   },
   "peerDependencies": {
     "stylelint": "*"
-  }
+  },
+  "gitHead": "53fc3bcdaa2fe47d6cf6452897b306248aa8074a"
 }
