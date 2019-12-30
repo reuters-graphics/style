@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-color",
-  "version": "0.0.1-alpha.35+53fc3bc",
+  "version": "0.0.1-alpha.36+bd19bcc",
   "private": false,
   "description": "Color schemes for Reuters graphics",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -13,6 +13,9 @@
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rm -rf scss/ && rollup --config config/rollup.config.js && npx ./bin/scss.js"
   },
@@ -32,5 +35,5 @@
     "rollup-plugin-dsv": "^1.2.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
-  "gitHead": "53fc3bcdaa2fe47d6cf6452897b306248aa8074a"
+  "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"
 }

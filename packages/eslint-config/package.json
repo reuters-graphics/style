@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/eslint-config",
-  "version": "0.0.1-alpha.35+53fc3bc",
+  "version": "0.0.1-alpha.36+bd19bcc",
   "private": false,
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "main": "index.js",
@@ -9,6 +9,9 @@
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "babel-eslint": "*",
     "eslint-config-standard": "*",
@@ -23,5 +26,5 @@
   "peerDependencies": {
     "eslint": "*"
   },
-  "gitHead": "53fc3bcdaa2fe47d6cf6452897b306248aa8074a"
+  "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"
 }
