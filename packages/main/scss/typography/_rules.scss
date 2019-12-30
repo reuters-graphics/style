@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+@import "../fonts/mixins";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-display;
+
+  margin-bottom: $headings-margin-bottom;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  @include font-serif;
+
+  font-size: $font-size-article;
+}
+
+small {
+  font-size: $font-size-sm;
+}

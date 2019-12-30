@@ -1,7 +1,9 @@
 {
   "name": "@reuters-graphics/style-color",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Color schemes for Reuters graphics",
+  "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "module": "dist/index.js",
   "files": [
     "scss/**/*.scss"

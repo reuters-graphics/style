@@ -1,7 +1,8 @@
 @import "fonts/font-faces";
 
 // Variables
-@import "~@reuters-graphics/style-color/scss/main";
+@import "~@reuters-graphics/style-color/scss/base";
+@import "~@reuters-graphics/style-color/scss/brand";
 @import "variables";
 
 // Mixins
@@ -12,3 +13,4 @@
 
 // Styles
 @import "fonts/rules";
+@import "typography/rules";

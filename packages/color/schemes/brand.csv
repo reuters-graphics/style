@@ -3,9 +3,8 @@ hex,variables
 #666666,$brand-secondary
 #ffffff,$brand-background $brand-inverted-secondary
 #86888b,$brand-nav
-#313132,$brand-nav-active
+#313132,$brand-nav-active $brand-text $brand-text-primary
 #333333,$brand-inverted-background
 #999999,$brand-inverted-nav
 #cccccc,$brand-inverted-nav-active
-#313132,$brand-text $brand-text-primary
 #717375,$brand-text-secondary

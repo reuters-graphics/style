@@ -1,7 +1,9 @@
 {
   "name": "@reuters-graphics/style-main",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Graphics fashion at Reuters",
+  "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "main": "scss/main.scss",
   "files": [
     "scss/**/*.scss"
@@ -12,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@reuters-graphics/style-color": "*",
+    "@reuters-graphics/style-color": "latest",
     "bootstrap": "^4.4.1"
   }
 }

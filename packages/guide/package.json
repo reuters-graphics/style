@@ -1,6 +1,7 @@
 {
   "name": "@reuters-graphics/style-guide",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "private": true,
   "description": "",
   "main": "scss/style.scss",
   "homepage": "https://reuters-graphics.github.io/style/",
@@ -8,8 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
-  "private": true,
-  "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --mode=production --config config/webpack.prod.js",

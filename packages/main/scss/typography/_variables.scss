@@ -1,16 +1,18 @@
 @import "../spacing/variables";
 @import "../fonts/variables";
+@import "~@reuters-graphics/style-color/scss/gray";
 
-$font-size-base:       1rem !default; // Assumes the browser default, typically `16px`
+// Font sizes
 $font-size-xs:         0.8rem !default;
 $font-size-sm:         0.875rem !default;
-$font-size-base:       1rem !default;
+$font-size-base:       1rem !default; // Assumes the browser default, typically `16px`
 $font-size-article:    1.05rem !default;
 $font-size-lg:         1.25rem !default;
-$font-size-xl:         1.5rem;
-$font-size-2xl:        2.4rem;
-$font-size-3xl:        2.8rem;
+$font-size-xl:         1.5rem !default;
+$font-size-2xl:        2.4rem !default;
+$font-size-3xl:        2.8rem !default;
 
+// Font weights
 $font-weight-light:    300 !default;
 $font-weight-normal:   400 !default;
 $font-weight-bold:     700 !default;
@@ -25,17 +27,9 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$font-size-h1:                $font-size-base * 2.5 !default;
-$font-size-h2:                $font-size-base * 2 !default;
-$font-size-h3:                $font-size-base * 1.75 !default;
-$font-size-h4:                $font-size-base * 1.5 !default;
-$font-size-h5:                $font-size-base * 1.25 !default;
-$font-size-h6:                $font-size-base !default;
-
-
 $headings-margin-bottom:      ($spacer / 2) !default;
-$headings-font-family:        $font-family-knowledge;
-$headings-font-weight:        700;
+$headings-font-family:        $font-family-display;
+$headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              $brand-text-primary;
 

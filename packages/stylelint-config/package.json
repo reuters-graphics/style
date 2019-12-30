@@ -1,13 +1,14 @@
 {
   "name": "@reuters-graphics/stylelint-config",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "private": false,
+  "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reuters-graphics/style.git"
   },
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "stylelint-config-standard": "*",
     "stylelint-config-standard-scss": "*",
