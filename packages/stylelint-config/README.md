@@ -8,7 +8,7 @@
 
         $ yarn add -D @reuters-graphics/stylelint-config stylelint
 
-2.  Create a `stylelintrc.json` in the root of your project:
+2.  Create a `.stylelintrc.json` in the root of your project:
 
         {
           "extends": "@reuters-graphics/stylelint-config"

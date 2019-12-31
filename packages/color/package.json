@@ -6,7 +6,8 @@
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "module": "dist/index.js",
   "files": [
-    "scss/**/*.scss"
+    "scss/**/*.scss",
+    "dist/index.js"
   ],
   "repository": {
     "type": "git",
