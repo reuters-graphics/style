@@ -24,13 +24,15 @@ const App = () => (
           <div className='row no-gutters'>
             <div className='col-12'>
               <Switch>
+                <Route path='/' exact component={Home} />
                 <Route path='/quickstart/' component={Quickstart} />
                 <Route path='/graphics-rig/' component={Rig} />
                 <Route path='/fonts/' component={Fonts} />
                 <Route path='/colors/' component={Colors} />
                 <Route path='/linters/' component={Linters} />
                 <Route path='/snippets/' component={Snippets} />
-                <Route path='/' component={Home} />
+                <Route path='/404/' component={Four04} />
+                <Route path='/404.html' component={Four04} />
                 <Route component={Four04} />
               </Switch>
             </div>

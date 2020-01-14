@@ -1,4 +1,4 @@
-import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
+import { NavLink, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import Ai2Html from './pages/ai2html';
 import Code from './pages/code';
@@ -15,6 +15,8 @@ import classnames from 'classnames';
 import { component } from './styles.scss';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
+const Four04 = () => <Redirect to='/404/' />;
+
 export default () => {
   const match = useRouteMatch();
   return (
@@ -29,6 +31,7 @@ export default () => {
       <Nav />
 
       <Switch>
+        <Route path={match.path} exact component={Home} />
         <Route path={`${match.path}quickstart/`} component={Quickstart} />
         <Route path={`${match.path}ai2html/`} component={Ai2Html} />
         <Route path={`${match.path}writing-code/`} component={Code} />
@@ -36,7 +39,7 @@ export default () => {
         <Route path={`${match.path}copy-and-translation/`} component={Copy} />
         <Route path={`${match.path}metadata/`} component={Metadata} />
         <Route path={`${match.path}embeddable-page/`} component={Embed} />
-        <Route path={match.path} component={Home} />
+        <Route component={Four04} />
       </Switch>
     </div>
   );
