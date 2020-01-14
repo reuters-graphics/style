@@ -15,8 +15,8 @@ Write your code in the `src/` directory.
 
 - [HTML/EJS](#HTMLEJS)
   - [Includes](#Includes)
-  - [Requiring data](#Requiring-data)
   - [Templates with data](#Templates-with-data)
+  - [Requiring data](#Requiring-data)
   - [Special context](#Special-context)
     - [journalize](#journalize)
     - [localeMarkdown](#localeMarkdown)
