@@ -37,8 +37,22 @@ module.exports = {
           },
         },
       }, {
+
+      }, {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[contenthash].[ext]',
+            outputPath: 'images',
+          },
+        }],
+      }, {
         test: /\.md$/,
-        loader: '@politico/markdown-react-loader',
+        use: [
+          path.resolve(__dirname, 'loaders/markdown-image-loader.js'),
+          '@politico/markdown-react-loader',
+        ],
       },
     ],
   },

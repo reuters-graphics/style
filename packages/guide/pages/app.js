@@ -10,6 +10,7 @@ import Nav from 'Components/Nav';
 import Quickstart from 'Components/sections/Quickstart';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Rig from 'Components/sections/Rig';
 import Snippets from 'Components/sections/Snippets';
 import { component } from './styles.scss';
 
@@ -19,11 +20,11 @@ const App = () => (
       <Nav />
       <div className='well'>
         <div className='container'>
-
           <div className='row no-gutters'>
             <div className='col-12'>
               <Switch>
                 <Route path='/quickstart/' component={Quickstart} />
+                <Route path='/graphics-rig/' component={Rig} />
                 <Route path='/fonts/' component={Fonts} />
                 <Route path='/colors/' component={Colors} />
                 <Route path='/linters/' component={Linters} />

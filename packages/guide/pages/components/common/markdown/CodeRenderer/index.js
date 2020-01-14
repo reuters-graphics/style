@@ -6,6 +6,7 @@ import Refractor from 'react-refractor';
 import bash from 'refractor/lang/bash';
 import { component } from './styles.scss';
 import copy from 'copy-to-clipboard';
+import ejs from 'refractor/lang/ejs';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import js from 'refractor/lang/javascript';
 import markdown from 'refractor/lang/markdown';
@@ -21,6 +22,7 @@ Refractor.registerLanguage(scss);
 Refractor.registerLanguage(sql);
 Refractor.registerLanguage(r);
 Refractor.registerLanguage(markdown);
+Refractor.registerLanguage(ejs);
 
 const getLang = (lang) => {
   switch (lang) {
