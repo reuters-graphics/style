@@ -679,4 +679,4 @@ document.getElementById('my-red-container').classList.add(styles.component);
 </div>
 ```
 
-This is probably most useful when writing JS components, like when using a framework like React. It lets you scope your styles locally to the component so you can avoid style collisions while writing very simple, easy to read style rules.
+This is probably most useful when writing JS components when using a framework like React. It lets you scope your styles locally to the component so you can avoid style collisions while writing very simple, easy to read style rules.
