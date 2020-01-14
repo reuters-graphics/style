@@ -1,9 +1,9 @@
 Write your code in the `src/` directory.
 
 > - src/
->    - html/
->    - js/
->    - scss/
+>    - **html/**
+>    - **js/**
+>    - **scss/**
 >    - static/
 
 - `html/`: [EJS templates](https://ejs.co/#docs)
@@ -606,6 +606,9 @@ import Title from './title.svelte';
 
 new Title({
   target: document.getElementById('title-container'),
+  props: {
+    title: 'My svelte page',
+  }
 });
 ```
 

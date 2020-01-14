@@ -6,7 +6,7 @@ Put media files and any other static assets your page may need in the `static` d
 >    - scss/
 >    - **static/**
 
-Please note: **Anything you put into this directory will be published with your page**, so keep large raw files or working drafts out of this folder.
+Please note: **Anything you put into this directory will be published with your page**, so keep large raw files or working drafts out of this folder. (Put that stuff in `project-files/`.)
 
 
 ## Contents

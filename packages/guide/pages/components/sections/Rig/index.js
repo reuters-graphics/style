@@ -3,7 +3,7 @@ import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import Ai2Html from './pages/ai2html';
 import Code from './pages/code';
 import Copy from './pages/copy';
-import Data from './pages/data';
+import Embed from './pages/embed';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Home from './pages/home';
 import Media from './pages/media';
@@ -33,9 +33,9 @@ export default () => {
         <Route path={`${match.path}ai2html/`} component={Ai2Html} />
         <Route path={`${match.path}writing-code/`} component={Code} />
         <Route path={`${match.path}working-with-media-files/`} component={Media} />
-        <Route path={`${match.path}working-with-data/`} component={Data} />
         <Route path={`${match.path}copy-and-translation/`} component={Copy} />
         <Route path={`${match.path}metadata/`} component={Metadata} />
+        <Route path={`${match.path}embeddable-page/`} component={Embed} />
         <Route path={match.path} component={Home} />
       </Switch>
     </div>

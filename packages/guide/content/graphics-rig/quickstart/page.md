@@ -1,8 +1,22 @@
-TK.
+*{ Temporary for prototype }*
 
-```
-$ yarn start
-```
+1. Clone the prototype from [the repository on GitHub](https://github.com/reuters-graphics/project-template-test).
+
+  ```
+  $ git clone git@github.com:reuters-graphics/project-template-test.git
+  ```
+
+2. Install dependencies.
+
+  ```
+  $ yarn
+  ```
+
+3. Start the development server.
+
+  ```
+  $ yarn start
+  ```
 
 
 ### What's in it? Folders...

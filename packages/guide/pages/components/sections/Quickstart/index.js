@@ -1,4 +1,4 @@
-import Content from './content.md';
+import Content from 'Content/quickstart/page.md';
 import withRenderers from '../../common/markdown/withRenderers';
 
 const Quickstart = () => withRenderers(Content);

@@ -1,5 +1,5 @@
 import CodeRenderer from 'Components/common/markdown/CodeRenderer';
-import Content from './content.md';
+import Content from 'Content/colors/page.md';
 import Explorer from './Explorer/';
 import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';

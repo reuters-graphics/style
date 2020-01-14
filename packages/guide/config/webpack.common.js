@@ -14,6 +14,7 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, '../pages/components/'),
       Theme: path.resolve(__dirname, '../pages/theme/'),
+      Content: path.resolve(__dirname, '../content'),
     },
   },
   module: {
