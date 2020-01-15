@@ -461,7 +461,7 @@ The only convention you need to respect is that your script has one entry file, 
 > - src/
 >   - js/
 >     - tools/
->     - app.js
+>     - **app.js**
 
 (You can safely ignore scripts in the `tools/` directory, which include some scripts for page furniture like our share tools and others that are only used during development.)
 
