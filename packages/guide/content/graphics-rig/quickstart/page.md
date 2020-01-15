@@ -1,6 +1,6 @@
 The Graphics Rig is the primary tool for building interactive and graphic pages at Reuters Graphics.
 
-The rig requires **Node version 12.0 or greater**. You can use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node.
+The rig requires **Node version 12.0 or greater**. (You can use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node.)
 
 
 ## Starting a project
@@ -17,16 +17,17 @@ The rig requires **Node version 12.0 or greater**. You can use [nvm](https://git
 
 > - bin/
 > - config/
-> - locales/
+> - **locales/**
 > - project-files/
 > - **src/**
 > - package.json
 
-- `bin`: Admin scripts that do one-off tasks like resize images and check metadata files.
-- `config`: Admin scripts that configure the page builder, [webpack](https://webpack.js.org/).
-- `locales`: Folders for each locale that contain the text content of your page. This is where you'll want to write most of your content so that it's easily translatable.
-- `project-files`: Any arbitrary files you want to keep with your project but not publish, e.g., ai files.
-- `src`: **Write your code here!**
+- `bin/`: Admin scripts that do one-off tasks like resize images and check metadata files.
+- `config/`: Admin scripts that configure the page builder. (Mostly [webpack](https://webpack.js.org/).)
+- `locales/`: 👈 **Write your content here!**  Folders for each locale. See [Copy and translation](../copy-and-translation/).
+- `project-files/`: Any arbitrary files you want to keep with your project but not publish, e.g., ai files.
+- `src/`: 👈 **Write your code here!** See [Writing Code](../writing-code/).
+- `package.json`: Contains metadata about the project.
 
 Read more in this guide.
 
@@ -71,3 +72,7 @@ $ yarn start --ngrok
 ```
 $ yarn preview --ngrok
 ```
+
+## Publishing
+
+TK.
