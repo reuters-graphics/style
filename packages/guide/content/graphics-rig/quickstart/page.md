@@ -4,12 +4,20 @@ The rig requires **Node version 12.0 or greater**. (You can use [nvm](https://gi
 
 
 ## Starting a project
-*{ Temporary for prototype }*
 
-1. Clone the prototype from [the repository on GitHub](https://github.com/reuters-graphics/project-template-test).
+1. If you haven't already, install our template engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to bluprint's CLI.
+
+  ```bash
+  $ yarn global add @reuters-graphics/bluprint
+  $ bluprint add reuters-graphics/graphics-rig
+  ```
+
+2. Make a fresh directory for your new project and use the `graphics rig` bluprint to scaffold out your project.
 
   ```
-  $ git clone git@github.com:reuters-graphics/project-template-test.git
+  $ mkdir my-new-project
+  $ cd my-new-project
+  $ bluprint new
   ```
 
 
