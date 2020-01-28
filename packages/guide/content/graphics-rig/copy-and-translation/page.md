@@ -1,4 +1,4 @@
-Translation is a first-class function of the rig. It's also very easy to do.
+Translation is a first-class function of the rig. It's also very easy to create multiple versions of your page for each locale you want to publish in.
 
 ## Contents
 
@@ -18,7 +18,7 @@ Translation is a first-class function of the rig. It's also very easy to do.
 
 **You must at least have an `en` locale directory.** (Included by default!)
 
-The **folder name is critical** and used as a key throughout the rig to get content and indicate what locale is being built.
+The **folder name is critical** and used as a key throughout the rig to get content and indicate which locale is being built.
 
 Beyond the folder, your content files can be named whatever you like. That said, all translation tools in the rig -- including [localeMarkdown](../writing-code/#localeMarkdown), [localeData](../writing-code/#localeData), [gt.gettext](../writing-code/#gtgettext) and [ttags](../writing-code/#Translation-with-ttag) -- **expect all locale folders to contain the same files.** So be sure each locale folder is a mirror of the others.
 
@@ -36,7 +36,13 @@ Beyond the folder, your content files can be named whatever you like. That said,
 
 Creating a new locale is dead simple. Just add a new folder using the [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for your translation.
 
-You'll need to run the `extract-text` command to create `.po` files once you've created the directory and then be sure the new folder mirrors other locales.
+As a shortcut to scaffold your new locale, you can use the `add-locale` command to create a copy of all the translation files in your `en` locale:
+
+```bash
+$ yarn add-locale
+```
+
+If you *don't* use the command, you'll need to run the `extract-text` command to create `.po` files once you've created the directory and then be sure the new folder mirrors other locales.
 
 ## Extracting text
 
@@ -50,8 +56,8 @@ Running the command multiple times to pick up new text is safe and won't erase t
 
 ## Previewing translated pages
 
-As of now, the only way to preview translations is to build the English version of the page. Then you can use the `preview` command to see the page built for your translation, for example at `http://localhost:{port}/de/`.
+As of now, the only way to preview translations is to build the English version of the page. Use the `preview` command to see the page built for your translation, for example at `http://localhost:{port}/de/`.
 
 ```
-$ yarn build && yarn preview
+$ yarn preview
 ```

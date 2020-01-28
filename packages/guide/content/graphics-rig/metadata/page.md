@@ -26,7 +26,7 @@ The metadata files are located in two places:
 
 ## How do I fill out metadata?
 
-The easiest way is to build your project. The `build` command will check your metadata, create any missing `metadata.json` files in your locales and prompt you for any pieces of required information that are missing. Going through the prompt will create the minimum metadata you need to publish your page.
+The easiest way is to build your project. The `build` command will check your metadata, create any missing `metadata.json` files in your locales and prompt you for any pieces of required information that are missing.
 
 ```
 $ yarn build
@@ -42,6 +42,7 @@ If you need to edit or add to your metadata, you can do so in the locale-specifi
 - A title and description optimized for sharing on social media
 - A title and description optimized for search
 - A path to a share image in `src/static/img` (Can be the same for each locale.)
+- A root (generic topic )and wild (specific topic) slug for each page. (Can be the same for each locale.)
 
 *For the package:*
 - At least one author
@@ -50,12 +51,14 @@ If you need to edit or add to your metadata, you can do so in the locale-specifi
 
 *For each locale:*
 - The dimensions of the share image
-- The ID and URL of each locale page
+- The edition IDs and public URLs for each page uploaded to the graphics server.
 
 *For the package:*
 - Publish date
 - The latest update date, if there was one
-- The workspace ID of the package on the graphics server
+- The workspace ID of the pack on the graphics server
+- The graphic ID of the pack on the graphics server
+- The graphics desk the project is publishing from, e.g., London, New York or Singapore
 
 **Optional metadata from you**
 

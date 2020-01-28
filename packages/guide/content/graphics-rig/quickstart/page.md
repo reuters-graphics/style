@@ -1,6 +1,6 @@
 The Graphics Rig is the primary tool for building interactive and graphic pages at Reuters Graphics.
 
-The rig requires **Node version 12.0 or greater**. (You can use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node.)
+The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node...) and [the Yarn package manager](https://legacy.yarnpkg.com/en/docs/install).
 
 
 ## Starting a project
@@ -83,4 +83,16 @@ $ yarn preview --ngrok
 
 ## Publishing
 
-TK.
+Projects are published through our [Reuters graphics server](https://editdata.thomsonreuters.com/Pages/graphics.aspx#/rngs/home). Uploading your files to the server is easy:
+
+```
+$ yarn upload
+```
+
+This command will check your metadata files to make sure you have all the information you need on the page, will build out your project files and finally create the graphics pack and individual editions of your project on the server.
+
+Optionally, you can upload a single locale to the server by passing the locale code to the command:
+
+```
+$ yarn upload de
+```
