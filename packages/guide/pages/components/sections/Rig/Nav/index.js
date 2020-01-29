@@ -16,6 +16,7 @@ const Nav = () => {
         <NavItem name='Copy and translation' link='copy-and-translation/' />
         <NavItem name='Metadata' link='metadata/' />
         <NavItem name='ai2html' link='ai2html/' />
+        <NavItem name='FAQ' link='faq/' />
       </nav>
     </div>
   );

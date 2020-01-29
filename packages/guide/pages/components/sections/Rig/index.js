@@ -4,6 +4,7 @@ import Ai2Html from './pages/ai2html';
 import Code from './pages/code';
 import Copy from './pages/copy';
 import Embed from './pages/embed';
+import FAQ from './pages/faq';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Home from './pages/home';
 import Media from './pages/media';
@@ -39,6 +40,7 @@ export default () => {
         <Route path={`${match.path}copy-and-translation/`} component={Copy} />
         <Route path={`${match.path}metadata/`} component={Metadata} />
         <Route path={`${match.path}embeddable-page/`} component={Embed} />
+        <Route path={`${match.path}faq/`} component={FAQ} />
         <Route component={Four04} />
       </Switch>
     </div>
