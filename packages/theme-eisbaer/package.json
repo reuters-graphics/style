@@ -1,0 +1,36 @@
+{
+  "name": "@reuters-graphics/style-theme-eisbaer",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Eisbaer styles theme at Reuters",
+  "author": "Jon McClure <jon.r.mcclure@gmail.com>",
+  "main": "scss/main.scss",
+  "files": [
+    "scss/**/*.scss"
+  ],
+  "scripts": {
+    "build": "sass ./scss/main.scss dist/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuters-graphics/style.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@reuters-graphics/style-color": "latest",
+    "@reuters-graphics/style-main": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.13.1",
+    "node-sass-tilde-importer": "^1.0.2",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "postcss-scss": "^2.0.0",
+    "sass": "^1.25.0"
+  }
+}

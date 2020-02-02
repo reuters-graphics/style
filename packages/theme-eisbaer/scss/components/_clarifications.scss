@@ -1,0 +1,60 @@
+@import "~@reuters-graphics/style-color/scss/gray";
+
+section.clarifications {
+  @extend .well;
+
+  margin: 40px auto 0;
+
+  @extend .font-sans;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 300;
+
+    @extend .uppercase;
+    @extend .spaced-least;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding-left: 20px;
+
+    @include media-breakpoint-down(xs) {
+      padding-left: 10px;
+    }
+  }
+
+  li {
+    @extend .small-size;
+
+    position: relative;
+    margin: 0;
+    padding-bottom: 1em;
+    padding-left: 20px;
+
+    &:first-child {
+      overflow-y: hidden;
+    }
+  }
+
+  li::before {
+    content: '';
+    background-color: $gray-200;
+    position: absolute;
+    bottom: 24px;
+    top: -24px;
+    left: 6px;
+    width: 2px;
+  }
+
+  li::after {
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 40 40" focusable="false"><circle stroke="none" fill="rgba(230, 231, 232, 1)" cx="20" cy="20" r="12"></circle></svg>');
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+  }
+}

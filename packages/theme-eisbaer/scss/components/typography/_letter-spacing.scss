@@ -1,0 +1,39 @@
+.spaced-least {
+  letter-spacing: 0.1rem;
+
+  &.important {
+    letter-spacing: 0.1rem !important;
+  }
+}
+
+.spaced-less {
+  letter-spacing: 0.25rem;
+
+  &.important {
+    letter-spacing: 0.25rem !important;
+  }
+}
+
+.spaced {
+  letter-spacing: 0.5rem;
+
+  &.important {
+    letter-spacing: 0.5rem !important;
+  }
+}
+
+.spaced-extra {
+  letter-spacing: 0.75rem;
+
+  &.important {
+    letter-spacing: 0.75rem !important;
+  }
+}
+
+.spaced-super {
+  letter-spacing: 1rem;
+
+  &.important {
+    letter-spacing: 1rem !important;
+  }
+}

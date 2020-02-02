@@ -5,9 +5,10 @@ The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/
 
 ## Starting a project
 
-1. If you haven't already, install our template engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to bluprint's CLI.
+1. If you haven't already, install our task [runner](https://github.com/reuters-graphics/runner); our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to the CLI.
 
   ```bash
+  $ yarn global add @reuters-graphics/runner
   $ yarn global add @reuters-graphics/bluprint
   $ bluprint add reuters-graphics/graphics-rig
   ```
@@ -17,7 +18,7 @@ The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/
   ```
   $ mkdir my-new-project
   $ cd my-new-project
-  $ bluprint new
+  $ bluprint start
   ```
 
 
@@ -42,17 +43,11 @@ Read more in this guide.
 
 ## Developing
 
-1. Install dependencies.
+The bluprint will install dependencies for you and automatically start a development server. To restart the dev server, use the runner:
 
-  ```
-  $ yarn
-  ```
-
-2. Start the development server.
-
-  ```
-  $ yarn start
-  ```
+```
+$ runner start
+```
 
 
 ## Building and previewing
@@ -60,13 +55,13 @@ Read more in this guide.
 1. When you're ready to build your page, the build command will check that you've filled out all the relevant metadata and publish each translation of your page.
 
   ```
-  $ yarn build
+  $ runner build
   ```
 
 2. To preview the built pages for each translation, run the `preview` command which will start a local server that will show you exactly what your page will look like to your readers.
 
   ```
-  $ yarn preview
+  $ runner preview
   ```
 
 ## Sharing previews
@@ -74,11 +69,11 @@ Read more in this guide.
 Both the `start` and `preview` commands take an optional `--ngrok` argument that will create a secure (**but public!**) URL you can share with others or use to test your page on a mobile phone. Read more about [ngrok](https://ngrok.com/) on their website.
 
 ```
-$ yarn start --ngrok
+$ runner start --ngrok
 ```
 
 ```
-$ yarn preview --ngrok
+$ runner preview --ngrok
 ```
 
 ## Publishing
@@ -86,7 +81,7 @@ $ yarn preview --ngrok
 Projects are published through our [Reuters graphics server](https://editdata.thomsonreuters.com/Pages/graphics.aspx#/rngs/home). Uploading your files to the server is easy:
 
 ```
-$ yarn upload
+$ runner upload
 ```
 
 This command will check your metadata files to make sure you have all the information you need on the page, will build out your project files and finally create the graphics pack and individual editions of your project on the server.
@@ -94,5 +89,5 @@ This command will check your metadata files to make sure you have all the inform
 Optionally, you can upload a single locale to the server by passing the locale code to the command:
 
 ```
-$ yarn upload de
+$ runner upload de
 ```

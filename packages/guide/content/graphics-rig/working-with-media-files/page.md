@@ -110,13 +110,13 @@ Put an image at the largest resolution you want to support in your `static` dire
 Now to make a responsive image set, run the srcset command in the terminal:
 
 ```
-$ yarn make-srcset bigPicture.jpg
+$ runner make-srcset bigPicture.jpg
 ```
 
 The command will create images at a few standard widths, but you can specify your own using the `--sizes` argument:
 
 ```
-$ yarn make-srcset bigPicture.jpg --sizes 300 600 1200 1500
+$ runner make-srcset bigPicture.jpg --sizes 300 600 1200 1500
 ```
 
 The command will create a new directory with your new images...

@@ -1,0 +1,29 @@
+@import "~@reuters-graphics/style-color/scss/gray";
+
+section.graphic {
+  @extend .well;
+
+  margin: 0 auto;
+
+  @extend .font-sans;
+
+  &:not(.borderless) {
+    @extend .separated;
+  }
+
+
+  p {
+    @extend .font-sans;
+    @extend .paragraph-size;
+  }
+
+  // Use for footnotes and source lines
+  aside {
+    p {
+      @extend .small-size;
+
+      margin-bottom: 5px;
+      color: $brand-text-secondary;
+    }
+  }
+}

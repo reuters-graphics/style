@@ -1,0 +1,23 @@
+.well {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.wide {
+    max-width: 800px;
+  }
+
+  &.wider {
+    max-width: 1200px;
+  }
+
+  &.widest {
+    max-width: 100%;
+  }
+
+  &.fluid {
+    width: 100vw;
+    margin-left: -15px;
+    max-width: none;
+  }
+}

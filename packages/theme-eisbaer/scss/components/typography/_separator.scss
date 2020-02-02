@@ -1,0 +1,32 @@
+@import "~@reuters-graphics/style-color/scss/gray";
+
+.separator-rule {
+  display: block;
+  content: '';
+  background: $gray-200;
+  height: 1px;
+  width: 50%;
+  margin: 35px auto;
+}
+
+.separated {
+  &::before {
+    @extend .separator-rule;
+  }
+
+  &::after {
+    @extend .separator-rule;
+  }
+}
+
+.separated-over {
+  &::before {
+    @extend .separator-rule;
+  }
+}
+
+.separated-under {
+  &::after {
+    @extend .separator-rule;
+  }
+}

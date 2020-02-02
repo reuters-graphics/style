@@ -63,6 +63,6 @@ Watch out for CSS rules using viewport dimensions. `100vh` may mean something ve
 
 ## Developing the embed page
 
-The development server (`yarn start`) will also create a page to preview the embed page within an iframe at a set width. Use this preview to test how your page will look in someone else's CMS.
+The development server (`runner start`) will also create a page to preview the embed page within an iframe at a set width. Use this preview to test how your page will look in someone else's CMS.
 
 Access it at `https://localhost:{port}/framer.html` or using the link in the dev tool in the lower left corner of the preview page.

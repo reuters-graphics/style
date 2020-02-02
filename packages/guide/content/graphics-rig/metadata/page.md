@@ -29,7 +29,7 @@ The metadata files are located in two places:
 The easiest way is to build your project. The `build` command will check your metadata, create any missing `metadata.json` files in your locales and prompt you for any pieces of required information that are missing.
 
 ```
-$ yarn build
+$ runner build
 ```
 
 If you need to edit or add to your metadata, you can do so in the locale-specific metadata files or in the `reuters` key in `package.json`.

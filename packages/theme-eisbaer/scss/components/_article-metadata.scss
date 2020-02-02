@@ -1,0 +1,35 @@
+@import "~@reuters-graphics/style-main/scss/fonts/mixins";
+@import "~@reuters-graphics/style-color/scss/base";
+@import "~@reuters-graphics/style-color/scss/brand";
+
+.article-metadata {
+  padding: 40px 0;
+
+  @include font-sans;
+
+  text-align: center;
+
+  .byline-container {
+    margin-bottom: 12px;
+  }
+
+  .byline {
+    a {
+      color: $brand-text;
+    }
+  }
+
+  .dateline-container {
+    @extend .uppercase;
+
+    color: $brand-text-secondary;
+    font-size: 0.6rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.1rem;
+
+    .time {
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+  }
+}

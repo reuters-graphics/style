@@ -1,0 +1,9 @@
+section.end-notes {
+  @extend .well;
+
+  margin: 40px auto 0;
+
+  p {
+    @extend .font-sans;
+  }
+}
