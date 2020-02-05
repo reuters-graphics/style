@@ -21,7 +21,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <Router basename='/theme-guides/eisbaer'>
+      <Router basename='/style/theme-guides/eisbaer'>
         <div>
           <Nav />
           <Switch>
