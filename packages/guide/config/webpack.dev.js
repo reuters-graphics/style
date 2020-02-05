@@ -25,7 +25,7 @@ const config = (env, argv, port) => (merge(common, {
           to: (context) => context.parsedUrl.pathname.replace('/statics/', '/'),
         },
         {
-          from: /^\/theme-guides\/.*/,
+          from: /^\/style\/theme-guides\/.*/,
           to: (context) => context.parsedUrl.pathname.replace('/theme-guides/', '/'),
         },
       ],

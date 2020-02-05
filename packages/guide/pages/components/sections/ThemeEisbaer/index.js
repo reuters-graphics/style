@@ -3,7 +3,7 @@ import React from 'react';
 
 export default class Theme extends React.Component {
   componentDidMount() {
-    this.parent = new Pym.Parent('pym-frame', '/theme-guides/eisbaer/', {});
+    this.parent = new Pym.Parent('pym-frame', '/style/theme-guides/eisbaer/', {});
   }
 
   render() {
