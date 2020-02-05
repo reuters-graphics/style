@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Rig from 'Components/sections/Rig';
 import Snippets from 'Components/sections/Snippets';
+import ThemeEisbaer from './components/sections/ThemeEisbaer';
 import { component } from './styles.scss';
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
                 <Route path='/colors/' component={Colors} />
                 <Route path='/linters/' component={Linters} />
                 <Route path='/snippets/' component={Snippets} />
+                <Route path='/themes/eisbaer/' component={ThemeEisbaer} />
                 <Route path='/404/' component={Four04} />
                 <Route path='/404.html' component={Four04} />
                 <Route component={Four04} />

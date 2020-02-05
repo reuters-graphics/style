@@ -2,38 +2,21 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const portfinder = require('portfinder');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 
-portfinder.basePort = 3000;
-
-const config = (env, argv, port) => (merge(common, {
-  mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
-  devServer: {
-    disableHostCheck: true,
-    port: port,
-    open: true,
-    contentBase: [
-      path.resolve(__dirname, '../'),
-      path.resolve(__dirname, '../../../docs/theme-guides/'),
-    ],
-    historyApiFallback: {
-      rewrites: [
-        { from: /^\/.*\/app.js/, to: '/app.js' },
-        {
-          from: /^\/statics\/.*/,
-          to: (context) => context.parsedUrl.pathname.replace('/statics/', '/'),
-        },
-        {
-          from: /^\/theme-guides\/.*/,
-          to: (context) => context.parsedUrl.pathname.replace('/theme-guides/', '/'),
-        },
-      ],
-    },
+module.exports = (env, argv) => (merge(common, {
+  mode: 'production',
+  output: {
+    filename: '[name].js',
+    path: path.join(__dirname, '../../../docs/theme-guides/eisbaer/'),
+    publicPath: '/style/theme-guides/eisbaer/',
   },
   module: {
     rules: [{
-      test: /theme.*\.scss$/,
+      test: /scss.*\.scss$/,
       use: [{
         loader: 'style-loader',
       }, {
@@ -52,7 +35,7 @@ const config = (env, argv, port) => (merge(common, {
       }],
     }, {
       test: /\.scss$/,
-      exclude: [/theme.*\.scss$/, /node_modules\/*/],
+      exclude: [/scss.*\.scss$/, /node_modules\/*/],
       use: [{
         loader: 'style-loader',
       }, {
@@ -80,13 +63,20 @@ const config = (env, argv, port) => (merge(common, {
       }],
     }],
   },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true,
+      }),
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../pages/statics/template/index.html'),
+      inlineSource: '.(js|css)$',
     }),
+    new HtmlWebpackInlineSourcePlugin(),
+    new CleanWebpackPlugin(),
   ],
 }));
-
-module.exports = (env, argv) =>
-  portfinder.getPortPromise()
-    .then(port => config(env, argv, port));

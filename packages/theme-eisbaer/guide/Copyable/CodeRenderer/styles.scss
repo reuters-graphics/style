@@ -1,0 +1,59 @@
+@import "~@reuters-graphics/style-color/scss/brand";
+
+.component :global {
+  position: relative;
+
+  pre {
+    background-color: $brand-inverted-background;
+    border-radius: 10px;
+    margin: 60px 0;
+    padding: 0.75em 1em;
+    font-size: 14px;
+  }
+
+  button {
+    border: 0;
+    background-color: $brand-inverted-background;
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    outline: none !important;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    &:active {
+      border: 1px solid $brand-primary;
+    }
+
+    &.copy {
+      right: 10px;
+      bottom: 5px;
+
+      &:active {
+        right: 8px;
+        bottom: 3px;
+      }
+    }
+  }
+
+  .token.number {
+    color: hsl(350, 40%, 70%);
+    background-color: inherit;
+    padding: inherit;
+    min-width: inherit;
+    margin: inherit;
+    font-size: inherit;
+    height: inherit;
+    justify-content: inherit;
+    display: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+    align-items: inherit;
+    border-radius: inherit;
+  }
+}

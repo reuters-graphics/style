@@ -9,7 +9,16 @@
     "scss/**/*.scss"
   ],
   "scripts": {
-    "build": "sass ./scss/main.scss dist/main.css"
+    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "build": "webpack --mode=production --config config/webpack.prod.js"
+  },
+  "reactSnap": {
+    "source": "./../../docs/theme-guides/eisbaer/",
+    "fixWebpackChunksIssue": false,
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "repository": {
     "type": "git",
@@ -24,13 +33,40 @@
     "@reuters-graphics/style-main": "latest"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@hobbes7878/eslint-config": "^0.0.2",
+    "@politico/markdown-react-loader": "^0.0.3",
     "autoprefixer": "^9.7.4",
+    "base64-image-loader": "^1.2.1",
     "bootstrap": "^4.4.1",
+    "cheerio": "^1.0.0-rc.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "node-sass-tilde-importer": "^1.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "portfinder": "^1.0.25",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
     "postcss-scss": "^2.0.0",
-    "sass": "^1.25.0"
+    "pretty": "^2.0.0",
+    "prismjs": "^1.19.0",
+    "pym.js": "^1.3.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-refractor": "^1.0.1",
+    "react-router-dom": "^5.1.2",
+    "react-snap": "^1.23.0",
+    "refractor": "^2.10.1",
+    "sass": "^1.25.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-merge": "^4.2.2",
+    "whatwg-fetch": "^3.0.0"
   }
 }

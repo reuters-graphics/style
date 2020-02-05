@@ -13,10 +13,7 @@ const config = (env, argv, port) => (merge(common, {
     disableHostCheck: true,
     port: port,
     open: true,
-    contentBase: [
-      path.resolve(__dirname, '../'),
-      path.resolve(__dirname, '../../../docs/theme-guides/'),
-    ],
+    contentBase: path.resolve(__dirname, '../'),
     historyApiFallback: {
       rewrites: [
         { from: /^\/.*\/app.js/, to: '/app.js' },
@@ -24,16 +21,12 @@ const config = (env, argv, port) => (merge(common, {
           from: /^\/statics\/.*/,
           to: (context) => context.parsedUrl.pathname.replace('/statics/', '/'),
         },
-        {
-          from: /^\/theme-guides\/.*/,
-          to: (context) => context.parsedUrl.pathname.replace('/theme-guides/', '/'),
-        },
       ],
     },
   },
   module: {
     rules: [{
-      test: /theme.*\.scss$/,
+      test: /scss.*\.scss$/,
       use: [{
         loader: 'style-loader',
       }, {
@@ -52,7 +45,7 @@ const config = (env, argv, port) => (merge(common, {
       }],
     }, {
       test: /\.scss$/,
-      exclude: [/theme.*\.scss$/, /node_modules\/*/],
+      exclude: [/scss.*\.scss$/, /node_modules\/*/],
       use: [{
         loader: 'style-loader',
       }, {
@@ -81,9 +74,7 @@ const config = (env, argv, port) => (merge(common, {
     }],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../pages/statics/template/index.html'),
-    }),
+    new HtmlWebpackPlugin(),
   ],
 }));
 

@@ -1,0 +1,81 @@
+@import "~@reuters-graphics/style-main/scss/fonts/variables";
+
+.component :global {
+  a {
+    text-decoration: none !important;
+  }
+
+
+  h1 {
+    font-size: 2.25em;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin: 0 0 1em;
+    transition: margin 0.2s;
+
+    &.small {
+      margin: 0 0 10px;
+    }
+  }
+
+  nav {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    transition: margin 0.2s;
+    margin-bottom: -40px;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  nav.home {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .nav-item {
+      display: block;
+    }
+
+    h6 {
+      display: block;
+    }
+  }
+
+  h6 {
+    display: none;
+  }
+
+  .nav-item {
+    display: none;
+    font-family: $font-family-sans-serif;
+    margin-left: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    font-weight: 300;
+    color: #666;
+    transition: all 0.2s;
+
+    &.active {
+      display: block;
+      margin-left: 0;
+      font-weight: bold;
+      color: inherit;
+      margin-bottom: 40px;
+
+      &:hover {
+        margin-left: 0;
+      }
+    }
+
+    &:hover {
+      margin-left: 15px;
+      text-decoration: none;
+    }
+  }
+}

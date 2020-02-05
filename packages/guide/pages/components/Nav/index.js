@@ -54,6 +54,7 @@ const Nav = (props) => {
           <NavItem name='Colors' link='/colors/' />
           <NavItem name='Linters' link='/linters/' />
           <NavItem name='Snippets' link='/snippets/' />
+          <NavItem name='Theme: Eisbär' link='/themes/eisbaer/' />
         </nav>
       </div>
     </div>
