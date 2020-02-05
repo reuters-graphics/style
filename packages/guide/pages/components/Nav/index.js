@@ -15,6 +15,10 @@ const Nav = (props) => {
 
   return (
     <div className={classnames(component)}>
+      <div
+        className={classnames('nav-escape', { clickable: visible })}
+        onClick={() => setVisible(false)}
+      />
       <div className={classnames('nav-container', { visible })}>
         <a
           className='github-bug'

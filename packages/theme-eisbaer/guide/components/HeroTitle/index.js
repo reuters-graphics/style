@@ -6,7 +6,7 @@ import imgSrc from './bear.jpg';
 const HeroTitle = () => (
   <section className='hero-title'>
     <figure>
-      <img className='crop-right' src={imgSrc} alt='WRITE ME' />
+      <img className='crop-left' src={imgSrc} alt='WRITE ME' />
     </figure>
     <div className='title color-white'>
       <p className='section-title text-shadow color-orange'>

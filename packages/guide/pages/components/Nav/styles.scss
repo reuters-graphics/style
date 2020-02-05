@@ -3,6 +3,21 @@
 @import "~Theme/variables";
 
 .component :global {
+  .nav-escape {
+    position: fixed;
+    z-index: 998;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &.clickable {
+      display: block;
+    }
+  }
+
   .nav-container {
     z-index: 999;
     height: 100vh;
