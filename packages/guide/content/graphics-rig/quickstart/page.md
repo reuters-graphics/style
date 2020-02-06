@@ -5,15 +5,23 @@ The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/
 
 ## Starting a project
 
-1. If you haven't already, install our task [runner](https://github.com/reuters-graphics/runner); our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to the CLI.
+##### If this is your first time
+
+1. Create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
+
+2. Add that token as the environment variable `GITHUB_TOKEN` to your machine. (Here's [how on a mac](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255#6dad)).
+
+3. Install our task [runner](https://github.com/reuters-graphics/runner); our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to the CLI.
 
   ```bash
   $ yarn global add @reuters-graphics/runner
   $ yarn global add @reuters-graphics/bluprint
-  $ bluprint add reuters-graphics/graphics-rig
+  $ bluprint add reuters-graphics/bluprint_graphics-rig
   ```
 
-2. Make a fresh directory for your new project and use the `graphics rig` bluprint to scaffold out your project.
+##### Now...
+
+Make a fresh directory for your new project and use the `graphics rig` bluprint to scaffold out your project.
 
   ```
   $ mkdir my-new-project
