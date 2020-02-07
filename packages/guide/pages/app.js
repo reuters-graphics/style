@@ -8,7 +8,6 @@ import Four04 from 'Components/sections/404';
 import Home from 'Components/sections/Home';
 import Linters from 'Components/sections/Linters';
 import Nav from 'Components/Nav';
-import Quickstart from 'Components/sections/Quickstart';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Rig from 'Components/sections/Rig';
@@ -26,7 +25,6 @@ const App = () => (
             <div className='col-12'>
               <Switch>
                 <Route path='/' exact component={Home} />
-                <Route path='/quickstart/' component={Quickstart} />
                 <Route path='/graphics-rig/' component={Rig} />
                 <Route path='/fonts/' component={Fonts} />
                 <Route path='/colors/' component={Colors} />

@@ -52,7 +52,6 @@ const Nav = (props) => {
         </NavLink>
 
         <nav className='nav flex-column'>
-          <NavItem name='Quickstart' link='/quickstart/' />
           <NavItem name='Graphics rig' link='/graphics-rig/' />
           <NavItem name='Fonts' link='/fonts/' />
           <NavItem name='Colors' link='/colors/' />
