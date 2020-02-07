@@ -1,0 +1,51 @@
+@import "~@reuters-graphics/style-main/scss/fonts/mixins";
+
+.component :global {
+  h6 {
+    font-size: 1.2em;
+    color: gray;
+    font-weight: 200;
+    margin-top: 15px;
+  }
+
+  .class-options {
+    margin-top: 40px;
+
+    .options-row {
+      margin-top: 5px;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    button {
+      margin-bottom: 5px;
+      margin-left: 5px;
+      outline: none !important;
+      border: 2px solid #ccc;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 200;
+
+      @include font-sans;
+
+      font-size: 1em;
+
+      &.active,
+      &:hover {
+        border: 2px solid #333;
+        // border-bottom: 2px solid #666;
+      }
+
+      &.active {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+
+  .copyable-code {
+    margin-top: 40px;
+  }
+}

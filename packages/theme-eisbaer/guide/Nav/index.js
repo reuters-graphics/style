@@ -1,12 +1,11 @@
 import { NavLink, useRouteMatch } from 'react-router-dom';
 
-import NavItem from './NavItem';
 import React from 'react';
 import bear from './bear.jpg';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 
-const Nav = () => {
+const Nav = (props) => {
   const match = useRouteMatch();
   return (
     <div className={component}>
@@ -22,9 +21,7 @@ const Nav = () => {
         </div>
       </NavLink>
       <nav className={classnames({ home: match.isExact })}>
-        <NavItem name='Typography' link='typography/' />
-        <NavItem name='Dateline' link='dateline/' />
-        <NavItem name='Hero title' link='hero-title/' />
+        {props.children}
       </nav>
     </div>
   );

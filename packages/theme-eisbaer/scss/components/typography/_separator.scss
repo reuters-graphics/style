@@ -9,6 +9,18 @@
   margin: 35px auto;
 }
 
+.separator-rule-darker {
+  @extend .separator-rule;
+
+  background: $gray-300;
+}
+
+.separator-rule-darkest {
+  @extend .separator-rule;
+
+  background: $gray-500;
+}
+
 .separated {
   &::before {
     @extend .separator-rule;
@@ -19,14 +31,58 @@
   }
 }
 
+.separated-darker {
+  &::before {
+    @extend .separator-rule-darker;
+  }
+
+  &::after {
+    @extend .separator-rule-darker;
+  }
+}
+
+.separated-darkest {
+  &::before {
+    @extend .separator-rule-darkest;
+  }
+
+  &::after {
+    @extend .separator-rule-darkest;
+  }
+}
+
 .separated-over {
   &::before {
     @extend .separator-rule;
   }
 }
 
+.separated-over-darker {
+  &::before {
+    @extend .separator-rule-darker;
+  }
+}
+
+.separated-over-darkest {
+  &::before {
+    @extend .separator-rule-darkest;
+  }
+}
+
 .separated-under {
   &::after {
     @extend .separator-rule;
+  }
+}
+
+.separated-under-darker {
+  &::after {
+    @extend .separator-rule-darker;
+  }
+}
+
+.separated-under-darkest {
+  &::after {
+    @extend .separator-rule-darkest;
   }
 }

@@ -22,7 +22,8 @@
   }
 }
 
-.spaced-extra {
+.spaced-extra,
+.spaced-more {
   letter-spacing: 0.75rem;
 
   &.important {
@@ -30,7 +31,8 @@
   }
 }
 
-.spaced-super {
+.spaced-super,
+.spaced-most {
   letter-spacing: 1rem;
 
   &.important {

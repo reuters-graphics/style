@@ -1,0 +1,22 @@
+.component :global {
+  article {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: -1px;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  section {
+    div {
+      margin: 10px 0;
+      padding: 10px;
+      text-align: center;
+
+      &.color-white {
+        background-color: #ccc;
+      }
+    }
+  }
+}
