@@ -13,6 +13,17 @@
 
     .options-row {
       margin-top: 5px;
+
+      .opt-group {
+        display: inline-block;
+        border-right: 1px solid #ddd;
+        padding-right: 10px;
+        margin-right: 5px;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
     }
 
     &.hidden {

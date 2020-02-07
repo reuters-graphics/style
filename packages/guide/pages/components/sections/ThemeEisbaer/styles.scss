@@ -1,0 +1,10 @@
+.component :global {
+  margin-top: 1em;
+
+  iframe {
+    height: calc(100vh - 50px);
+    border-right: 1px solid #eee;
+    margin-bottom: -55px;
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import CodeRenderer from './CodeRenderer';
 import React from 'react';
+import TurndownService from 'turndown';
 import cheerio from 'cheerio';
 import classnames from 'classnames';
 import { component } from './styles.scss';
@@ -7,11 +8,13 @@ import flatten from 'lodash/flatten';
 import pretty from 'pretty';
 import { renderToStaticMarkup } from 'react-dom/server';
 
+const turndownService = new TurndownService();
+
 const prettify = (html) => {
   return pretty(html).split('\n').slice(5, -3).join('\n').replace(/^ {4}/gm, '');
 };
 
-export default (CopyComponent, lang = 'ejs', classOptions = {}) =>
+export default (CopyComponent, lang = 'ejs', classOptions = {}, markdown = false) =>
   class Copyable extends React.Component {
     constructor(props) {
       super(props);
@@ -70,7 +73,9 @@ export default (CopyComponent, lang = 'ejs', classOptions = {}) =>
       const renderCategory = (category) => {
         const categoryOpts = this.state[category];
         if (Array.isArray(categoryOpts)) {
-          return flatten(categoryOpts.map((categoryOpt, i) => renderButtons(category, categoryOpt, i)));
+          return flatten(categoryOpts.map((categoryOpt, i) => (
+            <div className='opt-group' key={i}>{renderButtons(category, categoryOpt, i)}</div>
+          )));
         } else {
           return renderButtons(category, categoryOpts);
         }
@@ -100,6 +105,15 @@ export default (CopyComponent, lang = 'ejs', classOptions = {}) =>
                 value={prettify($.html())}
               />
             </div>
+            {markdown && (
+              <div className='copyable-code'>
+                <h6>Markdown</h6>
+                <CodeRenderer
+                  language='markdown'
+                  value={turndownService.turndown(prettify($.html()))}
+                />
+              </div>
+            )}
           </div>
         </>
       );

@@ -14,15 +14,18 @@ import NavItem from './Nav/NavItem';
 import Photo from './components/Photo';
 import Quickstart from './components/Quickstart';
 import React from 'react';
+import TextElements from './components/TextElements';
 import Typography from './components/Typography';
+import { component } from './styles.scss';
 
 export default class Home extends React.Component {
   render() {
     return (
       <Router basename='/style/theme-guides/eisbaer'>
-        <div>
+        <div className={component}>
           <Nav>
             <NavItem name='Quickstart' link='quickstart/' />
+            <NavItem name='Text elements' link='text-elements/' />
             <NavItem name='Typography' link='typography/' />
             <NavItem name='Dateline' link='dateline/' />
             <NavItem name='Hero title' link='hero-title/' />
@@ -35,6 +38,9 @@ export default class Home extends React.Component {
           <Switch>
             <Route path='/quickstart'>
               <Quickstart />
+            </Route>
+            <Route path='/text-elements'>
+              <TextElements />
             </Route>
             <Route path='/typography'>
               <Typography />

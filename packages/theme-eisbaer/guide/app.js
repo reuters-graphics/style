@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 document.body.onload = addElement;
 
-const pymChild = new Pym.Child({ polling: 500 });
+const pymChild = new Pym.Child();
 
 function addElement() {
   const node = document.createElement('div');

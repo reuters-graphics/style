@@ -7,8 +7,10 @@ import { component } from './styles.scss';
 import copy from 'copy-to-clipboard';
 import ejs from 'refractor/lang/ejs';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import markdown from 'refractor/lang/markdown';
 
 Refractor.registerLanguage(ejs);
+Refractor.registerLanguage(markdown);
 
 const getLang = (lang) => {
   switch (lang) {
