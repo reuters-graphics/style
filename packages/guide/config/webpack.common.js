@@ -52,7 +52,7 @@ module.exports = {
         test: /\.md$/,
         use: [
           path.resolve(__dirname, 'loaders/markdown-image-loader.js'),
-          '@politico/markdown-react-loader',
+          path.resolve(__dirname, 'loaders/markdown-react-loader.js'),
         ],
       },
     ],

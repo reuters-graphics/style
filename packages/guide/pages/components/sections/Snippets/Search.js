@@ -37,7 +37,6 @@ const Search = (props) => {
 
   return (
     <div className='search'>
-      <h1>Snippets</h1>
       <div
         className='search-form'
         onClick={handleClick}

@@ -19,7 +19,12 @@
     }
 
     svg {
-      color: $brand;
+      background-color: $brand;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.25em;
+      padding: 8px;
+      margin-bottom: -2px;
     }
   }
 

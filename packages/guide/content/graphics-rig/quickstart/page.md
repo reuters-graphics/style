@@ -5,7 +5,7 @@ The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/
 
 ## Starting a project
 
-##### If this is your first time
+##### *If this is your first time*
 
 1. Create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
 
@@ -19,7 +19,7 @@ The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/
   $ bluprint add reuters-graphics/bluprint_graphics-rig
   ```
 
-##### Now...
+##### *Now...*
 
 Make a fresh directory for your new project and use the `graphics rig` bluprint to scaffold out your project.
 

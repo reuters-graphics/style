@@ -10,6 +10,7 @@ import Home from './pages/home';
 import Media from './pages/media';
 import Metadata from './pages/metadata';
 import Nav from './Nav';
+import Prerendering from './pages/prerendering';
 import Quickstart from './pages/quickstart';
 import React from 'react';
 import classnames from 'classnames';
@@ -40,6 +41,7 @@ export default () => {
         <Route path={`${match.path}copy-and-translation/`} component={Copy} />
         <Route path={`${match.path}metadata/`} component={Metadata} />
         <Route path={`${match.path}embeddable-page/`} component={Embed} />
+        <Route path={`${match.path}prerendering-js-apps/`} component={Prerendering} />
         <Route path={`${match.path}faq/`} component={FAQ} />
         <Route component={Four04} />
       </Switch>
