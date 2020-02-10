@@ -212,7 +212,7 @@ If you need to include some local data in your app, it's better to put your JSON
 import myData from './myData.json';
 import myTemplate from 'myTemplate.ejs';
 
-export default async() => {
+export default () => {
   return myTemplate({ data: myData });
 }
 ```
