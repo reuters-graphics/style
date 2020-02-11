@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-color",
-  "version": "0.0.1-alpha.36+bd19bcc",
+  "version": "0.0.1",
   "private": false,
   "description": "Color schemes for Reuters graphics",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
