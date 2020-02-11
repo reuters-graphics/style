@@ -26,6 +26,7 @@ module.exports = {
     'publish-docs': {
       run: [
         'build-docs',
+        ['git', ['add', '.']],
         ['git', ['commit'], { a: true, m: '"update docs"' }],
         ['git', ['push', 'origin', 'master']],
       ]
