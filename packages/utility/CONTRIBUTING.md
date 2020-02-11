@@ -1,3 +1,0 @@
-![](../../badge.svg)
-
-# Contributing
