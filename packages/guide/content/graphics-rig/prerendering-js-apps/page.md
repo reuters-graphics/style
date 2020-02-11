@@ -18,6 +18,7 @@ The graphics rig comes with tools to let you build and prerender JavaScript appl
   - [Using local data](#Using-local-data)
   - [Using remote data (async)](#Using-remote-data-async)
   - [Multiple EJS templates](#Multiple-EJS-templates)
+  - [Static shells](#Static-shells)
   - [More configuration](#More-configuration)
 
 ## Quickstart
@@ -258,6 +259,62 @@ export default () => {
   return appContent();
 }
 ```
+
+### Static shells
+
+One common pattern is to create a "shell" of the static elements of your page you know won't change in response to reader interactions, then hook interactive content into that shell.
+
+Here's a simple example of how to do it in the rig:
+
+First, we write a prerendered app to create our "shell" elements...
+
+```javascript
+// src/js/myApp.js
+const makeHTML = () => `
+  <div id='map-container'></div>
+  <div id='chart-container'></div>
+`;
+
+const ROOT = document.getElementById('app-root');
+if (!ROOT.hasChildNodes()) ROOT.innerHTML = makeHTML();
+
+export default () => {
+  return makeHTML();
+}
+```
+
+... next, register that prerendered app as a `staticOnly` application ...
+
+```javascript
+// config/prerenderApps.js
+module.exports = [
+  {
+    script: 'myApp.js',
+    selector: '#app-root',
+    staticOnly: true,
+  },
+];
+```
+
+... lastly, in our main script, we can hook into the shell elements ...
+
+```javascript
+// src/js/app.js
+import Map from './myMap.js';
+import Chart from './myChart.js';
+
+const map = new Map({
+  container: document.getElementById('map-container'),
+});
+map.draw();
+
+const chart = new Chart({
+  container: document.getElementById('chart-container'),
+});
+chart.draw();
+```
+
+**Important caveats:** If your prerendered app is async, this pattern won't work in development, where the main script will likely fire before the shell is rendered. It's also generally not a good idea to write prerendered apps that depend on elements created by other prerendered apps. Execution order between prerendered apps can't be guaranteed.
 
 ### More configuration
 

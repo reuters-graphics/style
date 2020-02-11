@@ -12,13 +12,27 @@
 .separator-rule-darker {
   @extend .separator-rule;
 
-  background: $gray-300;
+  background: $gray-300 !important;
 }
 
 .separator-rule-darkest {
   @extend .separator-rule;
 
-  background: $gray-500;
+  background: $gray-600 !important;
+}
+
+.separator-rule-thicker {
+  @extend .separator-rule;
+
+  height: 2px !important;
+  width: 40% !important;
+}
+
+.separator-rule-thickest {
+  @extend .separator-rule;
+
+  height: 4px !important;
+  width: 100px !important;
 }
 
 .separated {
@@ -85,4 +99,108 @@
   &::after {
     @extend .separator-rule-darkest;
   }
+}
+
+.separated-thicker {
+  &::before {
+    @extend .separator-rule-thicker;
+  }
+
+  &::after {
+    @extend .separator-rule-thicker;
+  }
+}
+
+.separated-over-thicker {
+  &::before {
+    @extend .separator-rule-thicker;
+  }
+}
+
+.separated-under-thicker {
+  &::after {
+    @extend .separator-rule-thicker;
+  }
+}
+
+.separated-thickest {
+  &::before {
+    @extend .separator-rule-thickest;
+  }
+
+  &::after {
+    @extend .separator-rule-thickest;
+  }
+}
+
+.separated-over-thickest {
+  &::before {
+    @extend .separator-rule-thickest;
+  }
+}
+
+.separated-under-thickest {
+  &::after {
+    @extend .separator-rule-thickest;
+  }
+}
+
+.separated-darker-thicker {
+  @extend .separated-thicker;
+  @extend .separated-darker;
+}
+
+.separated-darkest-thicker {
+  @extend .separated-thicker;
+  @extend .separated-darkest;
+}
+
+.separated-darker-thickest {
+  @extend .separated-thickest;
+  @extend .separated-darker;
+}
+
+.separated-darkest-thickest {
+  @extend .separated-thickest;
+  @extend .separated-darkest;
+}
+
+.separated-over-darker-thicker {
+  @extend .separated-over-thicker;
+  @extend .separated-over-darker;
+}
+
+.separated-over-darkest-thicker {
+  @extend .separated-over-thicker;
+  @extend .separated-over-darkest;
+}
+
+.separated-over-darker-thickest {
+  @extend .separated-over-thickest;
+  @extend .separated-over-darker;
+}
+
+.separated-over-darkest-thickest {
+  @extend .separated-over-thickest;
+  @extend .separated-over-darkest;
+}
+
+.separated-under-darker-thicker {
+  @extend .separated-under-thicker;
+  @extend .separated-under-darker;
+}
+
+.separated-under-darkest-thicker {
+  @extend .separated-under-thicker;
+  @extend .separated-under-darkest;
+}
+
+.separated-under-darker-thickest {
+  @extend .separated-under-thickest;
+  @extend .separated-under-darker;
+}
+
+.separated-under-darkest-thickest {
+  @extend .separated-under-thickest;
+  @extend .separated-under-darkest;
 }

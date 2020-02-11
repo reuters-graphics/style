@@ -8,13 +8,15 @@
   }
 
   section {
+    padding: 10px;
+
     div {
       margin: 10px 0;
       padding: 10px;
       text-align: center;
 
       &.color-white {
-        background-color: #ccc;
+        background-color: #333;
       }
     }
   }

@@ -98,7 +98,7 @@ Using [responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Mu
 
 The **srcset img tag** lets us specify a set of images at different widths and let the browser pick the one that's optimal for our reader's device. Read more about how it works [here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#How_do_you_create_responsive_images).
 
-The rig includes a quick command to quickly generate responsive sets of images and also outputs the finicky-to-write image tag you can use in your code. Here's how:
+The rig includes a command to quickly generate responsive sets of images (**.jpg only!**) and also outputs the finicky-to-write image tag you can use in your code. Here's how:
 
 
 Put an image at the largest resolution you want to support in your `static` directory.
@@ -113,10 +113,10 @@ Now to make a responsive image set, run the srcset command in the terminal:
 $ runner make-srcset bigPicture.jpg
 ```
 
-The command will create images at a few standard widths, but you can specify your own using the `--sizes` argument:
+The command will create images at a few standard widths, but you can specify your own:
 
 ```
-$ runner make-srcset bigPicture.jpg --sizes 300 600 1200 1500
+$ runner make-srcset bigPicture.jpg -s 300 -s 600 -s 1200 -s 1500
 ```
 
 The command will create a new directory with your new images...

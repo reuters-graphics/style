@@ -448,7 +448,7 @@ document.getElementById('temp').innerHTML = apiData.temp;
 
 This was a simplified breakdown to help you think about how your content is being served to readers and where you might want to write it in our rig.
 
-There are more advanced techniques to create both **server-rendered/static** AND **client-rendered/dynamic** content from your JavaScript, but keeping the distinction between both types of content in mind is critical no matter how you build your page.
+There are more advanced techniques to create both **server-rendered/static** AND **client-rendered/dynamic** content from your JavaScript (see [Prerendering JS apps](../prerendering-js-apps/)), but keeping the distinction between both types of content in mind is critical no matter how you build your page.
 
 ## JS
 
