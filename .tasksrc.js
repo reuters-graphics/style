@@ -21,13 +21,16 @@ module.exports = {
       run: [
         'build-libs',
         ['lerna', ['publish']],
+        // ['git', ['add', '.']],
+        // ['git', ['commit'], { m: 'published libs' }],
+        // ['git', ['push', 'origin', 'master']],
       ],
     },
     'publish-docs': {
       run: [
         'build-docs',
         ['git', ['add', '.']],
-        ['git', ['commit'], { a: true, m: '"update docs"' }],
+        ['git', ['commit'], { m: '"publish docs"' }],
         ['git', ['push', 'origin', 'master']],
       ]
     },
