@@ -192,7 +192,7 @@ To give you an idea what this does, here's your HTML *without* `staticOnly` set:
 </html>
 ```
 
-Remember, you should only use this feature if your content is truly static. For dynamic content, essentially if your app needs ANY JavaScript to run as the reader runs through your page, then you'll have to use dynamic content.
+Remember, you should only use this feature if your content is truly static. For dynamic content -- essentially if your app needs **ANY** JavaScript to run as the reader goes through your page -- then you'll have to keep you prerendered app dynamic.
 
 ## Advanced techniques
 

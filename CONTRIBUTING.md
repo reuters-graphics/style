@@ -2,10 +2,11 @@
 
 # Contributing
 
-1. Install lerna globally.
+1. Install lerna and runner globally.
 
   ```
-  $ yarn install -g lerna
+  $ yarn global add lerna
+  $ yarn global add @reuters-graphics/runner
   ```
 
 2. Install package dependencies, which will also bootstrap inner packages with lerna.

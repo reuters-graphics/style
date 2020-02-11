@@ -19,6 +19,10 @@ Reuters graphics web fashions and [style guide](https://reuters-graphics.github.
 - [`@reuters-graphics/eslint-config`](https://github.com/reuters-graphics/style/tree/master/packages/eslint-config)
 - [`@reuters-graphics/stylelint-config`](https://github.com/reuters-graphics/style/tree/master/packages/stylelint-config)
 
+##### Style themes
+- [`@reuters-graphics/style-theme-eisbaer`](https://github.com/reuters-graphics/style/tree/master/packages/theme-eisbaer)
+
+
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 ### Contributing

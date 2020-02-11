@@ -25,6 +25,14 @@ module.exports = (env, argv) => (merge(common, {
           sourceMap: true,
         },
       }, {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          plugins: [
+            require('autoprefixer'),
+          ],
+        },
+      }, {
         loader: 'resolve-url-loader',
         options: {},
       }, {
@@ -45,6 +53,14 @@ module.exports = (env, argv) => (merge(common, {
           sourceMap: true,
         },
       }, {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          plugins: [
+            require('autoprefixer'),
+          ],
+        },
+      }, {
         loader: 'resolve-url-loader',
         options: {},
       }, {
@@ -60,6 +76,14 @@ module.exports = (env, argv) => (merge(common, {
       }, {
         loader: 'css-loader',
         options: { sourceMap: true },
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          plugins: [
+            require('autoprefixer'),
+          ],
+        },
       }],
     }],
   },

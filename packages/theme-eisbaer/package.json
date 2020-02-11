@@ -2,7 +2,7 @@
   "name": "@reuters-graphics/style-theme-eisbaer",
   "version": "0.0.1",
   "private": false,
-  "description": "Eisbaer styles theme at Reuters",
+  "description": "Eisbär styles theme at Reuters",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "main": "scss/main.scss",
   "files": [
@@ -53,6 +53,7 @@
     "portfinder": "^1.0.25",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.1.0",
+    "postcss-loader": "^3.0.0",
     "postcss-scss": "^2.0.0",
     "pretty": "^2.0.0",
     "prismjs": "^1.19.0",
