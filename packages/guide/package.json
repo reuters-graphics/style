@@ -47,6 +47,7 @@
     "react-snap": "^1.23.0",
     "recursive-readdir-sync": "^1.0.6",
     "remark-autolink-headings": "^5.2.1",
+    "remark-containers": "^1.1.2",
     "remark-slug": "^5.1.2",
     "resolve-url-loader": "*",
     "sass-loader": "^8.0.0",

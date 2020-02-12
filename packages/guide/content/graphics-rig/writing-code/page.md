@@ -444,11 +444,15 @@ document.getElementById('temp').innerHTML = apiData.temp;
 
 ... our page will be updated with the most current data for readers.
 
-##### Coda
+::: aside tip
 
-This was a simplified breakdown to help you think about how your content is being served to readers and where you might want to write it in our rig.
+### Coda...
 
-There are more advanced techniques to create both **server-rendered/static** AND **client-rendered/dynamic** content from your JavaScript (see [Prerendering JS apps](../prerendering-js-apps/)), but keeping the distinction between both types of content in mind is critical no matter how you build your page.
+This section is simplified to help you think about how your content is being served to readers and where you might want to write it in our rig.
+
+There are more advanced techniques to create content that is both **server-rendered/static** AND **client-rendered/dynamic**. See [Prerendering JS apps](../prerendering-js-apps/).
+
+:::
 
 ## JS
 

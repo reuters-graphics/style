@@ -1,4 +1,5 @@
 @import "~@reuters-graphics/style-color/scss/brand";
+@import "~@reuters-graphics/style-color/scss/tangerine";
 @import "~@reuters-graphics/style-main/scss/fonts/mixins";
 
 .component :global {
@@ -55,6 +56,52 @@
 
       ul {
         margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      background-size: 1px 1px;
+      background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="2" y2="2" stroke="rgba(0, 0, 0, 0.8)" /></svg>');
+      background-position: 0 1.3rem;
+      background-repeat: repeat-x;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    aside.tip {
+      background-color: #ebebeb;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 0.8em;
+      margin: 40px 0;
+      color: #333;
+
+      a {
+        background-position: 0 1.2em;
+      }
+
+      p {
+        margin-bottom: 0.8em;
+      }
+
+      h3 {
+        border-bottom: 1px solid #333;
+        margin: 0 0 15px;
+        font-size: 1.25em;
+        font-weight: 600;
+      }
+
+      pre {
+        font-size: 0.9em;
+        margin: 20px 0 25px;
+      }
+
+      ul {
+        margin: 0.8em 0 0.9em;
       }
     }
 

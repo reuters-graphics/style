@@ -3,23 +3,50 @@ The Graphics Rig is the primary tool for building interactive and graphic pages 
 The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node...) and [the Yarn package manager](https://legacy.yarnpkg.com/en/docs/install).
 
 
+
 ## Starting a project
 
-##### *If this is your first time*
+::: aside tip
 
-1. Create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
+### If this is your first time...
 
-2. Add that token as the environment variable `GITHUB_TOKEN` to your machine. (Here's [how on a mac](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255#6dad)).
+... you'll need to run through a couple additional setup steps.
 
-3. Install our task [runner](https://github.com/reuters-graphics/runner); our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), and add the bluprint for the graphics rig to the CLI.
+**First,** install our task [runner](https://github.com/reuters-graphics/runner) and our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), **globally**.
+
+```bash
+$ yarn global add @reuters-graphics/runner
+$ yarn global add @reuters-graphics/bluprint
+```
+
+**Second,** create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and do **one** of the following:
+
+- Add that token as the environment variable `GITHUB_TOKEN` on your machine. (Here's [how on a mac](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255#6dad).)
+
+- Add the token directly to bluprint's CLI:
 
   ```bash
-  $ yarn global add @reuters-graphics/runner
-  $ yarn global add @reuters-graphics/bluprint
+  $ bluprint token <your github token>
+  ```
+
+
+**Now,** add the graphics rig bluprint to bluprint's CLI:
+
+  ```bash
   $ bluprint add reuters-graphics/bluprint_graphics-rig
   ```
 
-##### *Now...*
+**Last thing,** when you first use the graphics rig bluprint, you'll be asked several questions that will be used to create a profile on your machine with information about your byline as well as some credentials you'll need to publish your work.
+
+Make sure you have the following credentials on hand to answer those prompts:
+
+- **username** & **password** to publish to the graphics server
+- AWS **access key** & **secret access key** with rights to publish to the graphics AWS S3 bucket
+
+If you don't have this information, reach out to an editor to get it for you.
+
+:::
+
 
 Make a fresh directory for your new project and use the `graphics rig` bluprint to scaffold out your project.
 
@@ -98,4 +125,10 @@ Optionally, you can upload a single locale to the server by passing the locale c
 
 ```
 $ runner upload de
+```
+
+After you've pushed all your code to the server, you can publish all your editions with:
+
+```
+$ runner publish
 ```

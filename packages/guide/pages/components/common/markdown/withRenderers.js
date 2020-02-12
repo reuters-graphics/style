@@ -1,8 +1,10 @@
 import CodeRenderer from './CodeRenderer';
+import ContainerRenderer from './ContainerRenderer';
 import HeadingRenderer from './HeadingRenderer';
 import ImageRenderer from './ImageRenderer';
 import ParagraphRenderer from './ParagraphRenderer';
 import React from 'react';
+import remarkContainersPlugin from 'remark-containers';
 
 const withRenderers = (ContentComponent) => (
   <div className='markdown-default'>
@@ -13,7 +15,14 @@ const withRenderers = (ContentComponent) => (
         image: ImageRenderer,
         paragraph: ParagraphRenderer,
         heading: HeadingRenderer,
+        aside: ContainerRenderer,
+        article: ContainerRenderer,
+        section: ContainerRenderer,
+        div: ContainerRenderer,
       }}
+      plugins={[
+        [remarkContainersPlugin],
+      ]}
     />
   </div>
 );
