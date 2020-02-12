@@ -111,6 +111,12 @@ $ runner start --ngrok
 $ runner preview --ngrok
 ```
 
+You can also publish your project to a testfiles directory on AWS.
+
+```
+$ runner preview:aws
+```
+
 ## Publishing
 
 Projects are published through our [Reuters graphics server](https://editdata.thomsonreuters.com/Pages/graphics.aspx#/rngs/home). Uploading your files to the server is easy:
