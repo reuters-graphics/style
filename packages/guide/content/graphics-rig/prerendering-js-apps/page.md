@@ -58,10 +58,13 @@ export default () => {
 To make sure your script also works in the browser during development, you should also write code to inject the content into your page.
 
 ```javascript
+::[10]
 // myApp.js
 
-// ...
+const somePeople = ['Ada Lovelace', 'Grace Hopper', 'Edith Clarke'];
 
+const makeRow = (name) => `<li>${name}</li>`;
+const makeList = (names) => `<ul>${names.map(makeRow).join('')}</ul>`;
 const makeHTML = () => makeList(somePeople);
 
 // This will render your content into #app-root in the browser!
@@ -75,13 +78,24 @@ export default () => {
 To save a step when your code is run, you can also conditionally render in the browser only if your container hasn't already been filled with your content.
 
 ```javascript
+::[9,10,11,12,13,14]
 // myApp.js
+
+const somePeople = ['Ada Lovelace', 'Grace Hopper', 'Edith Clarke'];
+
+const makeRow = (name) => `<li>${name}</li>`;
+const makeList = (names) => `<ul>${names.map(makeRow).join('')}</ul>`;
+const makeHTML = () => makeList(somePeople);
 
 const APP_ROOT = document.getElementById('app-root');
 
 // If container is empty, then we inject the content ourselves.
 if (!APP_ROOT.hasChildNodes()) {
   APP_ROOT.innerHTML = makeHTML();
+}
+
+export default () => {
+  return makeHTML();
 }
 ```
 

@@ -27,6 +27,10 @@
       padding: 8px;
       margin-bottom: -2px;
     }
+
+    @media (max-width: 400px) {
+      font-size: 1.5em;
+    }
   }
 
 
@@ -37,10 +41,8 @@
 
 
     h2 {
-      margin-top: 3em;
+      margin-top: 2.25em;
       border-bottom: 1px solid #ddd;
-      margin-bottom: 0.5em;
-      line-height: 1.5;
     }
 
     h3,

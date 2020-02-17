@@ -17,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@reuters-graphics/style-color": "latest",
+    "@reuters-graphics/style-color": "*",
     "bootstrap": "^4.4.1"
   },
   "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"

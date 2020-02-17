@@ -52,6 +52,7 @@ Includes help you separate and organize your code so it's easier to work with. H
 >    - body.ejs
 
 ```ejs
+::[4,5]
 <!-- index.ejs -->
 <html>
   <body>
@@ -143,6 +144,7 @@ So you can see how powerful templates can be when combined with data, but where 
 >      - person.ejs
 
 ```ejs
+::[2]
 <!-- index.ejs -->
 <% const deadPresidents = require('./data/presidents.json'); %>
 <ul>
@@ -187,6 +189,7 @@ Let's say you have two translations of your intro copy in your locales folder li
 In your templates, you can use `localeMarkdown` to include the correct translation of that content in your page.
 
 ```ejs
+::[3]
 <!-- index.ejs -->
 <body>
   <%- localeMarkdown('intro.md') %>
@@ -243,6 +246,7 @@ Say you have some data that is translated for each locale:
 In your templates, you can use `localeData` to include the correct translation of that data in your page.
 
 ```ejs
+::[3]
 <!-- index.ejs -->
 <body>
   <% const data = localeData('data.json') %>

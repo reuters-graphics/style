@@ -33,18 +33,33 @@ const getLang = (lang) => {
   }
 };
 
+const parseCode = (value) => {
+  const matches = value.match(/^::(\[[\d]*[\d,]*\])\n/);
+  if (!matches) return { code: value, markers: [] };
+  console.log('VALUE', value);
+  console.log('CODE', value.split('\n').slice(1).join('\n').trim());
+  return {
+    code: value.split('\n').slice(1).join('\n').trim(),
+    markers: JSON.parse(matches[1]),
+  };
+};
+
 class CodeBlock extends React.Component {
   render() {
     const { value, language } = this.props;
+
+    const { code, markers } = parseCode(value);
+
     return (
       <div className={component}>
         <Refractor
           language={getLang(language ? language.toLowerCase() : 'bash')}
-          value={value}
+          value={code}
+          markers={markers}
         />
         <button
           className='copy'
-          onClick={() => copy(this.props.value)}
+          onClick={() => copy(code)}
         >
           <FontAwesomeIcon icon={faCopy} />
         </button>

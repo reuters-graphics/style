@@ -36,6 +36,7 @@
       overflow-x: hidden;
       color: $brand-text;
 
+
       h4 {
         margin-bottom: 0;
       }
@@ -47,7 +48,9 @@
       }
 
       p {
-        margin: 5px 0 10px;
+        font-family: $font-family-sans-serif;
+        font-size: 0.9rem;
+        margin: 5px 0;
         text-decoration: none !important;
       }
 

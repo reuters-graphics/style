@@ -18,6 +18,7 @@ class Snippets extends React.Component {
 
     return (
       <div className={classnames(component)}>
+        <h1>Snippets</h1>
         <Switch>
           <Route path={`${match.url}/:snippetId/`} component={Snippet} />
           <Route path={`${match.url}/`} exact component={Search} />
