@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 const VirtualModulesPlugin = require('webpack-virtual-modules');
 const recursiveReadSync = require('recursive-readdir-sync');
 
-const SNIPPETS_DIR = path.resolve(__dirname, '../snippets/');
+const SNIPPETS_DIR = path.resolve(__dirname, '../content/snippets/');
 
 const snippets = {};
 

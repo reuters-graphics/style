@@ -78,7 +78,7 @@ export default () => {
 To save a step when your code is run, you can also conditionally render in the browser only if your container hasn't already been filled with your content.
 
 ```javascript
-::[9,10,11,12,13,14]
+::[9-14]
 // myApp.js
 
 const somePeople = ['Ada Lovelace', 'Grace Hopper', 'Edith Clarke'];
@@ -167,6 +167,7 @@ If your JS content will never change in response to any reader interactions -- i
 In this case you can tell the rig to exclude your app's script from the page after it renders and injects the JS content. Just set `staticOnly` to `true` on your configuration object.
 
 ```javascript
+::[6]
 // config/prerenderApps.js
 module.exports = [
   {
@@ -180,6 +181,7 @@ module.exports = [
 To give you an idea what this does, here's your HTML *without* `staticOnly` set:
 
 ```html
+::[7]
 <html>
 <body>
 
@@ -195,12 +197,14 @@ To give you an idea what this does, here's your HTML *without* `staticOnly` set:
 ... and here's your HTML *with* `staticOnly` set:
 
 ```html
+::[7]
 <html>
 <body>
 
 <div id='app-root'><!-- Your app's rendered content here --></div>
 
 <!-- Your app's script excluded from the page, which makes it faster! -->
+
 
 </body>
 </html>
@@ -335,6 +339,7 @@ chart.draw();
 The rig uses our own webpack plugin, [html-webpack-prerender-plugin](https://github.com/reuters-graphics/html-webpack-prerender-plugin), to prerender JS apps. You can pass additional configuration to the plugin through the `pluginOptions` key.
 
 ```javascript
+::[5-9]
 module.exports = [
   {
     script: 'myApp.js',

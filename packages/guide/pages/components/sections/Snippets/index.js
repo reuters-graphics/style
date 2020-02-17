@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 
+import Nav from './Nav';
 import React from 'react';
 import Search from './Search';
 import Snippet from './Snippet';
@@ -7,25 +8,20 @@ import classnames from 'classnames';
 import { component } from './styles.scss';
 import { withRouter } from 'react-router';
 
-class Snippets extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Snippets = (props) => {
+  const { match } = props;
 
-  render() {
-    const { match } = this.props;
-
-    return (
-      <div className={classnames(component)}>
-        <h1>Snippets</h1>
-        <Switch>
-          <Route path={`${match.url}/:snippetId/`} component={Snippet} />
-          <Route path={`${match.url}/`} exact component={Search} />
-        </Switch>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classnames(component)}>
+      <Nav />
+      <Switch>
+        <Route path={`${match.url}/:snippetId/`} component={Snippet} />
+        <Route path={`${match.url}/`} exact>
+          <Search />
+        </Route>
+      </Switch>
+    </div>
+  );
+};
 
 export default withRouter(Snippets);

@@ -73,6 +73,35 @@
       }
     }
 
+    blockquote {
+      margin-bottom: 2em;
+
+      ul {
+        margin: 20px 0;
+        padding: 10px 25px 10px 20px;
+        display: inline-block;
+        background-color: #ebebeb;
+        list-style-type: none;
+        border: 1px solid #ddd;
+
+        @include font-monospace;
+
+        ul {
+          margin: 0;
+          padding: 0 0 0 15px;
+          display: block;
+          border: none;
+        }
+
+        li {
+          strong {
+            color: $brand;
+            font-weight: inherit;
+          }
+        }
+      }
+    }
+
     aside.tip {
       background-color: #ebebeb;
       border: 1px solid #ddd;
@@ -104,35 +133,6 @@
 
       ul {
         margin: 0.8em 0 0.9em;
-      }
-    }
-
-    blockquote {
-      margin-bottom: 2em;
-
-      ul {
-        margin: 20px 0;
-        padding: 10px 25px 10px 20px;
-        display: inline-block;
-        background-color: #ebebeb;
-        list-style-type: none;
-        border: 1px solid #ddd;
-
-        @include font-monospace;
-
-        ul {
-          margin: 0;
-          padding: 0 0 0 15px;
-          display: block;
-          border: none;
-        }
-
-        li {
-          strong {
-            color: $brand;
-            font-weight: inherit;
-          }
-        }
       }
     }
   }

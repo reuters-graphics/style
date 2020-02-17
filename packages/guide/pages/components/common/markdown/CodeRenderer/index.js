@@ -9,6 +9,7 @@ import copy from 'copy-to-clipboard';
 import ejs from 'refractor/lang/ejs';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import js from 'refractor/lang/javascript';
+import makeRange from 'lodash/range';
 import markdown from 'refractor/lang/markdown';
 import python from 'refractor/lang/python';
 import r from 'refractor/lang/r';
@@ -33,14 +34,20 @@ const getLang = (lang) => {
   }
 };
 
+/**
+ * Adds our special syntax for adding markers to code blocks
+ * ::[1,2,5-10]
+ */
 const parseCode = (value) => {
-  const matches = value.match(/^::(\[[\d]*[\d,]*\])\n/);
+  const matches = value.match(/^::(\[[\d]*[\d,-]*\])\n/);
   if (!matches) return { code: value, markers: [] };
-  console.log('VALUE', value);
-  console.log('CODE', value.split('\n').slice(1).join('\n').trim());
+  const markers = matches[1].replace(/\d+-\d+/g, (range) => {
+    const [min, max] = range.split('-');
+    return makeRange(parseInt(min), parseInt(max) + 1).join(',');
+  });
   return {
     code: value.split('\n').slice(1).join('\n').trim(),
-    markers: JSON.parse(matches[1]),
+    markers: JSON.parse(markers),
   };
 };
 

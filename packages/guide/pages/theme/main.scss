@@ -1,34 +1,3 @@
 @import "~@reuters-graphics/style-main/scss/main.scss";
 @import "markdown";
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes explode {
-  0% {
-    padding-left: 2px;
-    letter-spacing: 2px;
-  }
-
-  100% {
-    padding-left: 25px;
-    letter-spacing: 25px;
-  }
-}
-
-@keyframes darken {
-  0% {
-    color: #ccc;
-  }
-
-  100% {
-    color: #666;
-  }
-}
+@import "animations";
