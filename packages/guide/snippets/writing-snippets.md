@@ -5,7 +5,7 @@ categories:
   - docs
 ---
 
-# Writing snippets
+## Writing snippets
 
 Snippets are a way to quickly and easily share and document tips on the team.
 

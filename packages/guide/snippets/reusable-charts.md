@@ -6,7 +6,7 @@ categories:
   - javascript
 ---
 
-# Reusable charts
+## Reusable charts
 
 ```javascript
 import * as d3 from 'd3';

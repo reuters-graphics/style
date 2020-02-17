@@ -12,7 +12,7 @@ const Home = (props) => (
           <Ring width='30' /><Reuters width='123' /> Graphics
         </div>
       </div>
-      <h1>Style.</h1>
+      <h1>Style</h1>
     </div>
     <div className='jumbo mobile'>
       <div className='container brand'>
@@ -20,7 +20,7 @@ const Home = (props) => (
           <Ring width='20' /><Reuters width='78' /> Graphics
         </div>
       </div>
-      <h1>Style.</h1>
+      <h1>Style</h1>
     </div>
   </div>
 );

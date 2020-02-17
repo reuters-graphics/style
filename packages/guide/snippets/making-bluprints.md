@@ -6,7 +6,7 @@ categories:
   - tools
 ---
 
-# Making templates with blüprint
+## Making templates with blüprint
 
 Reusing code is the easiest way to speed up your dev time.
 
