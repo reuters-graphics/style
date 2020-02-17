@@ -20,7 +20,7 @@ module.exports = {
     'publish-libs': {
       run: [
         'build-libs',
-        ['lerna', ['publish'], { scope: '@reuters-graphics/style-theme-*'}],
+        ['lerna', ['publish'], { scope: '@reuters-graphics/style-*'}],
         ['git', ['add', '.']],
         ['git', ['commit'], { m: 'published libs' }],
         ['git', ['push', 'origin', 'master']],
