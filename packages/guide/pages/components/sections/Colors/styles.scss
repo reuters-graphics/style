@@ -42,11 +42,45 @@
   }
 
   .scheme-detail {
+    button.back-btn {
+      background-color: #fff;
+      border: 0;
+      color: #ccc;
+      font-family: $font-family-monospace;
+      padding: 2px 5px 2px 0;
+      font-size: 14px;
+      margin-left: 0;
+      margin-top: -15px;
+      outline: none;
+      display: block;
+
+      &:hover {
+        color: $brand-nav-active;
+      }
+
+      svg {
+        margin-right: 0;
+        margin-bottom: -3px;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: inherit;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0;
+      }
+    }
+
     h3 {
       font-family: $font-family-monospace;
       font-weight: normal;
       margin-top: 20px;
+      margin-bottom: 0;
     }
+
+    hr {
+      margin: 2px 0;
+    }
+
 
     h5 {
       margin: 25px 0 10px;
@@ -54,18 +88,6 @@
 
     pre {
       margin: 0 5px;
-    }
-
-    svg {
-      margin-right: 10px;
-      color: $brand-inverted-nav;
-      cursor: pointer;
-      font-size: 1.2em;
-      margin-bottom: -3px;
-
-      &:hover {
-        color: $brand-nav-active;
-      }
     }
 
     .color-row {

@@ -13,6 +13,7 @@ import greenScheme from '../schemes/green.csv';
 import khakiScheme from '../schemes/khaki.csv';
 import magentaScheme from '../schemes/magenta.csv';
 import navyScheme from '../schemes/navy.csv';
+import nordScheme from '../schemes/nord.csv';
 import orangeScheme from '../schemes/orange.csv';
 import polsCaScheme from '../schemes/pols-ca.csv';
 import polsEsScheme from '../schemes/pols-es.csv';
@@ -42,6 +43,7 @@ export const orange = scheme(orangeScheme);
 
 export const khaki = scheme(khakiScheme);
 export const dawn = scheme(dawnScheme);
+export const nord = scheme(nordScheme);
 
 export const polsCA = scheme(polsCaScheme);
 export const polsES = scheme(polsEsScheme);
@@ -71,6 +73,7 @@ export default {
   orange,
   khaki,
   dawn,
+  nord,
   brewerBlue,
   brewerGreen,
   brewerPurple,

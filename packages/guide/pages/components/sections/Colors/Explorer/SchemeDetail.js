@@ -3,17 +3,18 @@ import ColorRow from './ColorRow';
 import ColorSchemes from '@reuters-graphics/style-color';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SchemeDetail = (props) => (
   <div className='scheme-detail'>
+    <button className='back-btn' onClick={props.resetScheme}>
+      <FontAwesomeIcon icon={faCaretLeft} /> back
+    </button>
     <h3>
-      <FontAwesomeIcon
-        icon={faArrowCircleLeft}
-        onClick={props.resetScheme}
-      />
       {props.scheme}
     </h3>
+    <hr />
+
     <h5>JS</h5>
     <CodeBlock
       language='js'

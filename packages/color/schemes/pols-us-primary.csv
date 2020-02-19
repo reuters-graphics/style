@@ -1,21 +1,17 @@
 hex,variables
-#3571C0,$pols-us-primary-dem-0
-#D9C3A5,$pols-us-primary-dem-1
-#8998AB,$pols-us-primary-dem-2
-#9AD3FC,$pols-us-primary-dem-3
-#C3F4CD,$pols-us-primary-dem-4
-#5DAED4,$pols-us-primary-dem-5
-#8ABDC0,$pols-us-primary-dem-6
-#775180,$pols-us-primary-dem-7
-#FFD682,$pols-us-primary-dem-8
-#948064,$pols-us-primary-dem-9
-#FE5C40,$pols-us-primary-gop-0
-#B8948E,$pols-us-primary-gop-1
-#FBA723,$pols-us-primary-gop-2
-#FFB2CB,$pols-us-primary-gop-3
-#B41E61,$pols-us-primary-gop-4
-#433E76,$pols-us-primary-gop-5
-#AC5141,$pols-us-primary-gop-6
-#7957B4,$pols-us-primary-gop-7
-#FEE0C2,$pols-us-primary-gop-8
-#FD87F7,$pols-us-primary-gop-9
+#7e61c9,$pols-us-purple $pols-us-klobuchar
+#ffd103,$pols-us-yellow $pols-us-sanders $pols-us-weld
+#72bf2e,$pols-us-green $pols-us-buttigieg
+#00b0bd,$pols-us-turqoise
+#f98900,$pols-us-orange $pols-us-warren $pols-us-trump
+#b90000,$pols-us-maroon
+#c12b6f,$pols-us-magenta $pols-us-yang
+#00b294,$pols-us-teal $pols-us-bloomberg
+#218ecd,$pols-us-blue $pols-us-biden $pols-us-dem
+#dbf1ff,$pols-us-blue-light $pols-us-dem-other
+#ea2135,$pols-us-red $pols-us-walsh $pols-us-gop
+#fde1dc,$pols-us-red-light $pols-us-gop-other
+#939598,$pols-us-gray
+#c7c7c7,$pols-us-gray-light $pols-us-no-polling-places
+#efefef,$pols-us-gray-lightest $pols-us-no-results
+#ffffff,$pols-us-white

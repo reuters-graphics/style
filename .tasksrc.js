@@ -12,6 +12,11 @@ module.exports = {
         ['lerna', ['run', 'build'], { scope: '@reuters-graphics/style-theme-*'}],
       ],
     },
+    'build-color': {
+      run: [
+        ['lerna', ['run', 'build'], { scope: '@reuters-graphics/style-color'}],
+      ]
+    },
     'build-libs': {
       run: [
         ['lerna', ['run', 'build'], { scope: '@reuters-graphics/style-color'}],
@@ -19,7 +24,6 @@ module.exports = {
     },
     'publish-libs': {
       run: [
-        'build-libs',
         ['lerna', ['publish']],
         ['git', ['add', '.']],
         ['git', ['commit'], { m: 'published libs' }],
