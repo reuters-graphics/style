@@ -15,7 +15,7 @@ const Head = (props) => (
     <meta property='og:description' content={props.description} />
     <meta property='og:type' content='article' />
     <meta property='og:url' content={`https://reuters-graphics.github.io/style${props.location.pathname}`} />
-    <meta property='og:image' content={`https://reuters-graphics.github.io/style/${ShareImg}`} />
+    <meta property='og:image' content={`https://reuters-graphics.github.io${ShareImg}`} />
   </Helmet>
 );
 
