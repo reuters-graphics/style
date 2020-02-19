@@ -6,6 +6,7 @@ import Search from './Search';
 import Snippet from './Snippet';
 import classnames from 'classnames';
 import { component } from './styles.scss';
+import { withHead } from 'Components/common/Head';
 import { withRouter } from 'react-router';
 
 const Snippets = (props) => {
@@ -24,4 +25,8 @@ const Snippets = (props) => {
   );
 };
 
-export default withRouter(Snippets);
+const RoutedSnippets = withRouter(Snippets);
+
+export default withHead(RoutedSnippets, {
+  title: 'style: Snippets',
+});

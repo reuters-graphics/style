@@ -3,6 +3,7 @@ import Reuters from 'Components/common/icons/Reuters';
 import Ring from 'Components/common/icons/Ring';
 import classnames from 'classnames';
 import { component } from './styles.scss';
+import { withHead } from 'Components/common/Head';
 
 const Home = (props) => (
   <div className={classnames(component, 'markdown-default')}>
@@ -25,4 +26,4 @@ const Home = (props) => (
   </div>
 );
 
-export default Home;
+export default withHead(Home);

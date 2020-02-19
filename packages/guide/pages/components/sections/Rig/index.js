@@ -16,10 +16,11 @@ import React from 'react';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
+import { withHead } from 'Components/common/Head';
 
 const Four04 = () => <Redirect to='/404/' />;
 
-export default () => {
+const Rig = () => {
   const match = useRouteMatch();
   return (
     <div className={component}>
@@ -48,3 +49,7 @@ export default () => {
     </div>
   );
 };
+
+export default withHead(Rig, {
+  title: 'style: Graphics Rig',
+});

@@ -44,6 +44,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "portfinder": "^1.0.25",
     "react-children-utilities": "^2.0.3",
+    "react-helmet": "^5.2.1",
     "react-snap": "^1.23.0",
     "recursive-readdir-sync": "^1.0.6",
     "remark-autolink-headings": "^5.2.1",
