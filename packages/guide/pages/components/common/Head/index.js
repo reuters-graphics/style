@@ -1,3 +1,4 @@
+import FavIcon from '../../../statics/images/favicon.ico';
 import { Helmet } from 'react-helmet';
 import React from 'react';
 import ShareImg from '../../../statics/images/share.jpg';
@@ -16,6 +17,7 @@ const Head = (props) => (
     <meta property='og:type' content='article' />
     <meta property='og:url' content={`https://reuters-graphics.github.io/style${props.location.pathname}`} />
     <meta property='og:image' content={`https://reuters-graphics.github.io${ShareImg}`} />
+    <link rel='shortcut icon' href={`https://reuters-graphics.github.io${FavIcon}`} />
   </Helmet>
 );
 
