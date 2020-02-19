@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-guide",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "description": "",
   "main": "scss/style.scss",
@@ -67,8 +67,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "@reuters-graphics/style-color": "^0.0.2",
-    "@reuters-graphics/style-main": "^0.0.2",
+    "@reuters-graphics/style-color": "^0.0.3",
+    "@reuters-graphics/style-main": "^0.0.3",
     "classnames": "*",
     "copy-to-clipboard": "^3.2.0",
     "fuzzy-search": "^3.0.2",
