@@ -7,7 +7,7 @@
   "module": "dist/index.js",
   "files": [
     "scss/**/*.scss",
-    "dist/index.js"
+    "dist/**/*.js"
   ],
   "repository": {
     "type": "git",
