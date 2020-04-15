@@ -8,6 +8,8 @@ Put media files and any other static assets your page may need in the `static` d
 
 Please note: **Anything you put into this directory will be published with your page**, so keep large raw files or working drafts out of this folder. (Put that stuff in `project-files/`.)
 
+**WARNING:** The graphics server **may reject your project** if you put any non-standard files in this directory.
+
 
 ## Contents
 
@@ -18,7 +20,7 @@ Please note: **Anything you put into this directory will be published with your 
 
 ## Organizing media files
 
-You should always make sub-folders in `src/` to organize your media files. For example:
+You should always make sub-folders in `src/static/` to organize your media files. For example:
 
 > - src/
 >    - static/
@@ -44,14 +46,9 @@ For example, a directory with an image like this ...
 ... will publish like this:
 
 
-> - en/
->   - index.html
->     - img/
->       - **picture.jpg**
-> - es/
->   - index.html
->     - img/
->       - **picture.jpg**
+> - index.html
+>   - img/
+>     - **picture.jpg**
 
 That means you can use a relative path to the image in your code.
 

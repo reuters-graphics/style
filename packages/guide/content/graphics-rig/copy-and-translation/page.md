@@ -4,6 +4,7 @@ Translation is a first-class function of the rig. It's also very easy to create 
 
 - [Locales directory](#Locales-directory)
 - [Creating new locales](#Creating-new-locales)
+- [Writing locale content in markdown](#Writing-locale-content-in-markdown)
 - [Extracting text](#Extracting-text)
 - [Previewing translated pages](#Previewing-translated-pages)
 
@@ -44,6 +45,150 @@ $ runner add-locale
 
 If you *don't* use the command, you'll need to run the `extract-text` command to create `.po` files once you've created the directory and then be sure the new folder mirrors other locales.
 
+## Writing locale content in markdown
+
+Generally, it's a good idea to write large chunks of text in markdown files.
+
+If you're unfamiliar with markdown, check out [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to get the idea.
+
+### How it works
+
+Let's say you have two translations of your intro copy in your locales folder like this:
+
+> - locales/
+>   - en/
+>     - **intro.md**
+>   - es/
+>     - **intro.md**
+
+In your templates, you can use, for example, our `localeMarkdown` helper function to include the correct translation of that content in each page we build.
+
+```ejs
+::[3]
+<!-- index.ejs -->
+<body>
+  <%- localeMarkdown('intro.md') %>
+</body>
+```
+
+So if your markdown files looked like this:
+
+```markdown
+# My English article
+
+Hello world! ...
+```
+
+```markdown
+# Mi articulo en ingles
+
+¡Hola Mundo! ...
+```
+
+... they would render to pages like this:
+
+```html
+<body>
+  <h1>My English article</h1>
+  <p>Hello world! ...</p>
+</body>
+```
+
+```html
+<body>
+  <h1>Mi articulo en ingles</h1>
+  <p>¡Hola Mundo! ...</p>
+</body>
+```
+
+### Special syntax
+
+We've extended the basic markdown syntax to add some additional helpers you may need.
+
+#### Curly bracket attributes
+
+You can add attributes like classes and ids to elements within curly brackets like this:
+
+```markdown
+# header {#headline}
+
+My paragraph ... {.small}
+```
+
+... which will render to HTML like this:
+
+```html
+<h1 id="headline">header</h1>
+
+<p class="small">My paragraph ...</p>
+```
+
+Combine curly bracket attributes with normal brackets to create spans around text.
+
+```markdown
+A paragraph with [a bit of red text]{.red} and back to normal.
+```
+
+```html
+<p>A paragraph with <span class="red">a bit of red text</span> and back to normal.</p>
+```
+
+See more in the docs for [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs).
+
+
+#### Chunks
+
+While you _can_ add HTML to markdown files, it's much better to **keep code out of markdown and in your EJS or JS scripts**.
+
+But often you need to place text around graphics. Instead of creating separate markdown files for each block of text, we've added a special syntax to help you split a single markdown file into **chunks** you can use to position text.
+
+
+> - locales/
+>   - en/
+>     - **article.md**
+
+Separate and name different blocks in your markdown file like this:
+
+```markdown
+::[1,5,7,9]
+<< intro >>
+# My headline
+
+Some intro grafs...
+<<>>
+
+<< mySubhead >>
+Lorem ipsum...
+<<>>
+```
+
+Then refer to each block individually using either localeMarkdown...
+
+```html
+<body>
+
+  <section id="intro">
+    <%- localeMarkdown('artcle.md').intro %>
+  </section>
+
+  <section id="some-graphic"> ... </section>
+
+  <%- localeMarkdown('article.md').mySubhed %>
+
+</body>
+```
+
+... or in JavaScript ...
+
+```javascript
+const locale = document.documentElement.lang;
+
+import(`Locales/${locale}/article`).then((markdown) => {
+  document.getElementById('intro').innerHTML = markdown.intro;
+});
+```
+
+
 ## Extracting text
 
 If you've used [gt.gettext](../writing-code/#gtgettext) in your templates or [ttags](../writing-code/#Translation-with-ttag) in your scripts to create translatable strings, use the `extract-text` command to automatically create `.po` files to use for translation.
@@ -56,7 +201,7 @@ Running the command multiple times to pick up new text is safe and won't erase t
 
 ## Previewing translated pages
 
-As of now, the only way to preview translations is to build the English version of the page. Use the `preview` command to see the page built for your translation, for example at `http://localhost:{port}/de/`.
+As of now, the only way to preview translations is to build the English version of the page. Use the `preview` command to see the page built for your translation, for example at `http://localhost:8000/de/`.
 
 ```
 $ runner preview

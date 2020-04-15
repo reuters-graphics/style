@@ -1,6 +1,10 @@
 The Graphics Rig is the primary tool for building interactive and graphic pages at Reuters Graphics.
 
-The rig requires **Node version 12.0 or greater** (use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node...) and [the Yarn package manager](https://legacy.yarnpkg.com/en/docs/install).
+## Prerequisites
+
+The rig requires **Node version 12.0 - 13.9** (use [nvm](https://github.com/nvm-sh/nvm) if you need to manage multiple versions of Node...) and [the Yarn package manager](https://legacy.yarnpkg.com/en/docs/install).
+
+You also must have a **GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)** with "repo" permissions and single sign-on enabled to access the ["tr" GitHub org](https://github.com/tr). That token must be saved [to your OSX Keychain](https://help.github.com/en/github/using-git/updating-credentials-from-the-osx-keychain).
 
 
 
@@ -19,11 +23,7 @@ $ yarn global add @reuters-graphics/runner
 $ yarn global add @reuters-graphics/bluprint
 ```
 
-**Second,** create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and do **one** of the following:
-
-- Add that token as the environment variable `GITHUB_TOKEN` on your machine. (Here's [how on a mac](https://medium.com/@himanshuagarwal1395/setting-up-environment-variables-in-macos-sierra-f5978369b255#6dad).)
-
-- Add the token directly to bluprint's CLI:
+**Second,** create a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) (preferably a _different token_ to the one you use to access tr GitHub so it won't expire) and register the token with bluprint's CLI:
 
   ```bash
   $ bluprint token <your github token>
@@ -40,7 +40,7 @@ $ yarn global add @reuters-graphics/bluprint
 
 Make sure you have the following credentials on hand to answer those prompts:
 
-- **username** & **password** to publish to the graphics server
+- **username** (your user ID number) & **password** to publish to the graphics server
 - AWS **access key** & **secret access key** with rights to publish to the graphics AWS S3 bucket
 
 If you don't have this information, reach out to an editor to get it for you.
@@ -76,7 +76,9 @@ Make a fresh directory for your new project and use the `graphics rig` bluprint 
 Read more in this guide.
 
 
-## Developing
+## Basic commands
+
+### Developing
 
 The bluprint will install dependencies for you and automatically start a development server. To restart the dev server, use the runner:
 
@@ -85,21 +87,21 @@ $ runner start
 ```
 
 
-## Building and previewing
+### Previewing locally
 
-1. When you're ready to build your page, the build command will check that you've filled out all the relevant metadata and publish each translation of your page.
-
-  ```
-  $ runner build
-  ```
-
-2. To preview the built pages for each translation, run the `preview` command which will start a local server that will show you exactly what your page will look like to your readers.
+To preview what your pages will look like after they've been compiled and minified, run the `preview` command which will start a local server. This will show you exactly what your page will look like to your readers.
 
   ```
   $ runner preview
   ```
 
-## Sharing previews
+You can change the locale at the end of the URL to see other translations.
+
+  ```
+  https://localhost:8000/en/
+  ```
+
+### Sharing previews
 
 Both the `start` and `preview` commands take an optional `--ngrok` argument that will create a secure (**but public!**) URL you can share with others or use to test your page on a mobile phone. Read more about [ngrok](https://ngrok.com/) on their website.
 
@@ -117,15 +119,17 @@ You can also publish your project to a testfiles directory on AWS.
 $ runner preview:aws
 ```
 
-## Publishing
+### Publishing
 
-Projects are published through our [Reuters graphics server](https://editdata.thomsonreuters.com/Pages/graphics.aspx#/rngs/home). Uploading your files to the server is easy:
+Projects are published through our [Reuters graphics server](https://sphinx.thomsonreuters.com/graphics/?#/group/rngs). Publishing requires **two** steps.
+
+First, upload your project files to the server:
 
 ```
 $ runner upload
 ```
 
-This command will check your metadata files to make sure you have all the information you need on the page, will build out your project files and finally create the graphics pack and individual editions of your project on the server.
+The "upload" command will check your metadata files to make sure you have all the information you need on the page, will build out your project files and finally create the graphics pack and individual editions of your project on the server.
 
 Optionally, you can upload a single locale to the server by passing the locale code to the command:
 
@@ -133,8 +137,10 @@ Optionally, you can upload a single locale to the server by passing the locale c
 $ runner upload de
 ```
 
-After you've pushed all your code to the server, you can publish all your editions with:
+After you've pushed all your code to the server, you can **publish** all your editions with:
 
 ```
 $ runner publish
 ```
+
+Anytime you upload any updates to your project, you must republish the entire package.

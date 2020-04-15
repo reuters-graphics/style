@@ -47,6 +47,12 @@ If you need to edit or add to your metadata, you can do so in the locale-specifi
 *For the package:*
 - At least one author
 
+**Optional metadata from you**
+
+*For the package:*
+- Referral links
+- Additional authors
+
 **Required but filled in automatically by the rig**
 
 *For each locale:*
@@ -56,12 +62,5 @@ If you need to edit or add to your metadata, you can do so in the locale-specifi
 *For the package:*
 - Publish date
 - The latest update date, if there was one
-- The workspace ID of the pack on the graphics server
 - The graphic ID of the pack on the graphics server
 - The graphics desk the project is publishing from, e.g., London, New York or Singapore
-
-**Optional metadata from you**
-
-*For the package:*
-- Referral links
-- Additional authors

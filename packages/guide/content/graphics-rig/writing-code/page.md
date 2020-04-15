@@ -9,7 +9,7 @@ Write your code in the `src/` directory.
 - `html/`: [EJS templates](https://ejs.co/#docs)
 - `js/`: JavaScript files
 - `scss/`: [SCSS files](https://sass-lang.com/guide#topic-2)
-- `static/`: Statc files like images, fonts or other media. See [Working with media files](../working-with-media-files/).
+- `static/`: Static files like images, fonts or other media. See [Working with media files](../working-with-media-files/).
 
 ## Contents
 
@@ -29,6 +29,7 @@ Write your code in the `src/` directory.
   - [Modern syntax and modules](#Modern-syntax-and-modules)
   - [EJS templates in JS](#EJS-templates-in-JS)
   - [Translation with ttag](#Translation-with-ttag)
+  - [Translation with markdown](#Translation-with-markdown)
   - [React](#React)
   - [Svelte](#Svelte)
 - [SCSS](#SCSS)
@@ -173,60 +174,32 @@ We include [journalize](https://github.com/rdmurphy/journalize#readme), which ha
 
 The `localeMarkdown` function allows you to access a locale-specific translations of content written in markdown, the HTML shortcut syntax.
 
-(If you're unfamiliar with markdown, check out [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to get the idea.)
-
-Let's say you have two translations of your intro copy in your locales folder like this:
+Pass the path to file in your locale directory.
 
 > - locales/
 >   - en/
->     - **intro.md**
->   - es/
->     - **intro.md**
-> - src
->   - html/
->     - index.ejs
-
-In your templates, you can use `localeMarkdown` to include the correct translation of that content in your page.
+>     - article/
+>       - **text.md**
 
 ```ejs
 ::[3]
 <!-- index.ejs -->
 <body>
-  <%- localeMarkdown('intro.md') %>
+  <%- localeMarkdown('article/text.md') %>
 </body>
 ```
 
-So if your markdown files looked like this:
+If you're using our markdown chunk syntax:
 
-```markdown
-# My English article
-
-Hello world! ...
-```
-
-```markdown
-# Mi articulo en ingles
-
-¡Hola Mundo! ...
-```
-
-... they would render to pages like this:
-
-```html
+```ejs
+::[3]
+<!-- index.ejs -->
 <body>
-  <h1>My English article</h1>
-  <p>Hello world! ...</p>
+  <%- localeMarkdown('text.md').intro %>
 </body>
 ```
 
-```html
-<body>
-  <h1>Mi articulo en ingles</h1>
-  <p>¡Hola Mundo! ...</p>
-</body>
-```
-
-Read more about translation on the [Copy and translation](../copy-and-translation/) page.
+Read more about using markdown files for translation on the [Copy and translation](../copy-and-translation/) page.
 
 #### `localeData`
 
@@ -266,7 +239,7 @@ So if your markdown files looked like this:
 ```javascript
 // locales/es/data.json
 {
-  "title": "Mi articulo en ingles"
+  "title": "Mi articulo en español"
 }
 ```
 
@@ -280,7 +253,7 @@ So if your markdown files looked like this:
 
 ```html
 <body>
-  <h1>Mi articulo en ingles</h1>
+  <h1>Mi articulo en español</h1>
 </body>
 ```
 
@@ -569,6 +542,20 @@ msgstr "Guten Tag"
 Check out the [docs](https://ttag.js.org/docs/quickstart.html) for more information on using ttag.
 
 Read more about translation on the [Copy and translation](../copy-and-translation/) page.
+
+### Translation with markdown
+
+To load different translations in your JavaScript files, you can use [dynamic expressions in an import statement](https://webpack.js.org/api/module-methods/#dynamic-expressions-in-import) and load locale-specific content.
+
+```javascript
+const locale = document.documentElement.lang; // en, es, de, etc.
+
+import(`Locales/${locale}/article/intro.md`).then((markdown) => {
+  document.getElementById('intro').innerHTML = markdown;
+});
+```
+
+By default Webpack will create a separate code bundle for each markdown file you import in this way. It's probably a good idea to read more about the ways you can configure how those files are created by using Webpack's ["magic comments."](https://webpack.js.org/api/module-methods/#magic-comments)
 
 ### React
 
