@@ -183,7 +183,7 @@ Then refer to each block individually using either localeMarkdown...
 ```javascript
 const locale = document.documentElement.lang;
 
-import(`Locales/${locale}/article`).then((markdown) => {
+import(`Locales/${locale}/article.md`).then((markdown) => {
   document.getElementById('intro').innerHTML = markdown.intro;
 });
 ```
