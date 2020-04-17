@@ -144,10 +144,10 @@ export default () => {
 
 Lastly, you need to register your app for prerendering.
 
-Open the file at `config/prerenderApps.js` and add a configuration object to the array like this:
+Create a file at `src/js/prerenderApps.js` and add a configuration object to the array like this:
 
 ```javascript
-// config/prerenderApps.js
+// src/js/prerenderApps.js
 module.exports = [
   {
     script: 'myApp.js',
@@ -168,7 +168,7 @@ In this case you can tell the rig to exclude your app's script from the page aft
 
 ```javascript
 ::[6]
-// config/prerenderApps.js
+// src/js/prerenderApps.js
 module.exports = [
   {
     script: 'myApp.js',
@@ -304,7 +304,7 @@ export default () => {
 ... next, register that prerendered app as a `staticOnly` application ...
 
 ```javascript
-// config/prerenderApps.js
+// src/js/prerenderApps.js
 module.exports = [
   {
     script: 'myApp.js',
