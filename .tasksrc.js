@@ -38,7 +38,7 @@ module.exports = {
         ['git', ['push', 'origin', 'master']],
       ]
     },
-    'dev-guide': {
+    'dev-docs': {
       run: [
         ['lerna', ['run', 'start'], { scope: '@reuters-graphics/style-guide'}],
       ],
