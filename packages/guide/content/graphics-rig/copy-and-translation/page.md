@@ -5,6 +5,10 @@ Translation is a first-class function of the rig. It's also very easy to create 
 - [Locales directory](#Locales-directory)
 - [Creating new locales](#Creating-new-locales)
 - [Writing locale content in markdown](#Writing-locale-content-in-markdown)
+  - [How it works](#How-it-works)
+  - [Special syntax](#Special-syntax)
+    - [Curly bracket attributes](#Curly-bracket-attributes)
+    - [Chunks](#Chunks)
 - [Extracting text](#Extracting-text)
 - [Previewing translated pages](#Previewing-translated-pages)
 
@@ -80,12 +84,12 @@ Hello world! ...
 ```
 
 ```markdown
-# Mi articulo en ingles
+# Mi articulo en español
 
 ¡Hola Mundo! ...
 ```
 
-... they would render to pages like this:
+... they would render to a page for each locale like this:
 
 ```html
 <body>
@@ -96,7 +100,7 @@ Hello world! ...
 
 ```html
 <body>
-  <h1>Mi articulo en ingles</h1>
+  <h1>Mi articulo en español</h1>
   <p>¡Hola Mundo! ...</p>
 </body>
 ```
@@ -140,7 +144,7 @@ See more in the docs for [markdown-it-attrs](https://www.npmjs.com/package/markd
 
 While you _can_ add HTML to markdown files, it's much better to **keep code out of markdown and in your EJS or JS scripts**.
 
-But often you need to place text around graphics. Instead of creating separate markdown files for each block of text, we've added a special syntax to help you split a single markdown file into **chunks** you can use to position text.
+But often you need to place text _around_ graphics. Instead of creating separate markdown files for each block of text, we've added a special syntax to help you split a single markdown file into **chunks** you can use to position text.
 
 
 > - locales/
@@ -197,11 +201,11 @@ If you've used [gt.gettext](../writing-code/#gtgettext) in your templates or [tt
 $ runner extract-text
 ```
 
-Running the command multiple times to pick up new text is safe and won't erase translations you've already done. If you need to start from scratch, you can pass a `--reset` flag to the command.
+Running the command multiple times to pick up new text is safe and won't erase translations you've already done. If _do_ you need to start from scratch, you can pass a `--reset` flag to the command.
 
 ## Previewing translated pages
 
-As of now, the only way to preview translations is to build the English version of the page. Use the `preview` command to see the page built for your translation, for example at `http://localhost:8000/de/`.
+For now, the only way to preview translations is to build the English version of your page. Use the `$ runner preview` command to see the page built for your translation, for example at `http://localhost:8000/de/`.
 
 ```
 $ runner preview

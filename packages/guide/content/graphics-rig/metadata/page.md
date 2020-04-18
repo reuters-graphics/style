@@ -3,64 +3,142 @@ Metadata is incredibly important to making sure your page is discoverable and at
 ## Contents
 
 - [Where is the metadata?](#Where-is-the-metadata?)
+  - [Locale-specific metadata](#Locale-specific-metadata)
+  - [Project-wide metadata](#Project-wide-metadata)
+- [What's in the metadata?](#Whats-in-the-metadata?)
+  - [Locale metadata reference](#Locale-metadata-reference)
+  - [Package metadata reference](#Package-metadata-reference)
 - [How do I fill out metadata?](#How-do-I-fill-out-metadata?)
-- [What metadata is required?](#What-metadata-is-required?)
 
 ## Where is the metadata?
 
-You may notice a conspicuous absence of metatags in our page EJS templates. The rig injects metatags automatically from JSON files when building your package.
+The rig injects metatags automatically from JSON files when building your package.
 
 The metadata files are located in two places:
 
-1. Translatable metadata is kept with all other locale-specific content in the `locales/` directory.
+#### Locale-specific metadata
 
-2. Other metadata that applies to all pages regardless of locale is kept in your project's `package.json` under a `reuters` key.
+Translatable metadata is kept with all other locale-specific content in the `locales/` directory.
 
-> - locales
->   - en
+> - locales/
+>   - en/
 >     - **metadata.json**
->   - de
+>   - de/
 >     - **metadata.json**
+
+#### Package-wide metadata
+
+Other metadata that applies to all pages regardless of locale is kept in your project's `package.json` under a `reuters` key.
+
+> - bin/
+> - config/
+> - locales/
+> - src/
 > - **package.json**
 
+## What's in the metadata?
+
+#### Locale metadata reference
+
+```js
+{
+  // SLUGS used to build published page URLs
+  "slugs": {
+    "root": "HEALTH-CORONAVIRUS", // The main topic-related slug
+    "wild": "ITALY" // A more project-specific slug
+  },
+
+  // SEO title & description used for search results
+  "seoTitle": "Italy's coronavirus crisis: Maps, statistics and analysis",
+  "seoDescription": "Tracking the daily toll of the virus with the latest data",
+
+  // SHARE title & description used for social share cards
+  "shareTitle": "Italy's coronavirus crisis",
+  "shareDescription": "Tracking the daily toll of the virus",
+
+  // The share image
+  "image": {
+    "path": "img/share.jpg",
+    "width": 1200,
+    "height": 600
+  },
+
+  // Graphics server specific IDs and URLs for this locale
+  "editions": {
+    "media": {
+      "interactive": {
+        "id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+        "url": "https://graphics.reuters.com/HEALTH-CORONAVIRUS-ITALY/XXXXXXXXXXX/"
+      },
+      "media-interactive": {
+        "id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+      }
+    },
+    "public": {
+      "interactive": {
+        "id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+        "url": "https://graphics.reuters.com/HEALTH-CORONAVIRUS-ITALY/XXXXXXXXXXX/"
+      }
+    }
+  }
+}
+```
+
+Note:  Not all of this metadata may be filled in during development.
+
+#### Package metadata reference
+
+```js
+{
+  // ...
+  // Metadata is in the "reuters" key in package.json
+  "reuters": {
+
+    // IDs for the card and board in Trello
+    "trello": {
+      "card": "XXXXXXXXXXXXXXXXXXXXXXXX",
+      "board": "XXXXXXXXXXXXXXXXXXXXXXXX"
+    },
+
+    // A URI used to publish previews to the testfiles bucket on AWS
+    "awsPreviewURI": "YYYY/XXXXXXXXXXXX",
+
+    // The desk the package is publishing from
+    "desk": "london",
+
+    // Publish date for the project
+    "publishDate": "2020-04-18T13:00:02.789Z",
+
+    // An array of package authors
+    "authors": [
+      {
+        "name": "Jon McClure",
+        "link": "https://www.twitter.com/JonRMcClure"
+      }
+    ],
+
+    // Referral links used to create referrals at the end of the page, up to 4
+    "referrals": [
+      "https://..."
+    ],
+
+    // The ID of the graphic package in the graphics server
+    "graphicId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+  }
+}
+
+```
+
+Note:  Not all of this metadata may be filled in during development.
 
 ## How do I fill out metadata?
 
-The easiest way is to build your project. The `build` command will check your metadata, create any missing `metadata.json` files in your locales and prompt you for any pieces of required information that are missing.
+Most metadata is filled in automatically by the rig.
+
+When you build your page, the rig will prompt you for any metadata you have to supply, like the share and SEO titles and descriptions.
 
 ```
 $ runner build
 ```
 
-If you need to edit or add to your metadata, you can do so in the locale-specific metadata files or in the `reuters` key in `package.json`.
-
-## What metadata is required?
-
-**Required from you**
-
-*For each locale:*
-- A title and description optimized for sharing on social media
-- A title and description optimized for search
-- A path to a share image in `src/static/img` (Can be the same for each locale.)
-- A root (generic topic )and wild (specific topic) slug for each page. (Can be the same for each locale.)
-
-*For the package:*
-- At least one author
-
-**Optional metadata from you**
-
-*For the package:*
-- Referral links
-- Additional authors
-
-**Required but filled in automatically by the rig**
-
-*For each locale:*
-- The dimensions of the share image
-- The edition IDs and public URLs for each page uploaded to the graphics server.
-
-*For the package:*
-- Publish date
-- The latest update date, if there was one
-- The graphic ID of the pack on the graphics server
-- The graphics desk the project is publishing from, e.g., London, New York or Singapore
+You can add or edit metadata in their respective JSON files, BUT generally **you should not edit any of the IDs or URLs related to external platforms like the graphics server, Trello or AWS.**

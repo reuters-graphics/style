@@ -1,4 +1,4 @@
-Put media files and any other static assets your page may need in the `static` directory.
+Put media files (images, videos, etc.) and any other static assets (fonts, etc.) your page may need in the `static` directory.
 
 > - src/
 >    - html/
@@ -8,7 +8,7 @@ Put media files and any other static assets your page may need in the `static` d
 
 Please note: **Anything you put into this directory will be published with your page**, so keep large raw files or working drafts out of this folder. (Put that stuff in `project-files/`.)
 
-**WARNING:** The graphics server **may reject your project** if you put any non-standard files in this directory.
+**WARNING:** The graphics server **may reject your project** if you put any non-standard web files in this directory. (Use `project-files/`!)
 
 
 ## Contents
@@ -83,7 +83,7 @@ In general, you should **always use relative path references** to media. It make
 
 The one exception to the relative path rule is the share image, which must use an absolute path (i.e., with "https://...").
 
-While you should **still put your share image in `static` directory**, we want to render the absolute reference in `meta` tags.
+While you should **still put your share image in the `static/img/` directory**, we want to render the absolute reference in `meta` tags.
 
 Luckily, the rig handles this exception for you! Read more on the [Metadata](../metadata) page.
 
@@ -133,4 +133,4 @@ The command will create a new directory with your new images...
 <img srcset="img/bill/600.jpg 600w, img/bill/1200.jpg 1200w, img/bill/2400.jpg 2400w" src="img/bill/2400.jpg" alt="WRITE ME">
 ```
 
-Use the tag directly in your code.
+Use the tag directly in your code. You can safely delete the original image if you're happy with the responsive sized ones.
