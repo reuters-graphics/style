@@ -557,6 +557,8 @@ import(`Locales/${locale}/article/intro.md`).then((markdown) => {
 
 By default Webpack will create a separate code bundle for each markdown file you import in this way. It's probably a good idea to read more about the ways you can configure how those files are created by using Webpack's ["magic comments."](https://webpack.js.org/api/module-methods/#magic-comments)
 
+Read more about using markdown files for translation on the [Copy and translation](../copy-and-translation/) page.
+
 ### React
 
 Support for [React](https://reactjs.org/) is built in. Simply write JSX in your JS files, directly.

@@ -3,6 +3,7 @@ For every page, the rig will also build an embeddable version designed to be use
 ## Contents
 
 - [The embed template](#The-embed-template)
+- [Writing code for the embeddable page](#Writing-code-for-the-embeddable-page)
 - [Assets](#Assets)
 - [Watch out for viewport dimensions](#Watch-out-for-viewport-dimensions)
 - [Developing the embed page](#Developing-the-embed-page)
@@ -41,6 +42,32 @@ Notice, too, that both `index.ejs` and `embed.ejs` **do include** an article tem
 
 Using EJS template includes, you can configure the two pages however you like for whatever content they share. See more in [Writing code](../writing-code/#Includes).
 
+## Writing code for the embeddable page
+
+#### JavaScript
+
+If you need to write different code for the embed page than the interactive one, use this pattern:
+
+```javascript
+const isEmbedded = window.location !== window.parent.location;
+
+if (isEmbedded) {
+  // This code will only run on the embeddable page.
+} else {
+  // This code will only run on the interactive page.
+}
+
+```
+
+#### SCSS
+
+In the embeddable page, the body element receives a special class, which you can use in SCSS to scope styles just for that page.
+
+```scss
+body.child-frame {
+  // These styles will only be applied to the embed page.
+}
+```
 
 ## Assets
 
@@ -54,7 +81,7 @@ Embeddable pages share the same assets as the standard page by default.
 >   - img/
 >     - **picture.jpg**
 
-That means you generally don't need any special handling for assets in an embed page.
+That means you generally don't need any special handling for assets like fonts or images in an embed page.
 
 ## Watch out for viewport dimensions
 

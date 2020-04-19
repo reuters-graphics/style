@@ -1,58 +1,75 @@
 ## Contents
 
-- [D3 stuff](#D3-stuff)
+- [How do I add custom methods to D3.js?](#How-do-I-add-custom-methods-to-D3js?)
+- [How do I use Font Awesome?](#How-do-I-use-Font-Awesome?)
 
-### D3 stuff
+## How do I add custom methods to D3.js?
 
-**I want to add a custom function to D3 and use it in my project**
-
-Good news! You can! 
-
-How you would structure this is:
-Create a file in your project where this custom d3 will live.
+Create a dedicated file in your project where you will add all your custom methods to d3.
 
 ```js
 // my-d3.js
-
-import * as d3 from "d3";
+import * as d3 from 'd3';
 // so THIS way of importing gets you a READ ONLY copy of d3. so you can't directly write to it like you would a normal javascript object. it will work in dev but will just get overwritten and not work in the final build. we will deal with this at the end.
 
 // your custom function
-const myCustomFunction = function(params) {
-  ...
-}
+const myCustomFunction = (params) => { ... };
 
-// now we create a new object and copy all the stuff from d3 to it, as well as our new function. 
+// now we create a new object and copy all the stuff from d3 to it, as well as our new function.
 export default Object.assign(d3, {
-  myCustomFunction: myCustomFunction
-})
+  myCustomFunction: myCustomFunction,
+});
+```
 
+Alternatively, you can add a _prototype_ to an existing d3 method _without_ creating a copy.:
+
+```js
+// my-d3.js
+import * as d3 from 'd3';
+
+d3.selection.prototype.myCustomFunction = (params) => { ... };
+
+// this will work
+export default d3;
 ```
 
 Now you can use this d3 you just exported in other files like so:
 
 ```js
 // another-file.js
+import * as d3 from 'path/to/my-d3.js';
 
-import * as d3 from "path/to/my-d3.js";
-
-d3.myCustomFunction(params)...
-
+d3.myCustomFunction(params);
 ```
 
-Things to note:
 
-if you want to write to a prototype of a d3 object, you can just export without creating a copy.:
 
-```js
-// my-d3.js
+You can read more about why this works [here](https://exploringjs.com/es6/ch_modules.html#_in-es6-imports-are-live-read-only-views-on-exported-values).
 
-import * as d3 from "d3";
+## How do I use Font Awesome?
 
-d3.selection.prototype.myCustomFunction = (params) => ...
+Import Font Awesome's SCSS stylesheets in `main.scss`.
 
-// this will work
-export default d3
+> - src/
+>   - scss/
+>     - **main.scss**
+
+```SCSS
+// Set the font-path variable FIRST
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+
+// Import the base SCSS stylesheet
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+
+// Import the fonts you need!
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
 ```
 
-If you *really* have nothing to do, read here: https://exploringjs.com/es6/ch_modules.html#_in-es6-imports-are-live-read-only-views-on-exported-values
+Now you can use Font Awesome's classes.
+
+```HTML
+<i class="fas fa-camera"></i>
+```
+
+Read what other stylesheets you might want to include in [Font Awesome's SASS guide](https://fontawesome.com/how-to-use/on-the-web/using-with/sass).
