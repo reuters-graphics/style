@@ -3,11 +3,16 @@ You can use Google sheets and docs to collaborate with others on translatable co
 
 ## Contents
 
+- [Prerequisites](#Prerequisites)
 - [Where to put Google docs and sheets](#Where-to-put-Google-docs-and-sheets)
 - [Configuring Google APIs](#Configuring-Google-APIs)
 - [Using Docs](#Using-Docs)
 - [Using Sheets](#Using-Sheets)
 - [Using downloaded data in your code](#Using-downloaded-data-in-your-code)
+
+## Prerequisites
+
+In order to use these features, you must have downloaded the Google API access file from the [Reuters Graphics 1Password account](https://reutersglobalgraphics.1password.com/) and placed it in your user directory at `~/.reuters-graphics/google-api.json`.
 
 ## Where to put Google docs and sheets
 
