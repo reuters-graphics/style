@@ -6,6 +6,7 @@ import Copy from './pages/copy';
 import Embed from './pages/embed';
 import FAQ from './pages/faq';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Google from './pages/google';
 import Home from './pages/home';
 import Media from './pages/media';
 import Metadata from './pages/metadata';
@@ -43,6 +44,7 @@ const Rig = () => {
         <Route path={`${match.path}metadata/`} component={Metadata} />
         <Route path={`${match.path}embeddable-page/`} component={Embed} />
         <Route path={`${match.path}prerendering-js-apps/`} component={Prerendering} />
+        <Route path={`${match.path}google-docs/`} component={Google} />
         <Route path={`${match.path}faq/`} component={FAQ} />
         <Route component={Four04} />
       </Switch>
