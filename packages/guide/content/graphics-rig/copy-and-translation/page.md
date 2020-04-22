@@ -53,7 +53,7 @@ If you *don't* use the command, you'll need to run the `extract-text` command to
 
 Generally, it's a good idea to write large chunks of text in markdown files.
 
-If you're unfamiliar with markdown, check out [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to get the idea.
+If you're unfamiliar with markdown, check out [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to get the idea or play around with an online editor like [stackedit](https://stackedit.io/app#).
 
 ### How it works
 
