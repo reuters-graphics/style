@@ -46,7 +46,7 @@ When you first use the graphics rig bluprint, you'll be asked several questions 
 
 Make sure you have the following credentials on hand to answer those prompts:
 
-- **username** (your user ID number) & **password** to publish to the graphics server
+- **username** (your employee ID number) & **password** to publish to the graphics server
 - AWS **access key** & **secret access key** with rights to publish to the graphics AWS S3 bucket
 - A **key** & **token** to access the Trello API.
 
