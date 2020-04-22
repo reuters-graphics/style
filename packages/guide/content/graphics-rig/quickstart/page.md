@@ -16,6 +16,8 @@ You also must have a **GitHub [personal access token](https://help.github.com/en
 
 ... you'll need to run through a couple additional setup steps.
 
+
+
 #### Dependencies
 
 **First,** install our task [runner](https://github.com/reuters-graphics/runner) and our scaffolding engine, [bluprint](https://github.com/reuters-graphics/bluprint), **globally**.
@@ -49,6 +51,10 @@ Make sure you have the following credentials on hand to answer those prompts:
 - A **key** & **token** to access the Trello API.
 
 If you don't have graphics server credentials, reach out to an editor to get them for you. AWS & Trello credentials are kept in the [Global Graphics 1Password account](https://reutersglobalgraphics.1password.com/) (look for passwords with the "Graphics rig" tag).
+
+#### Watch the video
+
+<iframe src="https://player.vimeo.com/video/409931962" width="100%" height="400px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 :::
 
