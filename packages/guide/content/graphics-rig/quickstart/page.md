@@ -52,7 +52,9 @@ Make sure you have the following credentials on hand to answer those prompts:
 
 If you don't have graphics server credentials, reach out to an editor to get them for you. AWS & Trello credentials are kept in the [Global Graphics 1Password account](https://reutersglobalgraphics.1password.com/) (look for passwords with the "Graphics rig" tag).
 
-#### Watch the video
+#### Watch a walk-through video
+
+(The password is: "graphics")
 
 <iframe src="https://player.vimeo.com/video/409931962" width="100%" height="400px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
