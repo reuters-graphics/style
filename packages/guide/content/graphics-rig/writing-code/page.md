@@ -333,7 +333,7 @@ You might be wondering, if EJS is just "embedded JavaScript," why wouldn't I jus
 
 The main reason has to do with _how_ and _when_ content is rendered.
 
-### Server vs. client / static vs. dynamic
+### Static vs. dynamic
 
 When you write your content in JavaScript, that content isn't immediately available on the page readers go to.
 
@@ -355,17 +355,17 @@ const page = { title: 'Hello world!' };
 document.getElementById('my-content').innerHTML = '<h1>' + page.title + '</h1>';
 ```
 
-When a user comes to that page, the first thing that renders is a page with an empty `div#my-content`, then the page requests your script, your script runs and finally your content appears.
+When a user comes to that page, the first thing that renders is a page with an empty `div#my-content`, _then_ the page requests your script, your script runs and finally your content appears.
 
-For a normal reader with a reasonably fast internet connect, that delay may be imperceptible (though not always!). But in one case, that delay is critical:
+For a normal reader with a reasonably fast internet connection, that delay may be imperceptible (though not always!). But in one case, that delay is critical:
 
 Enter BOTS.
 
 When Google's bots scrape your page to index it in search results, it may not wait for your script to run. So what Google sees is an empty page and will rank your page accordingly.
 
-That's the downside of rendering content **in the client**, i.e., in the browser via JavaScript.
+That's the downside of rendering content in the browser via JavaScript.
 
-When you use EJS templates, though, your content is rendered when we build the page. So with a simple template like this:
+When you use EJS templates, though, your content is <strong>pre-</strong>rendered when we build the page. So with a simple template like this:
 
 ```ejs
 <body>
@@ -388,7 +388,7 @@ When you use EJS templates, though, your content is rendered when we build the p
 
 Readers and bots alike will see your content immediately without waiting for the round-trip to get and execute a script.
 
-That's the benefit of rendering content **on the server**, which in this case just means when we built your page.
+That's the benefit of **pre-rendering static content** when we build your page.
 
 There is, however, a case where you may need to render your content on the client: when that content needs to change, or is **dynamic**.
 
@@ -400,9 +400,9 @@ If you were to write that in EJS like this:
 <p>Today's temperature is <%= apiData.temp %> degrees.</p>
 ```
 
-Then when we render it, your page will be built with whatever the temperature was at the moment you built your page. Not great for readers who visit the page next week because that content is now **static**, unchanged from whenever you last published your page.
+Then when we pre-render it, your page will show whatever the temperature was at the moment you built your page. Not great for readers who visit the page next week because that content is now **static**, unchanged from whenever you last published your page.
 
-This is a case where we absolutely should write our content in JavaScript.
+This is a case where we absolutely should write our content in JavaScript, so that it can be **dynamic**.
 
 Now with a template like this ...
 
@@ -427,7 +427,7 @@ document.getElementById('temp').innerHTML = apiData.temp;
 
 This section is simplified to help you think about how your content is being served to readers and where you might want to write it in our rig.
 
-There are more advanced techniques to create content that is both **server-rendered/static** AND **client-rendered/dynamic**. See [Prerendering JS apps](../prerendering-js-apps/).
+There are more advanced techniques to create content that can be both **pre-rendered/static** AND **dynamic**. See [Prerendering JS apps](../prerendering-js-apps/).
 
 :::
 
