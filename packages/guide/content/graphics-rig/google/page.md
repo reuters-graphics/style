@@ -16,9 +16,9 @@ In order to use these features, you must have downloaded the Google API access f
 
 ## Where to put Google docs and sheets
 
-Make a sheet or doc in a folder within the Reuters Graphics Google Drive folder. (Ask an editor if this hasn't already been shared with you.) This automatically gives our API scraper access to your doc. As long as your doc is in this folder, you can keep it private and share it directly with your collaborators.
+Make a sheet or doc in a folder within the **Reuters Graphics Interactive Docs** shared Google Drive folder. (Ask an editor if this hasn't already been shared with you.) This automatically gives our API scraper access to your doc. As long as your doc is in this folder, you can keep it private and share it directly with your collaborators.
 
-We recommend you create a separate sheet or doc for each locale you want translated.
+We recommend you create a separate sheet or doc for each locale you want translated in a folder for your project.
 
 ## Configuring Google APIs
 
@@ -33,6 +33,7 @@ To tell the rig what Google docs or sheets to use, you'll add configuration to a
 Within the config file, each **key** under `docs` or `sheets` is the path to the file you'd like output. Each **value** is the ID of the doc or sheet you'd like to download to that location.
 
 ```js
+::[3,6]
 {
   "docs": {
     "myDoc.json": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
@@ -79,7 +80,13 @@ After you've downloaded your data from Google, you can use the `localeData` help
 ```html
 <body>
   <% const doc = localeData('myDoc.json') %>
+
   <h1><%= doc.title %></h1>
+
+  <% doc.paragraphs.forEach(function(paragraph){ %>
+  <p><%= paragraph %></p>
+  <% }); %>
+
 </body>
 ```
 
@@ -91,6 +98,12 @@ In JS, you can use dynamic imports:
 const locale = document.documentElement.lang; // en, es, de, etc.
 
 import(`Locales/${locale}/myDoc.json`).then((doc) => {
-  document.getElementById('title').innerHTML = doc.title;
+
+  const header = `<h1>${doc.title}</h1>`;
+
+  const paragraphs = doc.paragraphs.map(paragraph => `<p>${paragraph}</p>`);
+
+  // ...
+
 });
 ```
