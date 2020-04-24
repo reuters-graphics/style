@@ -1,0 +1,116 @@
+.component :global {
+  article {
+    padding: 0;
+    margin-top: 10px;
+
+    article {
+      background-color: #bbb;
+      border-left: 15px solid #ddd;
+      padding-left: 0;
+      border-right: 15px solid #ddd;
+      padding-right: 0;
+
+      &::before {
+        content: "article";
+        font-family: monospace;
+        padding-left: 2px;
+        color: #fff;
+      }
+
+      padding-bottom: 2px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      min-height: 80px;
+      background-color: #81a1c1;
+      transition: all 0.2s;
+
+      &::before {
+        content: "section";
+        font-family: monospace;
+        padding-left: 2px;
+        color: #fff;
+      }
+
+      &.body-text::before {
+        content: "section.body-text";
+      }
+
+      &.container::before {
+        content: "section.container";
+      }
+
+      &.wide::before {
+        content: "section.wide";
+      }
+
+      &.wide.container::before {
+        content: "section.wide.container";
+      }
+
+      &.wider::before {
+        content: "section.wider";
+      }
+
+      &.wider.container::before {
+        content: "section.wider.container";
+      }
+
+      &.widest::before {
+        content: "section.widest";
+      }
+
+      &.widest.container::before {
+        content: "section.widest.container";
+      }
+
+      &.fluid::before {
+        content: "section.fluid";
+      }
+
+      &.fluid.container::before {
+        content: "section.fluid.container";
+      }
+
+      &.container {
+        padding-bottom: 20px;
+
+        .row {
+          background-color: #8fbcbb;
+          min-height: 40px;
+          padding-bottom: 5px;
+
+          &::before {
+            content: ".row";
+            font-family: monospace;
+            color: #fff;
+            clear: right;
+            position: absolute;
+          }
+
+          .col {
+            margin-top: 20px;
+            clear: left;
+            background-color: #b48ead;
+            height: 50px;
+            border: 4px solid #8fbcbb;
+
+            &::before {
+              content: ".col";
+              font-family: monospace;
+              color: #fff;
+              clear: right;
+              position: absolute;
+            }
+          }
+        }
+      }
+
+
+      p {
+        font-family: monospace;
+      }
+    }
+  }
+}

@@ -16,7 +16,10 @@ const config = (env, argv, port) => (merge(common, {
     contentBase: path.resolve(__dirname, '../'),
     historyApiFallback: {
       rewrites: [
-        { from: /^\/.*\/app.js/, to: '/app.js' },
+        {
+          from: /^\/.*\/([a-zA-Z0-9_-]*)\.js/,
+          to: (context) => `/${context.match[1]}.js`,
+        },
         {
           from: /^\/statics\/.*/,
           to: (context) => context.parsedUrl.pathname.replace('/statics/', '/'),

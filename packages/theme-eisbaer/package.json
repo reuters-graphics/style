@@ -29,11 +29,13 @@
     "access": "public"
   },
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "@reuters-graphics/style-color": "^0.0.4",
     "@reuters-graphics/style-main": "^0.0.4"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",

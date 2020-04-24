@@ -10,7 +10,7 @@ section.body-text {
     @extend .paragraph-size;
   }
 
-  // Hard-enforce the no h1 rule?
+  // Hard-enforce the no h1 rule? YES!
   h1 {
     display: none;
   }

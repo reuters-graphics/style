@@ -4,19 +4,23 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Clarifications from './components/Clarifications';
-import Dateline from './components/Metadata';
-import EndNotes from './components/EndNotes';
-import Graphic from './components/Graphic';
-import HeroTitle from './components/HeroTitle';
 import Nav from './Nav';
 import NavItem from './Nav/NavItem';
-import Photo from './components/Photo';
-import Quickstart from './components/Quickstart';
 import React from 'react';
-import TextElements from './components/TextElements';
-import Typography from './components/Typography';
 import { component } from './styles.scss';
+import loadable from '@loadable/component';
+
+const Quickstart = loadable(() => import('./components/Quickstart'));
+const TextElements = loadable(() => import('./components/TextElements'));
+const Typography = loadable(() => import('./components/Typography'));
+const Grid = loadable(() => import('./components/Grid'));
+const Dateline = loadable(() => import('./components/Dateline'));
+const HeroTitle = loadable(() => import('./components/HeroTitle'));
+const Headline = loadable(() => import('./components/Headline'));
+const Graphic = loadable(() => import('./components/Graphic'));
+const Clarifications = loadable(() => import('./components/Clarifications'));
+const Photo = loadable(() => import('./components/Photo'));
+const EndNotes = loadable(() => import('./components/EndNotes'));
 
 export default class Home extends React.Component {
   render() {
@@ -27,6 +31,8 @@ export default class Home extends React.Component {
             <NavItem name='Quickstart' link='quickstart/' />
             <NavItem name='Text elements' link='text-elements/' />
             <NavItem name='Typography' link='typography/' />
+            <NavItem name='Grid' link='grid/' />
+            <NavItem name='Headline' link='headline/' />
             <NavItem name='Dateline' link='dateline/' />
             <NavItem name='Hero title' link='hero-title/' />
             <NavItem name='Graphic' link='graphic/' />
@@ -45,8 +51,14 @@ export default class Home extends React.Component {
             <Route path='/typography'>
               <Typography />
             </Route>
+            <Route path='/grid'>
+              <Grid />
+            </Route>
             <Route path='/hero-title'>
               <HeroTitle />
+            </Route>
+            <Route path='/headline'>
+              <Headline />
             </Route>
             <Route path='/dateline'>
               <Dateline />

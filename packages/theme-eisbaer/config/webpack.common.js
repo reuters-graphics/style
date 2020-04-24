@@ -31,6 +31,7 @@ module.exports = {
             ],
             plugins: [
               '@babel/proposal-class-properties',
+              '@babel/plugin-syntax-dynamic-import',
             ],
           },
         },

@@ -1,7 +1,8 @@
 @import "~@reuters-graphics/style-color/scss/base";
 
-.hero-title {
+section.hero-title {
   @extend .clearfix;
+  @extend .well.widest;
 
   position: relative;
 

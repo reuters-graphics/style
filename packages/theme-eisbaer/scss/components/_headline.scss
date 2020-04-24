@@ -1,0 +1,39 @@
+section.headline {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 4.8rem;
+    margin: 5px 0;
+    line-height: 1.1;
+
+    &.font-serif {
+      font-weight: 400;
+    }
+
+    &.smaller {
+      font-size: 4rem;
+    }
+
+    &.bigger {
+      font-size: 5rem;
+    }
+
+    &.biggest {
+      font-size: 6rem;
+    }
+  }
+
+  p {
+    @extend .font-sans;
+
+    margin: 0;
+    font-weight: 200;
+
+    &.section-title {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  }
+}
