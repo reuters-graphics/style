@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-theme-eisbaer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "description": "Eisbär styles theme at Reuters",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -31,7 +31,7 @@
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "@reuters-graphics/style-color": "^0.0.4",
-    "@reuters-graphics/style-main": "^0.0.4"
+    "@reuters-graphics/style-main": "^0.0.5"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
