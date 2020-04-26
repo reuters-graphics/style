@@ -25,9 +25,6 @@ module.exports = {
     'publish-libs': {
       run: [
         ['lerna', ['publish']],
-        ['git', ['add', '.']],
-        ['git', ['commit'], { m: 'published libs' }],
-        ['git', ['push', 'origin', 'master']],
       ],
     },
     'publish-docs': {
