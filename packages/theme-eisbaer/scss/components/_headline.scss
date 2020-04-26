@@ -1,27 +1,65 @@
+@import "~@reuters-graphics/style-main/scss/variables";
+
+
 section.headline {
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 4rem;
 
+  $resize-factor-sm: 0.85;
+  $resize-factor-xs: 0.7;
+
   h2 {
-    font-size: 4.8rem;
+    font-size: 4rem;
     margin: 5px 0;
     line-height: 1.1;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      font-size: calc(4rem * #{$resize-factor-sm});
+    }
+
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      font-size: calc(4rem * #{$resize-factor-xs});
+    }
 
     &.font-serif {
       font-weight: 400;
     }
 
     &.smaller {
-      font-size: 4rem;
+      font-size: 3.2rem;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: calc(3.2rem * #{$resize-factor-sm});
+      }
+
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        font-size: calc(3.2rem * #{$resize-factor-xs});
+      }
     }
 
     &.bigger {
       font-size: 5rem;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: calc(5rem * #{$resize-factor-sm});
+      }
+
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        font-size: calc(5rem * #{$resize-factor-xs});
+      }
     }
 
     &.biggest {
-      font-size: 6rem;
+      font-size: 6.2rem;
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: calc(6.2rem * #{$resize-factor-sm});
+      }
+
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        font-size: calc(6.2rem * #{$resize-factor-xs});
+      }
     }
   }
 
