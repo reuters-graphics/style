@@ -29,7 +29,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@loadable/component": "^5.12.0",
     "@reuters-graphics/style-color": "^0.0.4",
     "@reuters-graphics/style-main": "^0.0.5"
   },
@@ -40,6 +39,7 @@
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
     "@hobbes7878/eslint-config": "^0.0.2",
+    "@loadable/component": "^5.12.0",
     "@politico/markdown-react-loader": "^0.0.3",
     "autoprefixer": "^9.7.4",
     "base64-image-loader": "^1.2.1",
