@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-color",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "Color schemes for Reuters graphics",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -24,7 +24,6 @@
     "build": "npm-run-all build-stylesheets build-scripts build-packages",
     "test": "NODE_ENV=test mocha --recursive --require esm"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
