@@ -1,0 +1,35 @@
+import makeColorScheme from './../../makeColorScheme';
+
+import blueScheme from './blue';
+import brewerBlueScheme from './brewerBlue';
+import brewerGreenScheme from './brewerGreen';
+import brewerPurpleScheme from './brewerPurple';
+import brewerRedScheme from './brewerRed';
+import brewerWarmRedScheme from './brewerWarmRed';
+import cyanScheme from './cyan';
+import grayScheme from './gray';
+import greenScheme from './green';
+import magentaScheme from './magenta';
+import navyScheme from './navy';
+import orangeScheme from './orange';
+import purpleScheme from './purple';
+import redScheme from './red';
+import tangerineScheme from './tangerine';
+import yellowScheme from './yellow';
+
+export const blue = makeColorScheme(blueScheme);
+export const brewerBlue = makeColorScheme(brewerBlueScheme);
+export const brewerGreen = makeColorScheme(brewerGreenScheme);
+export const brewerPurple = makeColorScheme(brewerPurpleScheme);
+export const brewerRed = makeColorScheme(brewerRedScheme);
+export const brewerWarmRed = makeColorScheme(brewerWarmRedScheme);
+export const cyan = makeColorScheme(cyanScheme);
+export const gray = makeColorScheme(grayScheme);
+export const green = makeColorScheme(greenScheme);
+export const magenta = makeColorScheme(magentaScheme);
+export const navy = makeColorScheme(navyScheme);
+export const orange = makeColorScheme(orangeScheme);
+export const purple = makeColorScheme(purpleScheme);
+export const red = makeColorScheme(redScheme);
+export const tangerine = makeColorScheme(tangerineScheme);
+export const yellow = makeColorScheme(yellowScheme);
