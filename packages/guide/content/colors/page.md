@@ -11,8 +11,11 @@ yarn add @reuters-graphics/style-color
 Import the SCSS color variables directly from the library.
 
 ```scss
-// Import colors from all our color schemes
-@import "~@reuters-graphics/style-color/scss/main";
+// Import colors from all our color schemes ...
+@import "~@reuters-graphics/style-color/scss/all";
+
+// ... or a family of color schemes ...
+@import "~@reuters-graphics/style-color/scss/sequential/all";
 
 // ... or just one scheme.
 @import "~@reuters-graphics/style-color/scss/sequential/gray";
@@ -34,7 +37,7 @@ circle {
 Import a color scheme from the library.
 
 ```javascript
-import { gray } from '@reuters-graphics/style-color';
+import { gray } from '@reuters-graphics/style-color/sequential';
 ```
 
 Work with colors in the scheme.
@@ -64,20 +67,24 @@ gray.all[0].variables
 
 There are a few alternative ways to access colors in the scheme:
 
-Use camel-cased SCSS variable names to access a color directly.
+Use aliases to access a color directly. (See the Color Explorer below.)
 
 ```javascript
-import { nord } from '@reuters-graphics/style-color';
+import { nord } from '@reuters-graphics/style-color/categorical';
+import { blue } from '@reuters-graphics/style-color/sequential';
 
-nord.nordAurora0
+nord.red
 // {hex: "#BF616A", rgba: ƒ, rgbaArray: ƒ}
+
+blue['100']
+// {hex: "#C8DAF0", rgba: ƒ, rgbaArray: ƒ}
 
 ```
 
 Schemes are guaranteed to be in order, so for sequential scales, you can access the min/max color values easily with first/last.
 
 ```javascript
-import { blue } from '@reuters-graphics/style-color';
+import { blue } from '@reuters-graphics/style-color/sequential';
 
 blue.first()
 // {variables: Array(1), hex: "#C8DAF0", rgba: ƒ, rgbaArray: ƒ}
