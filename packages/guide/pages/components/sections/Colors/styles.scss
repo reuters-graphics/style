@@ -1,22 +1,61 @@
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
-@import "~@reuters-graphics/style-color/scss/brand";
+@import "~@reuters-graphics/style-color/scss/categorical/brand";
 
 .component :global {
+  h2 {
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+  }
+
+  nav.breadcrumbs ol {
+    margin: 10px 0 30px;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 5px 0 0;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #999;
+      cursor: pointer;
+
+      &::after {
+        content: "/";
+        margin-left: 5px;
+      }
+
+      &:hover {
+        color: #333;
+      }
+
+      &:last-child {
+        color: #333;
+
+        &::after {
+          content: '';
+        }
+      }
+    }
+  }
+
+
   .scheme-options {
     p {
       font-family: $font-family-sans-serif;
     }
 
     .scheme-option {
-      font-family: $font-family-monospace;
+      font-family: $font-family-sans-serif;
       font-size: 1em;
       margin-bottom: 0.6em;
-      color: $brand-text;
       cursor: pointer;
+      color: #333;
 
       &:hover div {
-        text-decoration: underline;
+        color: #333;
       }
 
       .inline {
@@ -42,98 +81,6 @@
   }
 
   .scheme-detail {
-    button.back-btn {
-      background-color: #fff;
-      border: 0;
-      color: #ccc;
-      font-family: $font-family-monospace;
-      padding: 2px 5px 2px 0;
-      font-size: 14px;
-      margin-left: 0;
-      margin-top: -15px;
-      outline: none;
-      display: block;
 
-      &:hover {
-        color: $brand-nav-active;
-      }
-
-      svg {
-        margin-right: 0;
-        margin-bottom: -3px;
-        cursor: pointer;
-        font-size: 1.5em;
-        color: inherit;
-        background-color: #fff;
-        border-radius: 50%;
-        border: 0;
-      }
-    }
-
-    h3 {
-      font-family: $font-family-monospace;
-      font-weight: normal;
-      margin-top: 20px;
-      margin-bottom: 0;
-    }
-
-    hr {
-      margin: 2px 0;
-    }
-
-
-    h5 {
-      margin: 25px 0 10px;
-    }
-
-    pre {
-      margin: 0 5px;
-    }
-
-    .color-row {
-      font-family: $font-family-monospace;
-      font-size: 0.8em;
-      margin-bottom: 20px;
-
-      .inline {
-        display: inline-block;
-        vertical-align: top;
-      }
-
-      .bottom-space {
-        margin-bottom: 4px;
-      }
-
-
-      .swatch-container {
-        margin-right: 10px;
-        padding-left: 5px;
-      }
-
-      .swatch {
-        margin-top: 2px;
-        width: 20px;
-        height: 72px;
-        border-radius: 5px;
-        border: 1px solid $brand-inverted-nav-active;
-      }
-
-      .detail {
-        width: calc(100% - 60px);
-      }
-
-      span.tag {
-        color: $brand-inverted-nav;
-        padding: 1px 3px;
-        display: inline-block;
-        margin-right: 2px;
-        font-size: 0.8em;
-        font-weight: 200;
-      }
-
-      .spaced {
-        margin-right: 5px;
-      }
-    }
   }
 }

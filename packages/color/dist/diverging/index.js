@@ -102,7 +102,8 @@ function createColorScheme(scheme) {
   var colorScheme = Object.assign({}, aliasScheme, {
     all: scheme.map(function (color) {
       return Object.assign({
-        variables: color.variables
+        variables: color.variables,
+        aliases: color.aliases
       }, createColorValues(color));
     })
   });

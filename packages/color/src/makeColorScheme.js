@@ -32,6 +32,7 @@ function createColorScheme(scheme) {
     all: scheme.map(color =>
       Object.assign({
         variables: color.variables,
+        aliases: color.aliases,
       }, createColorValues(color))
     ),
   });

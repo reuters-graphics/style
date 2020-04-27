@@ -15,7 +15,7 @@ Import the SCSS color variables directly from the library.
 @import "~@reuters-graphics/style-color/scss/main";
 
 // ... or just one scheme.
-@import "~@reuters-graphics/style-color/scss/gray";
+@import "~@reuters-graphics/style-color/scss/sequential/gray";
 ```
 
  Then use them to style your elements.
