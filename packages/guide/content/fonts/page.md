@@ -10,7 +10,7 @@ yarn add @reuters-graphics/style-main
 
 ## Working with fonts
 
-Use SCSS variables and mixins in your stylesheets to style type.
+To use our fonts in your stylesheets, import either the SCSS variables and mixins in your code.
 
 ```scss
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
