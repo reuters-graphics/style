@@ -1,8 +1,6 @@
 import alias from 'rollup-plugin-alias';
 import babel from 'rollup-plugin-babel';
-import dsv from 'rollup-plugin-dsv';
 import path from 'path';
-import pkg from '../package.json';
 import resolve from 'rollup-plugin-node-resolve';
 
 const babelOpts = {
@@ -13,34 +11,42 @@ const babelOpts = {
   ],
 };
 
-export default {
+const plugins = [
+  alias({ resolve: ['.js'] }),
+  babel(babelOpts),
+  resolve({
+    preferBuiltins: true,
+    extensions: ['.js'],
+    modulesOnly: true,
+  }),
+];
+
+export default [{
   input: path.resolve(__dirname, '../src/index.js'),
   output: {
     file: path.resolve(__dirname, '../dist/index.js'),
     format: 'es',
   },
-  external: [
-    ...Object.keys(pkg.dependencies),
-  ],
-  plugins: [
-    dsv({
-      processRow(row, id) {
-        const trimmedRow = {};
-        Object.keys(row).forEach(key => {
-          const value = row[key].trim();
-          trimmedRow[key.trim()] = isNaN(+value) ? value : +value;
-        });
-        return trimmedRow;
-      },
-    }),
-    alias({
-      resolve: ['.js'],
-    }),
-    babel(babelOpts),
-    resolve({
-      preferBuiltins: true,
-      extensions: ['.js'],
-      modulesOnly: true,
-    }),
-  ],
-};
+  plugins,
+}, {
+  input: path.resolve(__dirname, '../src/schemes/categorical/index.js'),
+  output: {
+    file: path.resolve(__dirname, '../dist/categorical/index.js'),
+    format: 'es',
+  },
+  plugins,
+}, {
+  input: path.resolve(__dirname, '../src/schemes/sequential/index.js'),
+  output: {
+    file: path.resolve(__dirname, '../dist/sequential/index.js'),
+    format: 'es',
+  },
+  plugins,
+}, {
+  input: path.resolve(__dirname, '../src/schemes/diverging/index.js'),
+  output: {
+    file: path.resolve(__dirname, '../dist/diverging/index.js'),
+    format: 'es',
+  },
+  plugins,
+}];

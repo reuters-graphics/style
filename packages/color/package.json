@@ -18,23 +18,35 @@
     "access": "public"
   },
   "scripts": {
-    "build": "rm -rf scss/ && rollup --config config/rollup.config.js && npx ./bin/scss.js"
+    "build-scripts": "rm -rf src/schemes/ && npx ./bin/scripts.js",
+    "build-stylesheets": "rm -rf scss/ && npx ./bin/stylesheets.js",
+    "build-packages": "rollup --config config/rollup.config.js",
+    "build": "npm-run-all build-stylesheets build-scripts build-packages",
+    "test": "NODE_ENV=test mocha --recursive --require esm"
   },
-  "dependencies": {
-    "hex-rgb": "^4.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
+    "@hobbes7878/eslint-config": "^0.0.2",
+    "@rollup/plugin-json": "^4.0.3",
     "csv-parse": "^4.8.2",
+    "eslint": "^5.14.1",
+    "eslint-plugin-mocha": "^5.3.0",
     "esm": "^3.2.25",
+    "expect.js": "^0.3.1",
+    "hex-rgb": "^4.1.0",
     "mkdirp": "^0.5.1",
+    "mocha": "^7.1.2",
+    "npm-run-all": "^4.1.5",
     "recursive-readdir-sync": "^1.0.6",
     "rollup": "^1.27.11",
     "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-dsv": "^1.2.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "safe-dye": "^1.0.3",
+    "stringify-object": "^3.3.0"
   },
   "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"
 }
