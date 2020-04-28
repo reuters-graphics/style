@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-main",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "description": "Graphics fashion at Reuters",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -17,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@reuters-graphics/style-color": "^0.0.5",
+    "@reuters-graphics/style-color": "^0.0.6",
     "bootstrap": "^4.4.1"
   },
   "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"
