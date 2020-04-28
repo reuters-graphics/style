@@ -90,7 +90,9 @@ $ runner build-libs
 ... and then to publish ...
 
 ```
-$ publish-libs
+$ runner publish-libs
 ```
+
+If you've changed an existing color in a way that may cause older projects to break, make sure you make a
 
 **Don't forget to commit to GitHub!**
