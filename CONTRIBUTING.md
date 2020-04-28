@@ -81,18 +81,20 @@ You can add multiple variables separated by whitespace. You should generally pre
 
 #### Publishing
 
-Once your done adding colors, run:
+Once your done adding colors, re-build the libraries and docs:
 
 ```
 $ runner build-libs
+$ runner build-docs
 ```
 
-... and then to publish ...
+... add your new code to a new branch on git ...
 
 ```
-$ runner publish-libs
+$ git checkout -b <your new branch name>
+$ git add .
+$ git commit -m "My commit"
+$ git push origin <your new branch name>
 ```
 
-If you've changed an existing color in a way that may cause older projects to break, make sure you make a
-
-**Don't forget to commit to GitHub!**
+Tell a developer and we'll accept a Pull Request.
