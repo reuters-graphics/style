@@ -199,6 +199,19 @@ If you're using our markdown chunk syntax:
 </body>
 ```
 
+You can also pass data to `localeMarkdown` and use it to fill in text in your markdown files. Pass an object as the second parameter with your context data...
+
+```ejs
+::[3]
+<!-- index.ejs -->
+<body>
+  <%- localeMarkdown('article/text.md', { name: 'Jon' }) %>
+</body>
+```
+
+... then use that data in your markdown files using mustache syntax: Hi, my name is **&#123;&#123; name }}**!
+
+
 Read more about using markdown files for translation on the [Copy and translation](../copy-and-translation/) page.
 
 #### `localeData`
