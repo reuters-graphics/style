@@ -1,28 +1,41 @@
 .paragraph-size {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
 
   // slightly smaller in sans...
   &.font-sans {
-    line-height: 1.8rem;
-  }
-
-  @include media-breakpoint-down(sm) {
     font-size: 1.1rem;
     line-height: 1.75rem;
   }
 
+  @include media-breakpoint-down(sm) {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+
+    // slightly smaller in sans...
+    &.font-sans {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+
   &.important {
-    font-size: 1.2rem !important;
-    line-height: 2rem !important;
+    font-size: 1.3rem !important;
+    line-height: 2.1rem !important;
 
     &.font-sans {
+      font-size: 1.1rem !important;
       line-height: 1.8rem !important;
     }
 
     @include media-breakpoint-down(sm) {
       font-size: 1.1rem !important;
-      line-height: 1.75rem !important;
+      line-height: 1.8rem !important;
+
+      &.font-sans {
+        font-size: 1rem !important;
+        line-height: 1.6rem !important;
+      }
     }
   }
 }

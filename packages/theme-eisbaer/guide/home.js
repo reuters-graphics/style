@@ -13,12 +13,11 @@ import loadable from '@loadable/component';
 const Quickstart = loadable(() => import('./components/Quickstart'));
 const TextElements = loadable(() => import('./components/TextElements'));
 const Typography = loadable(() => import('./components/Typography'));
-const Grid = loadable(() => import('./components/Grid'));
+const Well = loadable(() => import('./components/Well'));
 const Dateline = loadable(() => import('./components/Dateline'));
 const HeroTitle = loadable(() => import('./components/HeroTitle'));
 const Headline = loadable(() => import('./components/Headline'));
 const Graphic = loadable(() => import('./components/Graphic'));
-const Clarifications = loadable(() => import('./components/Clarifications'));
 const Photo = loadable(() => import('./components/Photo'));
 const EndNotes = loadable(() => import('./components/EndNotes'));
 
@@ -31,13 +30,12 @@ export default class Home extends React.Component {
             <NavItem name='Quickstart' link='quickstart/' />
             <NavItem name='Text elements' link='text-elements/' />
             <NavItem name='Typography' link='typography/' />
-            <NavItem name='Grid' link='grid/' />
+            <NavItem name='Well' link='well/' />
             <NavItem name='Headline' link='headline/' />
             <NavItem name='Dateline' link='dateline/' />
             <NavItem name='Hero title' link='hero-title/' />
             <NavItem name='Graphic' link='graphic/' />
             <NavItem name='Photo' link='photo/' />
-            <NavItem name='Clarifications' link='clarifications/' />
             <NavItem name='End notes' link='end-notes/' />
           </Nav>
 
@@ -51,8 +49,8 @@ export default class Home extends React.Component {
             <Route path='/typography'>
               <Typography />
             </Route>
-            <Route path='/grid'>
-              <Grid />
+            <Route path='/Well'>
+              <Well />
             </Route>
             <Route path='/hero-title'>
               <HeroTitle />
@@ -68,9 +66,6 @@ export default class Home extends React.Component {
             </Route>
             <Route path='/photo'>
               <Photo />
-            </Route>
-            <Route path='/clarifications'>
-              <Clarifications />
             </Route>
             <Route path='/end-notes'>
               <EndNotes />

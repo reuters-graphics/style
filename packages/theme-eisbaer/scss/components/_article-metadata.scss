@@ -23,13 +23,7 @@
     @extend .uppercase;
 
     color: $brand-text-secondary;
-    font-size: 0.6rem;
-    line-height: 1.1rem;
-    letter-spacing: 0.1rem;
-
-    .time {
-      font-weight: 600;
-      font-size: 0.8rem;
-    }
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 }

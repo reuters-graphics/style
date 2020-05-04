@@ -11,6 +11,10 @@ section.graphic {
     @extend .separated;
   }
 
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
 
   p {
     @extend .font-sans;

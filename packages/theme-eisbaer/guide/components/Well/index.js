@@ -3,7 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 
-const Grid = (props) => {
+const Well = (props) => {
   const { Width } = props.classOptions;
   const { wide, wider, widest, fluid } = Width[0];
   const { bootstrap } = Width[1];
@@ -30,7 +30,7 @@ const Grid = (props) => {
   );
 };
 
-const Component = Copyable(Grid, 'ejs', {
+const Component = Copyable(Well, 'ejs', {
   Width: [{
     wide: false,
     wider: false,
