@@ -18,6 +18,9 @@
     animation-delay: 0;
     color: #666;
     opacity: 0;
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0;
   }
 
   .brand {
@@ -28,8 +31,8 @@
     .team-logo {
       svg {
         display: inline-block;
-        fill: $brand-text;
-        margin-top: -7px;
+        fill: $brand-text-secondary;
+        margin-top: -6px;
         margin-right: 0;
 
         &:first-child {
@@ -38,20 +41,13 @@
         }
       }
 
-      font-family: $font-family-knowledge;
-      font-weight: 400;
+      font-family: $font-family-display;
+      font-weight: 200;
       color: $brand-text-secondary;
       font-size: 29px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-  }
-
-
-  h1 {
-    text-align: center;
-    font-size: 5em;
-    margin-top: 0;
   }
 
   .desktop {
@@ -71,7 +67,7 @@
       font-size: 18px;
 
       svg {
-        margin-top: -2px;
+        margin-top: -3px;
       }
     }
 
