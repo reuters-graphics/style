@@ -1,6 +1,6 @@
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
-@import "~@reuters-graphics/style-color/scss/categorical/brand";
+@import "~@reuters-graphics/style-color/scss/thematic/brand";
 
 .component :global {
   button.back-btn {
@@ -102,7 +102,7 @@
   }
 
   .accessible-row {
-    padding: 0 2px;
+    padding: 2px 2px;
 
     .accessible-block-container {
       display: inline-block;
@@ -116,7 +116,7 @@
 
     .accessible-block {
       display: inline-block;
-      height: 25px;
+      height: 28px;
       width: 15px;
       border-radius: 4px;
       margin-right: 1px;
@@ -130,8 +130,14 @@
     small {
       vertical-align: top;
       display: inline-block;
-      margin-top: 2px;
+      margin-top: 0;
       margin-left: 5px;
+      line-height: 0.85rem;
+
+      span {
+        color: #999;
+        font-size: 0.7rem;
+      }
 
       @media (max-width: 425px) {
         display: none;

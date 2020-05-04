@@ -1,11 +1,19 @@
 .component :global {
+  h3 {
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
+
   div.button {
     cursor: pointer;
 
     h4 {
-      font-weight: normal;
+      font-weight: 400;
       color: #333;
       margin-bottom: 0;
+      font-size: 1.2rem;
     }
 
     p {
@@ -13,11 +21,15 @@
     }
 
     .demo {
+      margin-top: 10px;
+
       div {
         display: inline-block;
-        height: 10px;
-        width: 10px;
+        height: 20px;
+        width: 14px;
         margin-right: 1px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
       }
     }
   }

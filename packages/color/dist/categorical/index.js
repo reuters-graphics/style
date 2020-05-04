@@ -119,254 +119,118 @@ function createColorScheme(scheme) {
   return colorScheme;
 }
 
+var baseLiteScheme = [{
+  hex: '#333333',
+  variables: ['$black-lite'],
+  aliases: ['blackLite'],
+  rgbArray: [51, 51, 51]
+}, {
+  hex: '#cccccc',
+  variables: ['$gray-lite'],
+  aliases: ['grayLite'],
+  rgbArray: [204, 204, 204]
+}, {
+  hex: '#f9f9f9',
+  variables: ['$white-lite'],
+  aliases: ['whiteLite'],
+  rgbArray: [249, 249, 249]
+}, {
+  hex: '#948072',
+  variables: ['$brown-lite'],
+  aliases: ['brownLite'],
+  rgbArray: [148, 128, 114]
+}, {
+  hex: '#ffd430',
+  variables: ['$yellow-lite'],
+  aliases: ['yellowLite'],
+  rgbArray: [255, 212, 48]
+}, {
+  hex: '#f68e26',
+  variables: ['$orange-lite'],
+  aliases: ['orangeLite'],
+  rgbArray: [246, 142, 38]
+}, {
+  hex: '#ee665b',
+  variables: ['$red-lite'],
+  aliases: ['redLite'],
+  rgbArray: [238, 102, 91]
+}, {
+  hex: '#74c476',
+  variables: ['$green-lite'],
+  aliases: ['greenLite'],
+  rgbArray: [116, 196, 118]
+}, {
+  hex: '#569ed3',
+  variables: ['$blue-lite'],
+  aliases: ['blueLite'],
+  rgbArray: [86, 158, 211]
+}, {
+  hex: '#4ec7ff',
+  variables: ['$cyan-lite'],
+  aliases: ['cyanLite'],
+  rgbArray: [78, 199, 255]
+}, {
+  hex: '#9582c1',
+  variables: ['$purple-lite'],
+  aliases: ['purpleLite'],
+  rgbArray: [149, 130, 193]
+}];
+
 var baseScheme = [{
   hex: '#000000',
   variables: ['$black'],
   aliases: ['black'],
   rgbArray: [0, 0, 0]
 }, {
-  hex: '#6b6a6b',
+  hex: '#666666',
   variables: ['$gray'],
   aliases: ['gray'],
-  rgbArray: [107, 106, 107]
+  rgbArray: [102, 102, 102]
 }, {
   hex: '#ffffff',
   variables: ['$white'],
   aliases: ['white'],
   rgbArray: [255, 255, 255]
 }, {
-  hex: '#f6eb0e',
+  hex: '#7d604c',
+  variables: ['$brown'],
+  aliases: ['brown'],
+  rgbArray: [125, 96, 76]
+}, {
+  hex: '#f4c100',
   variables: ['$yellow'],
   aliases: ['yellow'],
-  rgbArray: [246, 235, 14]
+  rgbArray: [244, 193, 0]
 }, {
-  hex: '#ff8000',
+  hex: '#e6550d',
   variables: ['$orange'],
   aliases: ['orange'],
-  rgbArray: [255, 128, 0]
+  rgbArray: [230, 85, 13]
 }, {
-  hex: '#c31729',
+  hex: '#de2d26',
   variables: ['$red'],
   aliases: ['red'],
-  rgbArray: [195, 23, 41]
+  rgbArray: [222, 45, 38]
 }, {
-  hex: '#476e1e',
+  hex: '#31a354',
   variables: ['$green'],
   aliases: ['green'],
-  rgbArray: [71, 110, 30]
+  rgbArray: [49, 163, 84]
 }, {
-  hex: '#0d519f',
+  hex: '#3182bd',
   variables: ['$blue'],
   aliases: ['blue'],
-  rgbArray: [13, 81, 159]
+  rgbArray: [49, 130, 189]
 }, {
-  hex: '#946eac',
+  hex: '#00a1eb',
+  variables: ['$cyan'],
+  aliases: ['cyan'],
+  rgbArray: [0, 161, 235]
+}, {
+  hex: '#6a51a3',
   variables: ['$purple'],
   aliases: ['purple'],
-  rgbArray: [148, 110, 172]
-}, {
-  hex: '#b4d682',
-  variables: ['$mint', '$yes'],
-  aliases: ['mint', 'yes'],
-  rgbArray: [180, 214, 130]
-}, {
-  hex: '#fdc218',
-  variables: ['$marigold', '$no'],
-  aliases: ['marigold', 'no'],
-  rgbArray: [253, 194, 24]
-}];
-
-var brandScheme = [{
-  hex: '#ff8000',
-  variables: ['$brand', '$brand-primary'],
-  aliases: ['brand', 'primary'],
-  rgbArray: [255, 128, 0]
-}, {
-  hex: '#666666',
-  variables: ['$brand-secondary'],
-  aliases: ['secondary'],
-  rgbArray: [102, 102, 102]
-}, {
-  hex: '#ffffff',
-  variables: ['$brand-background', '$brand-inverted-secondary'],
-  aliases: ['background', 'invertedSecondary'],
-  rgbArray: [255, 255, 255]
-}, {
-  hex: '#86888b',
-  variables: ['$brand-nav'],
-  aliases: ['nav'],
-  rgbArray: [134, 136, 139]
-}, {
-  hex: '#313132',
-  variables: ['$brand-nav-active', '$brand-text', '$brand-text-primary'],
-  aliases: ['navActive', 'text', 'textPrimary'],
-  rgbArray: [49, 49, 50]
-}, {
-  hex: '#333333',
-  variables: ['$brand-inverted-background'],
-  aliases: ['invertedBackground'],
-  rgbArray: [51, 51, 51]
-}, {
-  hex: '#999999',
-  variables: ['$brand-inverted-nav'],
-  aliases: ['invertedNav'],
-  rgbArray: [153, 153, 153]
-}, {
-  hex: '#cccccc',
-  variables: ['$brand-inverted-nav-active'],
-  aliases: ['invertedNavActive'],
-  rgbArray: [204, 204, 204]
-}, {
-  hex: '#717375',
-  variables: ['$brand-text-secondary'],
-  aliases: ['textSecondary'],
-  rgbArray: [113, 115, 117]
-}];
-
-var dawnScheme = [{
-  hex: '#98B898',
-  variables: ['$dawn-0'],
-  aliases: ['0'],
-  rgbArray: [152, 184, 152]
-}, {
-  hex: '#94778B',
-  variables: ['$dawn-1'],
-  aliases: ['1'],
-  rgbArray: [148, 119, 139]
-}, {
-  hex: '#EFC267',
-  variables: ['$dawn-2'],
-  aliases: ['2'],
-  rgbArray: [239, 194, 103]
-}, {
-  hex: '#E8495F',
-  variables: ['$dawn-3'],
-  aliases: ['3'],
-  rgbArray: [232, 73, 95]
-}, {
-  hex: '#6A6B75',
-  variables: ['$dawn-4'],
-  aliases: ['4'],
-  rgbArray: [106, 107, 117]
-}, {
-  hex: '#08415C',
-  variables: ['$dawn-5'],
-  aliases: ['5'],
-  rgbArray: [8, 65, 92]
-}];
-
-var khakiScheme = [{
-  hex: '#FDC218',
-  variables: ['$khaki-0'],
-  aliases: ['0'],
-  rgbArray: [253, 194, 24]
-}, {
-  hex: '#406427',
-  variables: ['$khaki-1'],
-  aliases: ['1'],
-  rgbArray: [64, 100, 39]
-}, {
-  hex: '#6A5032',
-  variables: ['$khaki-2'],
-  aliases: ['2'],
-  rgbArray: [106, 80, 50]
-}, {
-  hex: '#413F42',
-  variables: ['$khaki-3'],
-  aliases: ['3'],
-  rgbArray: [65, 63, 66]
-}, {
-  hex: '#949598',
-  variables: ['$khaki-4'],
-  aliases: ['4'],
-  rgbArray: [148, 149, 152]
-}, {
-  hex: '#EDE3DE',
-  variables: ['$khaki-5'],
-  aliases: ['5'],
-  rgbArray: [237, 227, 222]
-}];
-
-var nordScheme = [{
-  hex: '#2E3440',
-  variables: ['$nord-0', '$nord-polar-night-0', '$nord-black'],
-  aliases: ['0', 'polarNight0', 'black'],
-  rgbArray: [46, 52, 64]
-}, {
-  hex: '#3B4252',
-  variables: ['$nord-1', '$nord-polar-night-1'],
-  aliases: ['1', 'polarNight1'],
-  rgbArray: [59, 66, 82]
-}, {
-  hex: '#434C5E',
-  variables: ['$nord-2', '$nord-polar-night-2'],
-  aliases: ['2', 'polarNight2'],
-  rgbArray: [67, 76, 94]
-}, {
-  hex: '#4C566A',
-  variables: ['$nord-3', '$nord-polar-night-3'],
-  aliases: ['3', 'polarNight3'],
-  rgbArray: [76, 86, 106]
-}, {
-  hex: '#D8DEE9',
-  variables: ['$nord-4', '$nord-snow-storm-0'],
-  aliases: ['4', 'snowStorm0'],
-  rgbArray: [216, 222, 233]
-}, {
-  hex: '#E5E9F0',
-  variables: ['$nord-5', '$nord-snow-storm-1'],
-  aliases: ['5', 'snowStorm1'],
-  rgbArray: [229, 233, 240]
-}, {
-  hex: '#ECEFF4',
-  variables: ['$nord-6', '$nord-snow-storm-2', '$nord-white'],
-  aliases: ['6', 'snowStorm2', 'white'],
-  rgbArray: [236, 239, 244]
-}, {
-  hex: '#8FBCBB',
-  variables: ['$nord-7', '$nord-frost-0'],
-  aliases: ['7', 'frost0'],
-  rgbArray: [143, 188, 187]
-}, {
-  hex: '#88C0D0',
-  variables: ['$nord-8', '$nord-frost-1'],
-  aliases: ['8', 'frost1'],
-  rgbArray: [136, 192, 208]
-}, {
-  hex: '#81A1C1',
-  variables: ['$nord-9', '$nord-frost-2'],
-  aliases: ['9', 'frost2'],
-  rgbArray: [129, 161, 193]
-}, {
-  hex: '#5E81AC',
-  variables: ['$nord-10', '$nord-frost-3', '$nord-blue'],
-  aliases: ['10', 'frost3', 'blue'],
-  rgbArray: [94, 129, 172]
-}, {
-  hex: '#BF616A',
-  variables: ['$nord-11', '$nord-aurora-0', '$nord-red'],
-  aliases: ['11', 'aurora0', 'red'],
-  rgbArray: [191, 97, 106]
-}, {
-  hex: '#D08770',
-  variables: ['$nord-12', '$nord-aurora-1', '$nord-orange'],
-  aliases: ['12', 'aurora1', 'orange'],
-  rgbArray: [208, 135, 112]
-}, {
-  hex: '#EBCB8B',
-  variables: ['$nord-13', '$nord-aurora-2', '$nord-yellow'],
-  aliases: ['13', 'aurora2', 'yellow'],
-  rgbArray: [235, 203, 139]
-}, {
-  hex: '#A3BE8C',
-  variables: ['$nord-14', '$nord-aurora-3', '$nord-green'],
-  aliases: ['14', 'aurora3', 'green'],
-  rgbArray: [163, 190, 140]
-}, {
-  hex: '#B48EAD',
-  variables: ['$nord-15', '$nord-aurora-4', '$nord-purple'],
-  aliases: ['15', 'aurora4', 'purple'],
-  rgbArray: [180, 142, 173]
+  rgbArray: [106, 81, 163]
 }];
 
 var polsCaScheme = [{
@@ -465,139 +329,10 @@ var polsUkScheme = [{
   rgbArray: [42, 184, 235]
 }];
 
-var polsUsPrimaryScheme = [{
-  hex: '#7e61c9',
-  variables: ['$pols-us-purple', '$pols-us-klobuchar'],
-  aliases: ['polsUsPurple', 'polsUsKlobuchar'],
-  rgbArray: [126, 97, 201]
-}, {
-  hex: '#ffd103',
-  variables: ['$pols-us-yellow', '$pols-us-sanders', '$pols-us-weld'],
-  aliases: ['polsUsYellow', 'polsUsSanders', 'polsUsWeld'],
-  rgbArray: [255, 209, 3]
-}, {
-  hex: '#72bf2e',
-  variables: ['$pols-us-green', '$pols-us-buttigieg'],
-  aliases: ['polsUsGreen', 'polsUsButtigieg'],
-  rgbArray: [114, 191, 46]
-}, {
-  hex: '#00b0bd',
-  variables: ['$pols-us-turqoise'],
-  aliases: ['polsUsTurqoise'],
-  rgbArray: [0, 176, 189]
-}, {
-  hex: '#f98900',
-  variables: ['$pols-us-orange', '$pols-us-warren', '$pols-us-trump'],
-  aliases: ['polsUsOrange', 'polsUsWarren', 'polsUsTrump'],
-  rgbArray: [249, 137, 0]
-}, {
-  hex: '#b90000',
-  variables: ['$pols-us-maroon'],
-  aliases: ['polsUsMaroon'],
-  rgbArray: [185, 0, 0]
-}, {
-  hex: '#c12b6f',
-  variables: ['$pols-us-magenta', '$pols-us-yang'],
-  aliases: ['polsUsMagenta', 'polsUsYang'],
-  rgbArray: [193, 43, 111]
-}, {
-  hex: '#00b294',
-  variables: ['$pols-us-teal', '$pols-us-bloomberg'],
-  aliases: ['polsUsTeal', 'polsUsBloomberg'],
-  rgbArray: [0, 178, 148]
-}, {
-  hex: '#218ecd',
-  variables: ['$pols-us-blue', '$pols-us-biden', '$pols-us-dem'],
-  aliases: ['polsUsBlue', 'polsUsBiden', 'polsUsDem'],
-  rgbArray: [33, 142, 205]
-}, {
-  hex: '#dbf1ff',
-  variables: ['$pols-us-blue-light', '$pols-us-dem-other'],
-  aliases: ['polsUsBlueLight', 'polsUsDemOther'],
-  rgbArray: [219, 241, 255]
-}, {
-  hex: '#ea2135',
-  variables: ['$pols-us-red', '$pols-us-walsh', '$pols-us-gop'],
-  aliases: ['polsUsRed', 'polsUsWalsh', 'polsUsGop'],
-  rgbArray: [234, 33, 53]
-}, {
-  hex: '#fde1dc',
-  variables: ['$pols-us-red-light', '$pols-us-gop-other'],
-  aliases: ['polsUsRedLight', 'polsUsGopOther'],
-  rgbArray: [253, 225, 220]
-}, {
-  hex: '#939598',
-  variables: ['$pols-us-gray'],
-  aliases: ['polsUsGray'],
-  rgbArray: [147, 149, 152]
-}, {
-  hex: '#c7c7c7',
-  variables: ['$pols-us-gray-light', '$pols-us-no-polling-places'],
-  aliases: ['polsUsGrayLight', 'polsUsNoPollingPlaces'],
-  rgbArray: [199, 199, 199]
-}, {
-  hex: '#efefef',
-  variables: ['$pols-us-gray-lightest', '$pols-us-no-results'],
-  aliases: ['polsUsGrayLightest', 'polsUsNoResults'],
-  rgbArray: [239, 239, 239]
-}, {
-  hex: '#ffffff',
-  variables: ['$pols-us-white'],
-  aliases: ['polsUsWhite'],
-  rgbArray: [255, 255, 255]
-}];
-
-var polsUsScheme = [{
-  hex: '#003576',
-  variables: ['$pols-us-democrat', '$pols-us-democrat-0'],
-  aliases: ['democrat', 'democrat0'],
-  rgbArray: [0, 53, 118]
-}, {
-  hex: '#006bb4',
-  variables: ['$pols-us-democrat-light', '$pols-us-democrat-1'],
-  aliases: ['democratLight', 'democrat1'],
-  rgbArray: [0, 107, 180]
-}, {
-  hex: '#3ca6e4',
-  variables: ['$pols-us-democrat-lighter', '$pols-us-democrat-2'],
-  aliases: ['democratLighter', 'democrat2'],
-  rgbArray: [60, 166, 228]
-}, {
-  hex: '#97d8fd',
-  variables: ['$pols-us-democrat-lightest', '$pols-us-democrat-3'],
-  aliases: ['democratLightest', 'democrat3'],
-  rgbArray: [151, 216, 253]
-}, {
-  hex: '#fdab9e',
-  variables: ['$pols-us-republican-lightest', '$pols-us-republican-3'],
-  aliases: ['republicanLightest', 'republican3'],
-  rgbArray: [253, 171, 158]
-}, {
-  hex: '#ee665b',
-  variables: ['$pols-us-republican-lighter', '$pols-us-republican-2'],
-  aliases: ['republicanLighter', 'republican2'],
-  rgbArray: [238, 102, 91]
-}, {
-  hex: '#c42a28',
-  variables: ['$pols-us-republican-light', '$pols-us-republican-1'],
-  aliases: ['republicanLight', 'republican1'],
-  rgbArray: [196, 42, 40]
-}, {
-  hex: '#7c0000',
-  variables: ['$pols-us-republican', '$pols-us-republican-0'],
-  aliases: ['republican', 'republican0'],
-  rgbArray: [124, 0, 0]
-}];
-
+var baseLite = createColorScheme(baseLiteScheme);
 var base = createColorScheme(baseScheme);
-var brand = createColorScheme(brandScheme);
-var dawn = createColorScheme(dawnScheme);
-var khaki = createColorScheme(khakiScheme);
-var nord = createColorScheme(nordScheme);
 var polsCa = createColorScheme(polsCaScheme);
 var polsEs = createColorScheme(polsEsScheme);
 var polsUk = createColorScheme(polsUkScheme);
-var polsUsPrimary = createColorScheme(polsUsPrimaryScheme);
-var polsUs = createColorScheme(polsUsScheme);
 
-export { base, brand, dawn, khaki, nord, polsCa, polsEs, polsUk, polsUs, polsUsPrimary };
+export { base, baseLite, polsCa, polsEs, polsUk };

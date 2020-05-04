@@ -119,608 +119,481 @@ function createColorScheme(scheme) {
   return colorScheme;
 }
 
-var blueScheme = [{
-  variables: ['$blue-100'],
-  hex: '#C8DAF0',
-  aliases: ['100'],
-  rgbArray: [200, 218, 240]
-}, {
-  variables: ['$blue-200'],
-  hex: '#ABC8E8',
-  aliases: ['200'],
-  rgbArray: [171, 200, 232]
-}, {
-  variables: ['$blue-300'],
-  hex: '#7AADDC',
-  aliases: ['300'],
-  rgbArray: [122, 173, 220]
-}, {
-  variables: ['$blue-400'],
-  hex: '#1F8FCE',
-  aliases: ['400'],
-  rgbArray: [31, 143, 206]
-}, {
-  variables: ['$blue-500'],
-  hex: '#1B78AC',
-  aliases: ['500'],
-  rgbArray: [27, 120, 172]
-}, {
-  variables: ['$blue-600'],
-  hex: '#044F74',
-  aliases: ['600'],
-  rgbArray: [4, 79, 116]
-}];
-
-var brewerBlueScheme = [{
-  variables: ['$brewer-blue-100'],
-  hex: '#f7fbff',
-  aliases: ['100'],
-  rgbArray: [247, 251, 255]
-}, {
-  variables: ['$brewer-blue-200'],
-  hex: '#deebf7',
-  aliases: ['200'],
-  rgbArray: [222, 235, 247]
-}, {
-  variables: ['$brewer-blue-300'],
-  hex: '#c6dbef',
-  aliases: ['300'],
-  rgbArray: [198, 219, 239]
-}, {
-  variables: ['$brewer-blue-400'],
-  hex: '#9ecae1',
-  aliases: ['400'],
-  rgbArray: [158, 202, 225]
-}, {
-  variables: ['$brewer-blue-500'],
-  hex: '#6baed6',
-  aliases: ['500'],
-  rgbArray: [107, 174, 214]
-}, {
-  variables: ['$brewer-blue-600'],
-  hex: '#4292c6',
-  aliases: ['600'],
-  rgbArray: [66, 146, 198]
-}, {
-  variables: ['$brewer-blue-700'],
-  hex: '#2171b5',
-  aliases: ['700'],
-  rgbArray: [33, 113, 181]
-}, {
-  variables: ['$brewer-blue-800'],
-  hex: '#08519c',
-  aliases: ['800'],
-  rgbArray: [8, 81, 156]
-}, {
-  variables: ['$brewer-blue-900'],
-  hex: '#08306b',
-  aliases: ['900'],
-  rgbArray: [8, 48, 107]
-}];
-
-var brewerGreenScheme = [{
-  variables: ['$brewer-green-100'],
-  hex: '#f7fcf5',
-  aliases: ['100'],
-  rgbArray: [247, 252, 245]
-}, {
-  variables: ['$brewer-green-200'],
-  hex: '#e5f5e0',
-  aliases: ['200'],
-  rgbArray: [229, 245, 224]
-}, {
-  variables: ['$brewer-green-300'],
+var avocadoScheme = [{
+  variables: ['$avocado-100', '$green-100'],
   hex: '#c7e9c0',
-  aliases: ['300'],
+  aliases: ['100', 'green100'],
   rgbArray: [199, 233, 192]
 }, {
-  variables: ['$brewer-green-400'],
+  variables: ['$avocado-200', '$green-200'],
   hex: '#a1d99b',
-  aliases: ['400'],
+  aliases: ['200', 'green200'],
   rgbArray: [161, 217, 155]
 }, {
-  variables: ['$brewer-green-500'],
+  variables: ['$avocado-300', '$green-300'],
   hex: '#74c476',
-  aliases: ['500'],
+  aliases: ['300', 'green300'],
   rgbArray: [116, 196, 118]
 }, {
-  variables: ['$brewer-green-600'],
-  hex: '#41ab5d',
-  aliases: ['600'],
-  rgbArray: [65, 171, 93]
+  variables: ['$avocado-400', '$green-400'],
+  hex: '#31a354',
+  aliases: ['400', 'green400'],
+  rgbArray: [49, 163, 84]
 }, {
-  variables: ['$brewer-green-700'],
-  hex: '#238b45',
-  aliases: ['700'],
-  rgbArray: [35, 139, 69]
-}, {
-  variables: ['$brewer-green-800'],
+  variables: ['$avocado-500', '$green-500'],
   hex: '#006d2c',
-  aliases: ['800'],
+  aliases: ['500', 'green500'],
   rgbArray: [0, 109, 44]
-}, {
-  variables: ['$brewer-green-900'],
-  hex: '#00441b',
-  aliases: ['900'],
-  rgbArray: [0, 68, 27]
 }];
 
-var brewerPurpleScheme = [{
-  variables: ['$brewer-purple-100'],
-  hex: '#fcfbfd',
-  aliases: ['100'],
-  rgbArray: [252, 251, 253]
+var blueberryScheme = [{
+  variables: ['$blueberry-100', '$blue-100'],
+  hex: '#d2e6f3',
+  aliases: ['100', 'blue100'],
+  rgbArray: [210, 230, 243]
 }, {
-  variables: ['$brewer-purple-200'],
-  hex: '#efedf5',
-  aliases: ['200'],
-  rgbArray: [239, 237, 245]
+  variables: ['$blueberry-200', '$blue-200'],
+  hex: '#a4cbe7',
+  aliases: ['200', 'blue200'],
+  rgbArray: [164, 203, 231]
 }, {
-  variables: ['$brewer-purple-300'],
-  hex: '#dadaeb',
-  aliases: ['300'],
-  rgbArray: [218, 218, 235]
+  variables: ['$blueberry-300', '$blue-300'],
+  hex: '#569ed3',
+  aliases: ['300', 'blue300'],
+  rgbArray: [86, 158, 211]
 }, {
-  variables: ['$brewer-purple-400'],
-  hex: '#bcbddc',
-  aliases: ['400'],
-  rgbArray: [188, 189, 220]
+  variables: ['$blueberry-400', '$blue-400'],
+  hex: '#3182bd',
+  aliases: ['400', 'blue400'],
+  rgbArray: [49, 130, 189]
 }, {
-  variables: ['$brewer-purple-500'],
-  hex: '#9e9ac8',
-  aliases: ['500'],
-  rgbArray: [158, 154, 200]
-}, {
-  variables: ['$brewer-purple-600'],
-  hex: '#807dba',
-  aliases: ['600'],
-  rgbArray: [128, 125, 186]
-}, {
-  variables: ['$brewer-purple-700'],
-  hex: '#6a51a3',
-  aliases: ['700'],
-  rgbArray: [106, 81, 163]
-}, {
-  variables: ['$brewer-purple-800'],
-  hex: '#54278f',
-  aliases: ['800'],
-  rgbArray: [84, 39, 143]
-}, {
-  variables: ['$brewer-purple-900'],
-  hex: '#3f007d',
-  aliases: ['900'],
-  rgbArray: [63, 0, 125]
+  variables: ['$blueberry-500', '$blue-500'],
+  hex: '#08519c',
+  aliases: ['500', 'blue500'],
+  rgbArray: [8, 81, 156]
 }];
 
-var brewerRedScheme = [{
-  variables: ['$brewer-red-100'],
-  hex: '#fff5f0',
+var caraCaraMorelScheme = [{
+  variables: ['$cara-cara-morel-100'],
+  hex: '#efefef',
   aliases: ['100'],
-  rgbArray: [255, 245, 240]
+  rgbArray: [239, 239, 239]
 }, {
-  variables: ['$brewer-red-200'],
-  hex: '#fee0d2',
+  variables: ['$cara-cara-morel-200'],
+  hex: '#fff4cd',
   aliases: ['200'],
-  rgbArray: [254, 224, 210]
+  rgbArray: [255, 244, 205]
 }, {
-  variables: ['$brewer-red-300'],
-  hex: '#fcbba1',
+  variables: ['$cara-cara-morel-300'],
+  hex: '#fdbe85',
   aliases: ['300'],
-  rgbArray: [252, 187, 161]
+  rgbArray: [253, 190, 133]
 }, {
-  variables: ['$brewer-red-400'],
-  hex: '#fc9272',
+  variables: ['$cara-cara-morel-400'],
+  hex: '#f68e26',
   aliases: ['400'],
-  rgbArray: [252, 146, 114]
+  rgbArray: [246, 142, 38]
 }, {
-  variables: ['$brewer-red-500'],
-  hex: '#fb6a4a',
+  variables: ['$cara-cara-morel-500'],
+  hex: '#7d604c',
   aliases: ['500'],
-  rgbArray: [251, 106, 74]
-}, {
-  variables: ['$brewer-red-600'],
-  hex: '#ef3b2c',
-  aliases: ['600'],
-  rgbArray: [239, 59, 44]
-}, {
-  variables: ['$brewer-red-700'],
-  hex: '#cb181d',
-  aliases: ['700'],
-  rgbArray: [203, 24, 29]
-}, {
-  variables: ['$brewer-red-800'],
-  hex: '#a50f15',
-  aliases: ['800'],
-  rgbArray: [165, 15, 21]
-}, {
-  variables: ['$brewer-red-900'],
-  hex: '#67000d',
-  aliases: ['900'],
-  rgbArray: [103, 0, 13]
+  rgbArray: [125, 96, 76]
 }];
 
-var brewerWarmRedScheme = [{
-  variables: ['$brewer-warm-red-100'],
-  hex: '#fff5eb',
-  aliases: ['100'],
-  rgbArray: [255, 245, 235]
+var caraCaraScheme = [{
+  variables: ['$cara-cara-100', '$orange-100'],
+  hex: '#feedde',
+  aliases: ['100', 'orange100'],
+  rgbArray: [254, 237, 222]
 }, {
-  variables: ['$brewer-warm-red-200'],
-  hex: '#fee6ce',
-  aliases: ['200'],
-  rgbArray: [254, 230, 206]
+  variables: ['$cara-cara-200', '$orange-200'],
+  hex: '#fdbe85',
+  aliases: ['200', 'orange200'],
+  rgbArray: [253, 190, 133]
 }, {
-  variables: ['$brewer-warm-red-300'],
-  hex: '#fdd0a2',
-  aliases: ['300'],
-  rgbArray: [253, 208, 162]
+  variables: ['$cara-cara-300', '$orange-300'],
+  hex: '#f68e26',
+  aliases: ['300', 'orange300'],
+  rgbArray: [246, 142, 38]
 }, {
-  variables: ['$brewer-warm-red-400'],
-  hex: '#fdae6b',
-  aliases: ['400'],
-  rgbArray: [253, 174, 107]
+  variables: ['$cara-cara-400', '$orange-400'],
+  hex: '#e6550d',
+  aliases: ['400', 'orange400'],
+  rgbArray: [230, 85, 13]
 }, {
-  variables: ['$brewer-warm-red-500'],
-  hex: '#fd8d3c',
-  aliases: ['500'],
-  rgbArray: [253, 141, 60]
-}, {
-  variables: ['$brewer-warm-red-600'],
-  hex: '#f16913',
-  aliases: ['600'],
-  rgbArray: [241, 105, 19]
-}, {
-  variables: ['$brewer-warm-red-700'],
-  hex: '#d94801',
-  aliases: ['700'],
-  rgbArray: [217, 72, 1]
-}, {
-  variables: ['$brewer-warm-red-800'],
+  variables: ['$cara-cara-500', '$orange-500'],
   hex: '#a63603',
-  aliases: ['800'],
+  aliases: ['500', 'orange500'],
+  rgbArray: [166, 54, 3]
+}];
+
+var fujiAppleScheme = [{
+  variables: ['$fuji-apple-100', '$red-100'],
+  hex: '#fee5d9',
+  aliases: ['100', 'red100'],
+  rgbArray: [254, 229, 217]
+}, {
+  variables: ['$fuji-apple-200', '$red-200'],
+  hex: '#f4a091',
+  aliases: ['200', 'red200'],
+  rgbArray: [244, 160, 145]
+}, {
+  variables: ['$fuji-apple-300', '$red-300'],
+  hex: '#ee665b',
+  aliases: ['300', 'red300'],
+  rgbArray: [238, 102, 91]
+}, {
+  variables: ['$fuji-apple-400', '$red-400'],
+  hex: '#de2d26',
+  aliases: ['400', 'red400'],
+  rgbArray: [222, 45, 38]
+}, {
+  variables: ['$fuji-apple-500', '$red-500'],
+  hex: '#a50f15',
+  aliases: ['500', 'red500'],
+  rgbArray: [165, 15, 21]
+}];
+
+var mangoCaraCaraScheme = [{
+  variables: ['$mango-cara-cara-100'],
+  hex: '#fff4cd',
+  aliases: ['100'],
+  rgbArray: [255, 244, 205]
+}, {
+  variables: ['$mango-cara-cara-200'],
+  hex: '#ffd430',
+  aliases: ['200'],
+  rgbArray: [255, 212, 48]
+}, {
+  variables: ['$mango-cara-cara-300'],
+  hex: '#f68e26',
+  aliases: ['300'],
+  rgbArray: [246, 142, 38]
+}, {
+  variables: ['$mango-cara-cara-400'],
+  hex: '#e6550d',
+  aliases: ['400'],
+  rgbArray: [230, 85, 13]
+}, {
+  variables: ['$mango-cara-cara-500'],
+  hex: '#a63603',
+  aliases: ['500'],
+  rgbArray: [166, 54, 3]
+}];
+
+var mangoFujiAppleScheme = [{
+  variables: ['$mango-fuji-apple-100'],
+  hex: '#fff4cd',
+  aliases: ['100'],
+  rgbArray: [255, 244, 205]
+}, {
+  variables: ['$mango-fuji-apple-200'],
+  hex: '#ffe47f',
+  aliases: ['200'],
+  rgbArray: [255, 228, 127]
+}, {
+  variables: ['$mango-fuji-apple-300'],
+  hex: '#ffd430',
+  aliases: ['300'],
+  rgbArray: [255, 212, 48]
+}, {
+  variables: ['$mango-fuji-apple-400'],
+  hex: '#e6550d',
+  aliases: ['400'],
+  rgbArray: [230, 85, 13]
+}, {
+  variables: ['$mango-fuji-apple-500'],
+  hex: '#a50f15',
+  aliases: ['500'],
+  rgbArray: [165, 15, 21]
+}];
+
+var mangoMorelScheme = [{
+  variables: ['$mango-morel-100'],
+  hex: '#fff4cd',
+  aliases: ['100'],
+  rgbArray: [255, 244, 205]
+}, {
+  variables: ['$mango-morel-200'],
+  hex: '#ffd430',
+  aliases: ['200'],
+  rgbArray: [255, 212, 48]
+}, {
+  variables: ['$mango-morel-300'],
+  hex: '#f68e26',
+  aliases: ['300'],
+  rgbArray: [246, 142, 38]
+}, {
+  variables: ['$mango-morel-400'],
+  hex: '#a63603',
+  aliases: ['400'],
   rgbArray: [166, 54, 3]
 }, {
-  variables: ['$brewer-warm-red-900'],
-  hex: '#7f2704',
-  aliases: ['900'],
-  rgbArray: [127, 39, 4]
-}];
-
-var cyanScheme = [{
-  variables: ['$cyan-100'],
-  hex: '#CFE8F9',
-  aliases: ['100'],
-  rgbArray: [207, 232, 249]
-}, {
-  variables: ['$cyan-200'],
-  hex: '#B5DDF6',
-  aliases: ['200'],
-  rgbArray: [181, 221, 246]
-}, {
-  variables: ['$cyan-300'],
-  hex: '#86CCF1',
-  aliases: ['300'],
-  rgbArray: [134, 204, 241]
-}, {
-  variables: ['$cyan-400'],
-  hex: '#2AB8EB',
-  aliases: ['400'],
-  rgbArray: [42, 184, 235]
-}, {
-  variables: ['$cyan-500'],
-  hex: '#259AC5',
+  variables: ['$mango-morel-500'],
+  hex: '#49392e',
   aliases: ['500'],
-  rgbArray: [37, 154, 197]
-}, {
-  variables: ['$cyan-600'],
-  hex: '#0C6785',
-  aliases: ['600'],
-  rgbArray: [12, 103, 133]
+  rgbArray: [73, 57, 46]
 }];
 
-var grayScheme = [{
-  variables: ['$gray-100'],
-  hex: '#F0F1F1',
+var mangoScheme = [{
+  variables: ['$mango-100', '$yellow-100'],
+  hex: '#fff4cd',
+  aliases: ['100', 'yellow100'],
+  rgbArray: [255, 244, 205]
+}, {
+  variables: ['$mango-200', '$yellow-200'],
+  hex: '#ffe47f',
+  aliases: ['200', 'yellow200'],
+  rgbArray: [255, 228, 127]
+}, {
+  variables: ['$mango-300', '$yellow-300'],
+  hex: '#ffd430',
+  aliases: ['300', 'yellow300'],
+  rgbArray: [255, 212, 48]
+}, {
+  variables: ['$mango-400', '$yellow-400'],
+  hex: '#f4c100',
+  aliases: ['400', 'yellow400'],
+  rgbArray: [244, 193, 0]
+}, {
+  variables: ['$mango-500', '$yellow-500'],
+  hex: '#cda200',
+  aliases: ['500', 'yellow500'],
+  rgbArray: [205, 162, 0]
+}];
+
+var mintChocolateSesameScheme = [{
+  variables: ['$mint-chocolate-sesame-100'],
+  hex: '#fff4cd',
   aliases: ['100'],
-  rgbArray: [240, 241, 241]
+  rgbArray: [255, 244, 205]
 }, {
-  variables: ['$gray-200'],
-  hex: '#E6E7E8',
+  variables: ['$mint-chocolate-sesame-200'],
+  hex: '#a8dbd9',
   aliases: ['200'],
-  rgbArray: [230, 231, 232]
+  rgbArray: [168, 219, 217]
 }, {
-  variables: ['$gray-300'],
-  hex: '#A7A9AC',
+  variables: ['$mint-chocolate-sesame-300'],
+  hex: '#7ebfc1',
   aliases: ['300'],
-  rgbArray: [167, 169, 172]
+  rgbArray: [126, 191, 193]
 }, {
-  variables: ['$gray-400'],
-  hex: '#999',
+  variables: ['$mint-chocolate-sesame-400'],
+  hex: '#4f90a6',
   aliases: ['400'],
+  rgbArray: [79, 144, 166]
+}, {
+  variables: ['$mint-chocolate-sesame-500'],
+  hex: '#333333',
+  aliases: ['500'],
+  rgbArray: [51, 51, 51]
+}];
+
+var mintChocolateScheme = [{
+  variables: ['$mint-chocolate-100', '$teal-100'],
+  hex: '#d1eeea',
+  aliases: ['100', 'teal100'],
+  rgbArray: [209, 238, 234]
+}, {
+  variables: ['$mint-chocolate-200', '$teal-200'],
+  hex: '#a8dbd9',
+  aliases: ['200', 'teal200'],
+  rgbArray: [168, 219, 217]
+}, {
+  variables: ['$mint-chocolate-300', '$teal-300'],
+  hex: '#7ebfc1',
+  aliases: ['300', 'teal300'],
+  rgbArray: [126, 191, 193]
+}, {
+  variables: ['$mint-chocolate-400', '$teal-400'],
+  hex: '#4f90a6',
+  aliases: ['400', 'teal400'],
+  rgbArray: [79, 144, 166]
+}, {
+  variables: ['$mint-chocolate-500', '$teal-500'],
+  hex: '#2c6075',
+  aliases: ['500', 'teal500'],
+  rgbArray: [44, 96, 117]
+}];
+
+var morelScheme = [{
+  variables: ['$morel-100', '$brown-100'],
+  hex: '#d8d0cc',
+  aliases: ['100', 'brown100'],
+  rgbArray: [216, 208, 204]
+}, {
+  variables: ['$morel-200', '$brown-200'],
+  hex: '#b6a89f',
+  aliases: ['200', 'brown200'],
+  rgbArray: [182, 168, 159]
+}, {
+  variables: ['$morel-300', '$brown-300'],
+  hex: '#948072',
+  aliases: ['300', 'brown300'],
+  rgbArray: [148, 128, 114]
+}, {
+  variables: ['$morel-400', '$brown-400'],
+  hex: '#7d604c',
+  aliases: ['400', 'brown400'],
+  rgbArray: [125, 96, 76]
+}, {
+  variables: ['$morel-500', '$brown-500'],
+  hex: '#49392e',
+  aliases: ['500', 'brown500'],
+  rgbArray: [73, 57, 46]
+}];
+
+var morningGloryBlueberryScheme = [{
+  variables: ['$morning-glory-blueberry-100'],
+  hex: '#c3ecff',
+  aliases: ['100'],
+  rgbArray: [195, 236, 255]
+}, {
+  variables: ['$morning-glory-blueberry-200'],
+  hex: '#89daff',
+  aliases: ['200'],
+  rgbArray: [137, 218, 255]
+}, {
+  variables: ['$morning-glory-blueberry-300'],
+  hex: '#4ec7ff',
+  aliases: ['300'],
+  rgbArray: [78, 199, 255]
+}, {
+  variables: ['$morning-glory-blueberry-400'],
+  hex: '#00a1eb',
+  aliases: ['400'],
+  rgbArray: [0, 161, 235]
+}, {
+  variables: ['$morning-glory-blueberry-500'],
+  hex: '#08519c',
+  aliases: ['500'],
+  rgbArray: [8, 81, 156]
+}];
+
+var morningGloryScheme = [{
+  variables: ['$morning-glory-100', '$cyan-100'],
+  hex: '#c3ecff',
+  aliases: ['100', 'cyan100'],
+  rgbArray: [195, 236, 255]
+}, {
+  variables: ['$morning-glory-200', '$cyan-200'],
+  hex: '#89daff',
+  aliases: ['200', 'cyan200'],
+  rgbArray: [137, 218, 255]
+}, {
+  variables: ['$morning-glory-300', '$cyan-300'],
+  hex: '#4ec7ff',
+  aliases: ['300', 'cyan300'],
+  rgbArray: [78, 199, 255]
+}, {
+  variables: ['$morning-glory-400', '$cyan-400'],
+  hex: '#00a1eb',
+  aliases: ['400', 'cyan400'],
+  rgbArray: [0, 161, 235]
+}, {
+  variables: ['$morning-glory-500', '$cyan-500'],
+  hex: '#0079b0',
+  aliases: ['500', 'cyan500'],
+  rgbArray: [0, 121, 176]
+}];
+
+var pistachioScheme = [{
+  variables: ['$pistachio-100'],
+  hex: '#d6e8be',
+  aliases: ['100'],
+  rgbArray: [214, 232, 190]
+}, {
+  variables: ['$pistachio-200'],
+  hex: '#bad992',
+  aliases: ['200'],
+  rgbArray: [186, 217, 146]
+}, {
+  variables: ['$pistachio-300'],
+  hex: '#9eca66',
+  aliases: ['300'],
+  rgbArray: [158, 202, 102]
+}, {
+  variables: ['$pistachio-400'],
+  hex: '#6c9936',
+  aliases: ['400'],
+  rgbArray: [108, 153, 54]
+}, {
+  variables: ['$pistachio-500'],
+  hex: '#4e6e26',
+  aliases: ['500'],
+  rgbArray: [78, 110, 38]
+}];
+
+var plumScheme = [{
+  variables: ['$plum-100', '$purple-100'],
+  hex: '#dadaeb',
+  aliases: ['100', 'purple100'],
+  rgbArray: [218, 218, 235]
+}, {
+  variables: ['$plum-200', '$purple-200'],
+  hex: '#c1b6db',
+  aliases: ['200', 'purple200'],
+  rgbArray: [193, 182, 219]
+}, {
+  variables: ['$plum-300', '$purple-300'],
+  hex: '#9582c1',
+  aliases: ['300', 'purple300'],
+  rgbArray: [149, 130, 193]
+}, {
+  variables: ['$plum-400', '$purple-400'],
+  hex: '#6a51a3',
+  aliases: ['400', 'purple400'],
+  rgbArray: [106, 81, 163]
+}, {
+  variables: ['$plum-500', '$purple-500'],
+  hex: '#54278f',
+  aliases: ['500', 'purple500'],
+  rgbArray: [84, 39, 143]
+}];
+
+var sesameScheme = [{
+  variables: ['$sesame-100', '$gray-100'],
+  hex: '#efefef',
+  aliases: ['100', 'gray100'],
+  rgbArray: [239, 239, 239]
+}, {
+  variables: ['$sesame-200', '$gray-200'],
+  hex: '#cccccc',
+  aliases: ['200', 'gray200'],
+  rgbArray: [204, 204, 204]
+}, {
+  variables: ['$sesame-300', '$gray-300'],
+  hex: '#999999',
+  aliases: ['300', 'gray300'],
   rgbArray: [153, 153, 153]
 }, {
-  variables: ['$gray-500'],
-  hex: '#76787A',
-  aliases: ['500'],
-  rgbArray: [118, 120, 122]
+  variables: ['$sesame-400', '$gray-400'],
+  hex: '#666666',
+  aliases: ['400', 'gray400'],
+  rgbArray: [102, 102, 102]
 }, {
-  variables: ['$gray-600'],
-  hex: '#404041',
-  aliases: ['600'],
-  rgbArray: [64, 64, 65]
+  variables: ['$sesame-500', '$gray-500'],
+  hex: '#333333',
+  aliases: ['500', 'gray500'],
+  rgbArray: [51, 51, 51]
 }];
 
-var greenScheme = [{
-  variables: ['$green-100'],
-  hex: '#CBE1C8',
-  aliases: ['100'],
-  rgbArray: [203, 225, 200]
-}, {
-  variables: ['$green-200'],
-  hex: '#AED3AB',
-  aliases: ['200'],
-  rgbArray: [174, 211, 171]
-}, {
-  variables: ['$green-300'],
-  hex: '#7DBE80',
-  aliases: ['300'],
-  rgbArray: [125, 190, 128]
-}, {
-  variables: ['$green-400'],
-  hex: '#0AA74B',
-  aliases: ['400'],
-  rgbArray: [10, 167, 75]
-}, {
-  variables: ['$green-500'],
-  hex: '#008C3E',
-  aliases: ['500'],
-  rgbArray: [0, 140, 62]
-}, {
-  variables: ['$green-600'],
-  hex: '#005E25',
-  aliases: ['600'],
-  rgbArray: [0, 94, 37]
-}];
+var avocado = createColorScheme(avocadoScheme);
+var blueberry = createColorScheme(blueberryScheme);
+var caraCaraMorel = createColorScheme(caraCaraMorelScheme);
+var caraCara = createColorScheme(caraCaraScheme);
+var fujiApple = createColorScheme(fujiAppleScheme);
+var mangoCaraCara = createColorScheme(mangoCaraCaraScheme);
+var mangoFujiApple = createColorScheme(mangoFujiAppleScheme);
+var mangoMorel = createColorScheme(mangoMorelScheme);
+var mango = createColorScheme(mangoScheme);
+var mintChocolateSesame = createColorScheme(mintChocolateSesameScheme);
+var mintChocolate = createColorScheme(mintChocolateScheme);
+var morel = createColorScheme(morelScheme);
+var morningGloryBlueberry = createColorScheme(morningGloryBlueberryScheme);
+var morningGlory = createColorScheme(morningGloryScheme);
+var pistachio = createColorScheme(pistachioScheme);
+var plum = createColorScheme(plumScheme);
+var sesame = createColorScheme(sesameScheme);
 
-var magentaScheme = [{
-  variables: ['$magenta-100'],
-  hex: '#F4CCDC',
-  aliases: ['100'],
-  rgbArray: [244, 204, 220]
-}, {
-  variables: ['$magenta-200'],
-  hex: '#E575A6',
-  aliases: ['200'],
-  rgbArray: [229, 117, 166]
-}, {
-  variables: ['$magenta-300'],
-  hex: '#DF338A',
-  aliases: ['300'],
-  rgbArray: [223, 51, 138]
-}, {
-  variables: ['$magenta-400'],
-  hex: '#9C1B61',
-  aliases: ['400'],
-  rgbArray: [156, 27, 97]
-}, {
-  variables: ['$magenta-500'],
-  hex: '#740245',
-  aliases: ['500'],
-  rgbArray: [116, 2, 69]
-}, {
-  variables: ['$magenta-600'],
-  hex: '#65002C',
-  aliases: ['600'],
-  rgbArray: [101, 0, 44]
-}];
-
-var navyScheme = [{
-  variables: ['$navy-100'],
-  hex: '#BCC2E0',
-  aliases: ['100'],
-  rgbArray: [188, 194, 224]
-}, {
-  variables: ['$navy-200'],
-  hex: '#9BA4CF',
-  aliases: ['200'],
-  rgbArray: [155, 164, 207]
-}, {
-  variables: ['$navy-300'],
-  hex: '#697CB8',
-  aliases: ['300'],
-  rgbArray: [105, 124, 184]
-}, {
-  variables: ['$navy-400'],
-  hex: '#0F519F',
-  aliases: ['400'],
-  rgbArray: [15, 81, 159]
-}, {
-  variables: ['$navy-500'],
-  hex: '#0A4286',
-  aliases: ['500'],
-  rgbArray: [10, 66, 134]
-}, {
-  variables: ['$navy-600'],
-  hex: '#002459',
-  aliases: ['600'],
-  rgbArray: [0, 36, 89]
-}];
-
-var orangeScheme = [{
-  variables: ['$orange-100'],
-  hex: '#FDD5BB',
-  aliases: ['100'],
-  rgbArray: [253, 213, 187]
-}, {
-  variables: ['$orange-200'],
-  hex: '#FBBE99',
-  aliases: ['200'],
-  rgbArray: [251, 190, 153]
-}, {
-  variables: ['$orange-300'],
-  hex: '#F79967',
-  aliases: ['300'],
-  rgbArray: [247, 153, 103]
-}, {
-  variables: ['$orange-400'],
-  hex: '#F26725',
-  aliases: ['400'],
-  rgbArray: [242, 103, 37]
-}, {
-  variables: ['$orange-500'],
-  hex: '#C8551D',
-  aliases: ['500'],
-  rgbArray: [200, 85, 29]
-}, {
-  variables: ['$orange-600'],
-  hex: '#843401',
-  aliases: ['600'],
-  rgbArray: [132, 52, 1]
-}];
-
-var purpleScheme = [{
-  variables: ['$purple-100'],
-  hex: '#CABDDC',
-  aliases: ['100'],
-  rgbArray: [202, 189, 220]
-}, {
-  variables: ['$purple-200'],
-  hex: '#B19CC9',
-  aliases: ['200'],
-  rgbArray: [177, 156, 201]
-}, {
-  variables: ['$purple-300'],
-  hex: '#8D6EAE',
-  aliases: ['300'],
-  rgbArray: [141, 110, 174]
-}, {
-  variables: ['$purple-400'],
-  hex: '#653290',
-  aliases: ['400'],
-  rgbArray: [101, 50, 144]
-}, {
-  variables: ['$purple-500'],
-  hex: '#552479',
-  aliases: ['500'],
-  rgbArray: [85, 36, 121]
-}, {
-  variables: ['$purple-600'],
-  hex: '#360451',
-  aliases: ['600'],
-  rgbArray: [54, 4, 81]
-}];
-
-var redScheme = [{
-  variables: ['$red-100'],
-  hex: '#FBC9BA',
-  aliases: ['100'],
-  rgbArray: [251, 201, 186]
-}, {
-  variables: ['$red-200'],
-  hex: '#F8AB98',
-  aliases: ['200'],
-  rgbArray: [248, 171, 152]
-}, {
-  variables: ['$red-300'],
-  hex: '#F37B68',
-  aliases: ['300'],
-  rgbArray: [243, 123, 104]
-}, {
-  variables: ['$red-400'],
-  hex: '#EC2033',
-  aliases: ['400'],
-  rgbArray: [236, 32, 51]
-}, {
-  variables: ['$red-500'],
-  hex: '#C31729',
-  aliases: ['500'],
-  rgbArray: [195, 23, 41]
-}, {
-  variables: ['$red-600'],
-  hex: '#82000D',
-  aliases: ['600'],
-  rgbArray: [130, 0, 13]
-}];
-
-var tangerineScheme = [{
-  variables: ['$tangerine-100'],
-  hex: '#FFECC6',
-  aliases: ['100'],
-  rgbArray: [255, 236, 198]
-}, {
-  variables: ['$tangerine-200'],
-  hex: '#FFE3A7',
-  aliases: ['200'],
-  rgbArray: [255, 227, 167]
-}, {
-  variables: ['$tangerine-300'],
-  hex: '#FFD576',
-  aliases: ['300'],
-  rgbArray: [255, 213, 118]
-}, {
-  variables: ['$tangerine-400'],
-  hex: '#FDC218',
-  aliases: ['400'],
-  rgbArray: [253, 194, 24]
-}, {
-  variables: ['$tangerine-500'],
-  hex: '#D0A115',
-  aliases: ['500'],
-  rgbArray: [208, 161, 21]
-}, {
-  variables: ['$tangerine-600'],
-  hex: '#886A00',
-  aliases: ['600'],
-  rgbArray: [136, 106, 0]
-}];
-
-var yellowScheme = [{
-  variables: ['$yellow-100'],
-  hex: '#FCF8CD',
-  aliases: ['100'],
-  rgbArray: [252, 248, 205]
-}, {
-  variables: ['$yellow-200'],
-  hex: '#FBF5B0',
-  aliases: ['200'],
-  rgbArray: [251, 245, 176]
-}, {
-  variables: ['$yellow-300'],
-  hex: '#F9F17E',
-  aliases: ['300'],
-  rgbArray: [249, 241, 126]
-}, {
-  variables: ['$yellow-400'],
-  hex: '#F6EB0E',
-  aliases: ['400'],
-  rgbArray: [246, 235, 14]
-}, {
-  variables: ['$yellow-500'],
-  hex: '#CAC313',
-  aliases: ['500'],
-  rgbArray: [202, 195, 19]
-}, {
-  variables: ['$yellow-600'],
-  hex: '#838103',
-  aliases: ['600'],
-  rgbArray: [131, 129, 3]
-}];
-
-var blue = createColorScheme(blueScheme);
-var brewerBlue = createColorScheme(brewerBlueScheme);
-var brewerGreen = createColorScheme(brewerGreenScheme);
-var brewerPurple = createColorScheme(brewerPurpleScheme);
-var brewerRed = createColorScheme(brewerRedScheme);
-var brewerWarmRed = createColorScheme(brewerWarmRedScheme);
-var cyan = createColorScheme(cyanScheme);
-var gray = createColorScheme(grayScheme);
-var green = createColorScheme(greenScheme);
-var magenta = createColorScheme(magentaScheme);
-var navy = createColorScheme(navyScheme);
-var orange = createColorScheme(orangeScheme);
-var purple = createColorScheme(purpleScheme);
-var red = createColorScheme(redScheme);
-var tangerine = createColorScheme(tangerineScheme);
-var yellow = createColorScheme(yellowScheme);
-
-export { blue, brewerBlue, brewerGreen, brewerPurple, brewerRed, brewerWarmRed, cyan, gray, green, magenta, navy, orange, purple, red, tangerine, yellow };
+export { avocado, blueberry, caraCara, caraCaraMorel, fujiApple, mango, mangoCaraCara, mangoFujiApple, mangoMorel, mintChocolate, mintChocolateSesame, morel, morningGlory, morningGloryBlueberry, pistachio, plum, sesame };

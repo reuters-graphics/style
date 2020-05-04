@@ -1,12 +1,12 @@
 hex,variables
 #000000,$black
-#6b6a6b,$gray
+#666666,$gray
 #ffffff,$white
-#f6eb0e,$yellow
-#ff8000,$orange
-#c31729,$red
-#476e1e,$green
-#0d519f,$blue
-#946eac,$purple
-#b4d682,$mint $yes
-#fdc218,$marigold $no
+#7d604c,$brown
+#f4c100,$yellow
+#e6550d,$orange
+#de2d26,$red
+#31a354,$green
+#3182bd,$blue
+#00a1eb,$cyan
+#6a51a3,$purple

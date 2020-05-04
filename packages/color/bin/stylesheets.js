@@ -54,10 +54,12 @@ const makeSchemes = (type = 'categorical') => {
 makeSchemes('categorical');
 makeSchemes('sequential');
 makeSchemes('diverging');
+makeSchemes('thematic');
 
 const mainPath = path.resolve(__dirname, '../scss/_all.scss');
 fs.writeFileSync(mainPath, `
 @import 'categorical/all';
 @import 'sequential/all';
 @import 'diverging/all';
+@import 'thematic/all';
 `);

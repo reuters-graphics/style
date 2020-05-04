@@ -49,4 +49,11 @@ export default [{
     format: 'es',
   },
   plugins,
+}, {
+  input: path.resolve(__dirname, '../src/schemes/thematic/index.js'),
+  output: {
+    file: path.resolve(__dirname, '../dist/thematic/index.js'),
+    format: 'es',
+  },
+  plugins,
 }];

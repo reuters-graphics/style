@@ -1,10 +1,10 @@
 import React from 'react';
 import blinder from 'color-blind';
 
-const makeRow = (colors, name) => {
-  const accessibleColors = colors.map(color => (
+const makeRow = (colors, name, prevalence = null) => {
+  const accessibleColors = colors.map((color, i) => (
     <div
-      key={color}
+      key={name + color + i}
       className='accessible-block'
       style={{ background: color }}
     />
@@ -15,7 +15,7 @@ const makeRow = (colors, name) => {
         className='accessible-block-container'
       >{accessibleColors}
       </div>
-      <small>{name}</small>
+      <small>{name} <br /> <span>{prevalence}</span></small>
     </div>
   );
 };
@@ -33,14 +33,14 @@ const Accessibility = (props) => {
   return (
     <div className='accessibility'>
       {makeRow(colors.map(c => c.hex), '')}
-      {makeRow(protanomaly, 'protanomaly')}
-      {makeRow(protanopia, 'protanopia')}
-      {makeRow(deuteranomaly, 'deuteranomaly')}
-      {makeRow(deuteranopia, 'deuteranopia')}
-      {makeRow(tritanomaly, 'tritanomaly')}
-      {makeRow(tritanopia, 'tritanopia')}
-      {makeRow(achromatomaly, 'achromatomaly')}
-      {makeRow(achromatopsia, 'achromatopsia')}
+      {makeRow(deuteranomaly, 'deuteranomaly', '5% of men / <1% of women')}
+      {makeRow(deuteranopia, 'deuteranopia', '1% of men / <0.1% of women')}
+      {makeRow(protanomaly, 'protanomaly', '1% of men / <0.1% of women')}
+      {makeRow(protanopia, 'protanopia', '1% of men / <1% of women')}
+      {makeRow(tritanomaly, 'tritanomaly', '<0.1% of men & women')}
+      {makeRow(tritanopia, 'tritanopia', '<0.1% of men & women')}
+      {makeRow(achromatomaly, 'achromatomaly', 'rare')}
+      {makeRow(achromatopsia, 'achromatopsia', 'rare')}
     </div>
   );
 };

@@ -14,7 +14,7 @@ export default [
     ]
   },
   {
-    hex: '#6b6a6b',
+    hex: '#666666',
     variables: [
       '$gray'
     ],
@@ -22,9 +22,9 @@ export default [
       'gray'
     ],
     rgbArray: [
-      107,
-      106,
-      107
+      102,
+      102,
+      102
     ]
   },
   {
@@ -42,7 +42,21 @@ export default [
     ]
   },
   {
-    hex: '#f6eb0e',
+    hex: '#7d604c',
+    variables: [
+      '$brown'
+    ],
+    aliases: [
+      'brown'
+    ],
+    rgbArray: [
+      125,
+      96,
+      76
+    ]
+  },
+  {
+    hex: '#f4c100',
     variables: [
       '$yellow'
     ],
@@ -50,13 +64,13 @@ export default [
       'yellow'
     ],
     rgbArray: [
-      246,
-      235,
-      14
+      244,
+      193,
+      0
     ]
   },
   {
-    hex: '#ff8000',
+    hex: '#e6550d',
     variables: [
       '$orange'
     ],
@@ -64,13 +78,13 @@ export default [
       'orange'
     ],
     rgbArray: [
-      255,
-      128,
-      0
+      230,
+      85,
+      13
     ]
   },
   {
-    hex: '#c31729',
+    hex: '#de2d26',
     variables: [
       '$red'
     ],
@@ -78,13 +92,13 @@ export default [
       'red'
     ],
     rgbArray: [
-      195,
-      23,
-      41
+      222,
+      45,
+      38
     ]
   },
   {
-    hex: '#476e1e',
+    hex: '#31a354',
     variables: [
       '$green'
     ],
@@ -92,13 +106,13 @@ export default [
       'green'
     ],
     rgbArray: [
-      71,
-      110,
-      30
+      49,
+      163,
+      84
     ]
   },
   {
-    hex: '#0d519f',
+    hex: '#3182bd',
     variables: [
       '$blue'
     ],
@@ -106,13 +120,27 @@ export default [
       'blue'
     ],
     rgbArray: [
-      13,
-      81,
-      159
+      49,
+      130,
+      189
     ]
   },
   {
-    hex: '#946eac',
+    hex: '#00a1eb',
+    variables: [
+      '$cyan'
+    ],
+    aliases: [
+      'cyan'
+    ],
+    rgbArray: [
+      0,
+      161,
+      235
+    ]
+  },
+  {
+    hex: '#6a51a3',
     variables: [
       '$purple'
     ],
@@ -120,41 +148,9 @@ export default [
       'purple'
     ],
     rgbArray: [
-      148,
-      110,
-      172
-    ]
-  },
-  {
-    hex: '#b4d682',
-    variables: [
-      '$mint',
-      '$yes'
-    ],
-    aliases: [
-      'mint',
-      'yes'
-    ],
-    rgbArray: [
-      180,
-      214,
-      130
-    ]
-  },
-  {
-    hex: '#fdc218',
-    variables: [
-      '$marigold',
-      '$no'
-    ],
-    aliases: [
-      'marigold',
-      'no'
-    ],
-    rgbArray: [
-      253,
-      194,
-      24
+      106,
+      81,
+      163
     ]
   }
 ]

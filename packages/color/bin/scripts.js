@@ -65,3 +65,4 @@ const makeSchemes = (type = 'categorical') => {
 makeSchemes('categorical');
 makeSchemes('sequential');
 makeSchemes('diverging');
+makeSchemes('thematic');

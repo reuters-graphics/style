@@ -1,10 +1,10 @@
 @import "~@reuters-graphics/style-main/scss/fonts/variables";
 @import "~Theme/variables";
-@import "~@reuters-graphics/style-color/scss/categorical/brand";
+@import "~@reuters-graphics/style-color/scss/thematic/brand";
 
 .component :global {
   h2 {
-    margin-top: 10px;
+    margin-top: 80px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 4px;
     margin-bottom: 0;
@@ -78,9 +78,5 @@
         }
       }
     }
-  }
-
-  .scheme-detail {
-
   }
 }

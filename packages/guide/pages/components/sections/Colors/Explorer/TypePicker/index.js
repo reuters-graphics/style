@@ -1,10 +1,13 @@
+import Colors from '@reuters-graphics/style-color';
 import React from 'react';
 import classnames from 'classnames';
 import { component } from './styles.scss';
 
-const categoricalColors = ['#c31729', '#476e1e', '#ccc', '#ff8000', '#0d519f', '#946eac'];
-const sequentialColors = ['#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#67000d'];
-const divergingColors = ['#b2182b', '#d6604d', '#fddbc7', '#d1e5f0', '#4393c3', '#2166ac'];
+const getColorsForType = (type) => {
+  const schemes = Colors[type];
+  const colors = schemes[Object.keys(schemes)[0]].all.map(c => c.hex);
+  return colors.map((c, i) => <div key={i} style={{ background: c }} />);
+};
 
 const TypePicker = (props) => (
   <div className={classnames(component)}>
@@ -13,35 +16,43 @@ const TypePicker = (props) => (
         <li>colors</li>
       </ol>
     </nav>
+    <h3>Colors for dataviz</h3>
     <div
       className='button'
       onClick={() => props.updateType('categorical')}
     >
-      <h4>Categorical</h4>
       <div className='demo'>
-        {categoricalColors.map((c, i) => <div key={i} style={{ background: c }} />)}
+        {getColorsForType('categorical')}
       </div>
-      <p>Good for representing non-numeric data, like country names.</p>
+      <p><strong>Categorical:</strong> Good for non-numeric data, like country names.</p>
     </div>
     <div
       className='button'
       onClick={() => props.updateType('sequential')}
     >
-      <h4>Sequential</h4>
       <div className='demo'>
-        {sequentialColors.map((c, i) => <div key={i} style={{ background: c }} />)}
+        {getColorsForType('sequential')}
       </div>
-      <p>Good for representing numeric data that increases from low to high, like temperature.</p>
+      <p><strong>Sequential:</strong> Good for numeric data that increases from low to high, like temperature.</p>
     </div>
     <div
       className='button'
       onClick={() => props.updateType('diverging')}
     >
-      <h4>Diverging</h4>
       <div className='demo'>
-        {divergingColors.map((c, i) => <div key={i} style={{ background: c }} />)}
+        {getColorsForType('diverging')}
       </div>
-      <p>Good for representing data that increases in two directions, like vote margins.</p>
+      <p><strong>Diverging:</strong> Good for data that increases in two directions, like vote margins.</p>
+    </div>
+    <h3>Colors for design</h3>
+    <div
+      className='button'
+      onClick={() => props.updateType('thematic')}
+    >
+      <div className='demo'>
+        {getColorsForType('thematic')}
+      </div>
+      <p><strong>Thematic:</strong> Good for design elements and typography.</p>
     </div>
   </div>
 );
