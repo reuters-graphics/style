@@ -39,8 +39,6 @@ section.body-text {
     text-align: center;
     font-weight: 600;
 
-    @extend .font-sans;
-
     &::after {
       display: block;
       content: '';
