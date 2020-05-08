@@ -6,6 +6,7 @@ You can use Google sheets and docs to collaborate with others on translatable co
 - [Prerequisites](#Prerequisites)
 - [Where to put Google docs and sheets](#Where-to-put-Google-docs-and-sheets)
 - [Configuring Google APIs](#Configuring-Google-APIs)
+- [Downloading data from Google](#Downloading-data-from-Google)
 - [Using Docs](#Using-Docs)
 - [Using Sheets](#Using-Sheets)
 - [Using downloaded data in your code](#Using-downloaded-data-in-your-code)
@@ -62,6 +63,8 @@ To find the ID of you doc or sheet, look for a long string of random characters 
 
 https://docs.google.com/spreadsheets/d/**1h1O8jPScxrUg-xmolKGSPzaePgyG3zbBkAWiijEpi0c**/edit
 
+## Downloading data from Google
+
 ## Using Docs
 
 Google docs are processed using [ArchieML](http://archieml.org/). Read more on their site about how you can use the syntax to structure your data.
@@ -72,6 +75,12 @@ Your spreadsheet can contain tabular data or key-value pairs. Read more in the [
 
 
 ## Using downloaded data in your code
+
+Once you've configured your Google docs `google.json`, you can download your content to JSON using:
+
+```
+$ runner get-google
+```
 
 #### EJS
 
