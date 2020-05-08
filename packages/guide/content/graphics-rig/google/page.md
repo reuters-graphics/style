@@ -65,6 +65,13 @@ https://docs.google.com/spreadsheets/d/**1h1O8jPScxrUg-xmolKGSPzaePgyG3zbBkAWiij
 
 ## Downloading data from Google
 
+
+Once you've configured your Google docs `google.json`, you can download your content to JSON using:
+
+```
+$ runner get-google
+```
+
 ## Using Docs
 
 Google docs are processed using [ArchieML](http://archieml.org/). Read more on their site about how you can use the syntax to structure your data.
@@ -75,12 +82,6 @@ Your spreadsheet can contain tabular data or key-value pairs. Read more in the [
 
 
 ## Using downloaded data in your code
-
-Once you've configured your Google docs `google.json`, you can download your content to JSON using:
-
-```
-$ runner get-google
-```
 
 #### EJS
 
