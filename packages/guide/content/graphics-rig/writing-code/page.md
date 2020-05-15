@@ -24,6 +24,7 @@ Write your code in the `src/` directory.
     - [metadata](#metadata)
     - [lang](#lang)
     - [gt.gettext](#gtgettext)
+    - [parseMarkdown](#parseMarkdown)
 - [JS vs. HTML/EJS](#JS-vs-HTMLEJS)
 - [JS](#JS)
   - [Modern syntax and modules](#Modern-syntax-and-modules)
@@ -337,6 +338,44 @@ msgstr "¡Hola Mundo!"
 
 
 Read more about translation on the [Copy and translation](../copy-and-translation/) page.
+
+#### `parseMarkdown`
+
+You can also parse [Markdown](https://guides.github.com/features/mastering-markdown/)-formatted strings in your templates:
+
+```ejs
+<% const myMarkdown = '### Header\\n\\nThis is a paragraph'; %>
+
+<%- parseMarkdown(myMarkdown); %>
+```
+
+... which will create HTML like ...
+
+```html
+<h3>Header</h3>
+<p>This is a paragraph</p>
+```
+
+You can also pass additional data to the parser, which you can use to fill in variables in your text using [mustache](https://github.com/janl/mustache.js#variables)-style placeholders like this...
+
+```ejs
+::[3,5]
+<% const someNumber = 2; %>
+
+{{={{{ }}}=}}
+<% const myMarkdown = '### Header\\n\\nThe count is {{ count }}.'; %>
+{{{={{ }}=}}}
+
+<%- parseMarkdown(myMarkdown, { count: someNumber }); %>
+```
+
+... which will create HTML like ...
+
+```html
+<h3>Header</h3>
+<p>The count is 2.</p>
+```
+
 
 ## JS vs. HTML/EJS
 
