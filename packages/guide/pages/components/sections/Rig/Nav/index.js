@@ -17,6 +17,7 @@ const Nav = () => {
         <NavItem name='Metadata' link='metadata/' />
         <NavItem name='ai2html' link='ai2html/' />
         <NavItem name='Google docs' link='google-docs/' />
+        <NavItem name='Charter' link='charter/' />
         <NavItem name='Prerendering JS apps' link='prerendering-js-apps/' />
         <NavItem name='FAQ' link='faq/' />
       </nav>
