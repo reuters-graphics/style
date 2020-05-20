@@ -24,7 +24,7 @@ const SchemeDetail = (props) => {
       <h5>JS</h5>
       <CodeBlock
         language='js'
-        value={`import { ${scheme} } from '@reuters-graphics/style-color/${type}';`}
+        value={`import { ${scheme} } from '@reuters-graphics/style-color/dist/${type}';`}
       />
 
       <h5>SCSS</h5>
