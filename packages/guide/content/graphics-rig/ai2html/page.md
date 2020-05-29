@@ -43,6 +43,9 @@ Simply include the .ejs file in your working markup. For example, if your main a
 </section>
 ```
 
+### Fluid vs. Fixed
+By default, your ai2html graphic will snap to **fixed** sizes according to the size of the parent container. This is great for the consistent label positioning and sizing, but it can lead to undesirably large margins in some contexts.
+
 If you would like your graphic to be fluid (responsive to the width of the parent container without snapping to pre-set sizes) you need to do two things: 1) Set the ai2html setting **responsiveness: fluid** in the Illustrator document. 2) add the **.fluid** class to the section tag holding the graphic. Ex:
 
 ```
