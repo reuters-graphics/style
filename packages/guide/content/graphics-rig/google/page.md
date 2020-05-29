@@ -6,6 +6,7 @@ You can use Google sheets and docs to collaborate with others on translatable co
 - [Prerequisites](#Prerequisites)
 - [Where to put Google docs and sheets](#Where-to-put-Google-docs-and-sheets)
 - [Configuring Google APIs](#Configuring-Google-APIs)
+- [Downloading data from Google](#Downloading-data-from-Google)
 - [Using Docs](#Using-Docs)
 - [Using Sheets](#Using-Sheets)
 - [Using downloaded data in your code](#Using-downloaded-data-in-your-code)
@@ -61,6 +62,15 @@ For example, keys like the above, will create files like this:
 To find the ID of you doc or sheet, look for a long string of random characters in the URL of the file in Google Drive. You can find it between `https://.../d/< DOC ID HERE >/edit`. For example:
 
 https://docs.google.com/spreadsheets/d/**1h1O8jPScxrUg-xmolKGSPzaePgyG3zbBkAWiijEpi0c**/edit
+
+## Downloading data from Google
+
+
+Once you've configured your Google docs `google.json`, you can download your content to JSON using:
+
+```
+$ runner get-google
+```
 
 ## Using Docs
 

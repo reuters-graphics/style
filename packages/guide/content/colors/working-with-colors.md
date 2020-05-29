@@ -31,7 +31,7 @@ circle {
 Import a color scheme from the library.
 
 ```javascript
-import { sesame } from '@reuters-graphics/style-color/sequential';
+import { sesame } from '@reuters-graphics/style-color/dist/sequential';
 ```
 
 Work with colors in the scheme.
@@ -64,8 +64,8 @@ There are a few alternative ways to access colors in the scheme:
 Use aliases to access a color directly. (See the Color Explorer below.)
 
 ```javascript
-import { nord } from '@reuters-graphics/style-color/thematic';
-import { blueberry } from '@reuters-graphics/style-color/sequential';
+import { nord } from '@reuters-graphics/style-color/dist/thematic';
+import { blueberry } from '@reuters-graphics/style-color/dist/sequential';
 
 nord.red
 // {hex: "#BF616A", rgba: ƒ, rgbaArray: ƒ}
@@ -78,7 +78,7 @@ blueberry['100']
 Schemes are guaranteed to be in order, so for sequential scales, you can access the min/max color values easily with first/last.
 
 ```javascript
-import { blueberry } from '@reuters-graphics/style-color/sequential';
+import { blueberry } from '@reuters-graphics/style-color/dist/sequential';
 
 blueberry.first()
 // {variables: Array(1), hex: "#C8DAF0", rgba: ƒ, rgbaArray: ƒ}

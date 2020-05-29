@@ -1,6 +1,7 @@
 import { NavLink, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import Ai2Html from './pages/ai2html';
+import Charter from './pages/charter';
 import Code from './pages/code';
 import Copy from './pages/copy';
 import Embed from './pages/embed';
@@ -45,6 +46,7 @@ const Rig = () => {
         <Route path={`${match.path}embeddable-page/`} component={Embed} />
         <Route path={`${match.path}prerendering-js-apps/`} component={Prerendering} />
         <Route path={`${match.path}google-docs/`} component={Google} />
+        <Route path={`${match.path}charter/`} component={Charter} />
         <Route path={`${match.path}faq/`} component={FAQ} />
         <Route component={Four04} />
       </Switch>
