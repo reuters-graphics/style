@@ -43,7 +43,7 @@ Simply include the .ejs file in your working markup. For example, if your main a
 </section>
 ```
 
-If you would like your graphic to be fluid (responsive to the width of the parent container without snapping to pre-set sizes) you need to do two things: 1) Set the ai2html setting `responsiveness: fluid` in the Illustrator document. 2) add the `.fluid` class to the section tag holding the graphic. Ex:
+If you would like your graphic to be fluid (responsive to the width of the parent container without snapping to pre-set sizes) you need to do two things: 1) Set the ai2html setting **responsiveness: fluid** in the Illustrator document. 2) add the **.fluid** class to the section tag holding the graphic. Ex:
 
 ```
 <section class='graphic fluid'>
