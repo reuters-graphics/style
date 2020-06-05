@@ -25,15 +25,22 @@ The Illustrator template is included with the project-files folder everytime you
 ### How to use it
 1) Make sure you have the ai2html script installed (linked above).
 
-To install, save the **ai2html_newrig.js** file in the Scripts folder for Adobe Illustrator. The path will be something like **/Applications/Adobe Illustrator 2020/Presets/en_US/Scripts** depending on your version of Illustrator.
+To install, save the **ai2html_newrig.js** file in the Scripts folder for Adobe Illustrator. The path will be something like...
 
-You’ll need to close and reopen Illustrator in order for it to show up in the dropdown menu.
+> - Applications/
+>   - Adobe Illustrator 2020/
+>   - Presets/
+>   - en_US/
+>   - Scipts/
+>   - ai2html.js
+
+NOTE: You’ll need to close and reopen Illustrator in order for it to show up in Illustrator’s dropdown menu.
 
 2) Build your graphic element in Illustrator and customize the layout across each artboard. You can find the Illustrator web template in the **project-files/** directory of the [Bluprint graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig) (It’s also linked above).
 
 Use the "Base Styles" toolbox as a reference point for typography and style elements like arrow types, axis lines and labels. _Hint: The eye dropper tool is your friend here._
 
-3) When you’re ready to place your artwork, run the ai2hml script from Illustrator **File > Scripts > ai2html**.
+3) When you’re ready to place your artwork, run the ai2hml script from Illustrator `File > Scripts > ai2html`.
 
 This will write your files to a local filepath to be included in your ejs files. The filepath will be **...src/html/your-project-name.ejs**. The background images for the graphic will be saved to the **.../src/static/img/** directory and will automatically work when you place the graphic in the page.
 
