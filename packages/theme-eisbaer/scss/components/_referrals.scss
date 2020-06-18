@@ -2,7 +2,7 @@
 
 section.referral-container {
   @extend .separated-over;
-  @extend .well.wider;
+  @extend .well, .wider;
 
   margin: 60px auto 30px;
   padding: 0 15px;

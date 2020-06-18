@@ -2,7 +2,7 @@
 
 section.hero-title {
   @extend .clearfix;
-  @extend .well.widest;
+  @extend .well, .widest;
 
   position: relative;
 
