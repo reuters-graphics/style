@@ -10,27 +10,37 @@ We've reworked our ai2html script a bit. Now it will/can:
 -  It generates divs with background images instead of img tags.
 -  It spits out .ejs files instead of .html files.
 
-The new script is here: https://github.com/reuters-graphics/ai2html/blob/master/ai2html_newrig.js
+* * * * * *
+➽ Get the ai2html script [here](https://github.com/reuters-graphics/ai2html/blob/master/ai2html.js) 
+
+➽ Get the ai2html graphics template [here](https://github.com/reuters-graphics/bluprint_graphics-rig/blob/master/project-files/ai2html-template.ait).
+* * * * * *
 
 ### The template
 The default template has four artboards since that seems to be the most common number people use. You can add a fifth larger one/remove as you please. 
 **Caveat** being you can't remove from the smallest up but only from the largest down. So you *can't* remove xs and keep sm, md and lg. But you *can* remove lg and md, and keep xs and sm.
 
-The template is in the project-files folder everytime you create a new graphics project with the rig. It can also be found here:
-https://github.com/reuters-graphics/bluprint_graphics-rig/blob/master/project-files/ai2html-template_newrig.ait
+The Illustrator template is included with the project-files folder everytime you create a new graphics project with the rig.
 
 ### How to use it
 1) Make sure you have the ai2html script installed (linked above).
 
-To install, save the **ai2html_newrig.js** file in the Scripts folder for Adobe Illustrator. The path will be something like **/Applications/Adobe Illustrator 2020/Presets/en_US/Scripts** depending on your version of Illustrator.
+To install, save the **ai2html_newrig.js** file in the Scripts folder for Adobe Illustrator. The path will be something like...
 
-You’ll need to close and reopen Illustrator in order for it to show up in the dropdown menu.
+> - Applications/
+>   - Adobe Illustrator 2020/
+>   - Presets/
+>   - en_US/
+>   - Scipts/
+>   - ai2html.js
+
+NOTE: You’ll need to close and reopen Illustrator in order for it to show up in Illustrator’s dropdown menu.
 
 2) Build your graphic element in Illustrator and customize the layout across each artboard. You can find the Illustrator web template in the **project-files/** directory of the [Bluprint graphics rig](https://github.com/reuters-graphics/bluprint_graphics-rig) (It’s also linked above).
 
 Use the "Base Styles" toolbox as a reference point for typography and style elements like arrow types, axis lines and labels. _Hint: The eye dropper tool is your friend here._
 
-3) When you’re ready to place your artwork, run the ai2hml script from Illustrator **File > Scripts > ai2html**.
+3) When you’re ready to place your artwork, run the ai2hml script from Illustrator `File > Scripts > ai2html`.
 
 This will write your files to a local filepath to be included in your ejs files. The filepath will be **...src/html/your-project-name.ejs**. The background images for the graphic will be saved to the **.../src/static/img/** directory and will automatically work when you place the graphic in the page.
 
@@ -38,8 +48,20 @@ This will write your files to a local filepath to be included in your ejs files.
 Simply include the .ejs file in your working markup. For example, if your main article markup is in the article.ejs file, you might include your graphic like so:
 
 ```
-<figure class='graphic-item'>
+<section class='graphic'>
     <%- include('your-project-name.ejs'); %>
-</figure>
+</section>
 ```
+
+### Fluid vs. Fixed
+By default, your ai2html graphic will snap to **fixed** sizes according to the size of the parent container. This is great for the consistent label positioning and sizing, but it can lead to undesirably large margins in some contexts.
+
+If you would like your graphic to be fluid (responsive to the width of the parent container without snapping to pre-set sizes) you need to do two things: 1) Set the ai2html setting **responsiveness: fluid** in the Illustrator document. 2) add the **.fluid** class to the section tag holding the graphic. Ex:
+
+```
+<section class='graphic fluid'>
+    <%- include('your-project-name.ejs'); %>
+</section>
+```
+
 
