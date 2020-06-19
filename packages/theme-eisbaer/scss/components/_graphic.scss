@@ -1,10 +1,10 @@
 @import "~@reuters-graphics/style-color/scss/sequential/sesame";
 
 section.graphic {
+  margin-top: 0;
+  margin-bottom: 0;
+
   @extend .well;
-
-  margin: 0 auto;
-
   @extend .font-sans;
 
   &:not(.borderless) {

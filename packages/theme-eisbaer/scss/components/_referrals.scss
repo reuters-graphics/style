@@ -1,10 +1,12 @@
 @import "~@reuters-graphics/style-color/scss/sequential/sesame";
 
 section.referral-container {
+  margin-top: 60px;
+  margin-bottom: 30px;
+
   @extend .separated-over;
   @extend .well, .wider;
 
-  margin: 60px auto 30px;
   padding: 0 15px;
 
   svg {
