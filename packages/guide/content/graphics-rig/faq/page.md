@@ -48,6 +48,20 @@ You can read more about why this works [here](https://exploringjs.com/es6/ch_mod
 
 ## How do I use Font Awesome?
 
+Install fontawesome with yarn.
+
+```
+$ yarn add @fortawesome/fontawesome-free
+```
+
+Within your `node_modules` folder, find `@fortawesome/fontawesome-free` and copy the `webfonts` folder into the `src/static` directory.
+
+> - src/
+>   - static/
+>     - **webfonts/**
+>       - fa-brands-400.eot
+>       - ...
+
 Import Font Awesome's SCSS stylesheets in `main.scss`.
 
 > - src/
@@ -56,7 +70,7 @@ Import Font Awesome's SCSS stylesheets in `main.scss`.
 
 ```SCSS
 // Set the font-path variable FIRST
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+$fa-font-path: 'webfonts';
 
 // Import the base SCSS stylesheet
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
