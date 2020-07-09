@@ -27,7 +27,7 @@ circle {
 There is an inverted colour scheme with a dark gray page and white text. To use that:
 
 ```scss
-@import "~@reuters-graphics/style-theme-eisbaer/scss/invert";
+@import "~@reuters-graphics/style-theme-eisbaer/scss/components/invert";
 ```
 
 #### JS
