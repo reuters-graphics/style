@@ -24,12 +24,6 @@ circle {
 }
 ```
 
-There is an inverted colour scheme with a dark gray page and white text. To use that:
-
-```scss
-@import "~@reuters-graphics/style-theme-eisbaer/scss/components/invert";
-```
-
 #### JS
 
 Import a color scheme from the library.
