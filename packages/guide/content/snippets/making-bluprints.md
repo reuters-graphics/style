@@ -1,16 +1,16 @@
 ---
-title: Making templates with blüprint
+title: Making templates with bluprint
 description: Make your code easily reusable and shareable.
 categories:
   - templates
   - tools
 ---
 
-## Making templates with blüprint
+## Making templates with bluprint
 
 Reusing code is the easiest way to speed up your dev time.
 
-[blüprint](https://github.com/reuters-graphics/bluprint), our in-house scaffolding engine, makes it extremely easy to create templates you can use to build your next project.
+[bluprint](https://github.com/reuters-graphics/bluprint), our in-house scaffolding engine, makes it extremely easy to create templates you can use to build your next project.
 
 
 ### What's a bluprint?
