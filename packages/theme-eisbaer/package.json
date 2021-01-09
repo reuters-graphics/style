@@ -29,8 +29,22 @@
     "access": "public"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@reuters-graphics/style-color": "^1.0.0",
-    "@reuters-graphics/style-main": "^0.2.0"
+    "@reuters-graphics/style-main": "^0.2.0",
+    "classnames": "*",
+    "copy-to-clipboard": "^3.2.0",
+    "prismjs": "^1.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.2.2",
+    "react-refractor": "^1.0.1",
+    "react-router-dom": "^5.1.2",
+    "refractor": "^2.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -69,6 +83,7 @@
     "react-snap": "^1.23.0",
     "refractor": "^2.10.1",
     "sass": "^1.25.0",
+    "style-loader": "^1.0.1",
     "turndown": "^5.0.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.41.5",
