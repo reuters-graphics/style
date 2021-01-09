@@ -8,7 +8,7 @@ categories:
 
 ## Making templates with bluprint
 
-Reusing code is the easiest way to speed up your dev time.
+Reusing code is the easiest way to speed up your dev time..
 
 [bluprint](https://github.com/reuters-graphics/bluprint), our in-house scaffolding engine, makes it extremely easy to create templates you can use to build your next project.
 
