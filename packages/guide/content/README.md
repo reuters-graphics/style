@@ -6,7 +6,9 @@ Edit files in this directory to update the content on the [Reuters Graphics styl
 
 Once edited, the style guide will be republished via GitHub actions within 5 minutes.
 
-## Snippets
+## Page metadata
+
+### Snippets
 
 Add the following metadata to the top of each page you create:
 
