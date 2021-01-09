@@ -21,11 +21,11 @@ jobs:
     - run: rm package-lock.json
       working-directory: ./packages/guide
     - run: npm install
-      working-directory: ./packages/theme-eisbar
+      working-directory: ./packages/theme-eisbaer
     - run: yarn build
-      working-directory: ./packages/theme-eisbar
+      working-directory: ./packages/theme-eisbaer
     - run: rm package-lock.json
-      working-directory: ./packages/theme-eisbar
+      working-directory: ./packages/theme-eisbaer
     - run: |
           git config user.name hobbes7878
           git config user.email jon.r.mcclure@gmail.com
