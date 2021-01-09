@@ -1,0 +1,26 @@
+name: Publish style guide
+
+on:
+  push:
+    paths:
+    - 'packages/guide/content/**/*.md'
+
+jobs:
+  publish-guide:
+    name: Publish style guide
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install lerna
+    - run: npx lerna bootstrap --hoist
+    - run: npx lerna run build --scope @reuters-graphics/style-guide
+    - run: npx lerna run build --scope @reuters-graphics/style-theme-*
+    - run: |
+          git config user.name hobbes7878
+          git config user.email jon.r.mcclure@gmail.com
+          git add .
+          git commit -m "homepage updated"
+          git push
