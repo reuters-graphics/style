@@ -14,10 +14,10 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12.x'
-    - run: yarn add -D lerna
-    - run: npx lerna bootstrap
-    - run: npx lerna run build --scope @reuters-graphics/style-guide
-    - run: npx lerna run build --scope @reuters-graphics/style-theme-*
+    - run: npm install
+      working-directory: ./packages/guide
+    - run: yarn build
+      working-directory: ./packages/guide
     - run: |
           git config user.name hobbes7878
           git config user.email jon.r.mcclure@gmail.com
