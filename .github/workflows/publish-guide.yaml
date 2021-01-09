@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install lerna
-    - run: npx lerna bootstrap --hoist
+    - run: npx lerna bootstrap
     - run: npx lerna run build --scope @reuters-graphics/style-guide
     - run: npx lerna run build --scope @reuters-graphics/style-theme-*
     - run: |
