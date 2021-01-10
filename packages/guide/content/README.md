@@ -6,6 +6,8 @@ Most content in the [Reuters Graphics style guide](https://reuters-graphics.gith
 
 Any changes you make to these files in GitHib will trigger the page to republish. You'll see your changes on the site within 5 minutes.
 
+**REMEMBER!** These files are published to a public webpage. **Never put sensitive information into a style guide page.** Passwords, login details, secret keys and other sensitive notes should be put in the team's 1Password account. If you have a question about a piece of information you'd like to put into a page, ask your editor _before_ you publish it here.
+
 ## Editing pages
 
 You should edit files **directly from GitHub** using [markdown syntax](https://guides.github.com/features/mastering-markdown/).
