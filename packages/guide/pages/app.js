@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Colors from 'Components/sections/Colors';
 import Fonts from 'Components/sections/Fonts';
 import Four04 from 'Components/sections/404';
+import Guides from 'Components/sections/Guides';
 import Home from 'Components/sections/Home';
 import Linters from 'Components/sections/Linters';
 import Nav from 'Components/Nav';
@@ -26,6 +27,7 @@ const App = () => (
               <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/graphics-rig/' component={Rig} />
+                <Route path='/guides/' component={Guides} />
                 <Route path='/fonts/' component={Fonts} />
                 <Route path='/colors/' component={Colors} />
                 <Route path='/linters/' component={Linters} />

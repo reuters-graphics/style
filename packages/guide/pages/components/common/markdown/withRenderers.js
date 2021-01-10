@@ -5,6 +5,7 @@ import ImageRenderer from './ImageRenderer';
 import ParagraphRenderer from './ParagraphRenderer';
 import React from 'react';
 import remarkContainersPlugin from 'remark-containers';
+import taskListPlugin from 'remark-task-list';
 
 const withRenderers = (ContentComponent) => (
   <div className='markdown-default'>

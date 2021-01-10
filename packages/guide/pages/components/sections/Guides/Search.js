@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FuzzySearch from 'fuzzy-search';
+import Guides from 'Guides';
 import SearchItem from './SearchItem';
-import Snippets from 'Snippets';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const searchableSnippets = Object.keys(Snippets).map((key) =>
-  Object.assign({}, Snippets[key].data, { key })
+const searchableGuides = Object.keys(Guides).map((key) =>
+  Object.assign({}, Guides[key].data, { key })
 );
 
 const searcher = new FuzzySearch(
-  searchableSnippets,
-  ['title', 'description', 'categories'],
+  searchableGuides,
+  ['title', 'description'],
   { sort: true }
 );
 
@@ -25,13 +25,13 @@ const Search = (props) => {
     textInput.current.focus();
   };
 
-  const searchSnippets = (term) => searcher.search(term);
+  const searchGuides = (term) => searcher.search(term);
 
-  const getSnippets = () => {
-    return term === '' ? Object.keys(Snippets).map((key) => (
-      <SearchItem {...Snippets[key].data} path={key} key={key} />
-    )) : searchSnippets(term).map(({ key }) => (
-      <SearchItem {...Snippets[key].data} path={key} key={key} />
+  const getGuides = () => {
+    return term === '' ? Object.keys(Guides).map((key) => (
+      <SearchItem {...Guides[key].data} path={key} key={key} />
+    )) : searchGuides(term).map(({ key }) => (
+      <SearchItem {...Guides[key].data} path={key} key={key} />
     ));
   };
 
@@ -52,7 +52,7 @@ const Search = (props) => {
         />
       </div>
       <div className='search-results'>
-        {getSnippets()}
+        {getGuides()}
       </div>
     </div>
   );

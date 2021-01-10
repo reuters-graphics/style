@@ -70,8 +70,18 @@
     font-family: $font-family-monospace;
   }
 
+  ul, ol {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
   ul {
-    margin-bottom: 2rem;
+    li::marker{
+      color: #666;
+    }
   }
 
   table {

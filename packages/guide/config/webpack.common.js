@@ -1,5 +1,6 @@
 const path = require('path');
-const virtualPostsPlugin = require('./snippetsPlugin');
+const snippetsPlugin = require('./snippetsPlugin');
+const guidesPlugin = require('./guidesPlugin');
 
 module.exports = {
   entry: {
@@ -57,5 +58,8 @@ module.exports = {
       },
     ],
   },
-  plugins: [virtualPostsPlugin],
+  plugins: [
+    snippetsPlugin,
+    guidesPlugin,
+  ],
 };

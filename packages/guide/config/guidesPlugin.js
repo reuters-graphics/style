@@ -5,17 +5,13 @@ const VirtualModulesPlugin = require('webpack-virtual-modules');
 const glob = require('glob');
 const Ajv = require('ajv').default;
 
-const SNIPPETS_DIR = path.resolve(__dirname, '../content/snippets/');
+const GUIDES_DIR = path.resolve(__dirname, '../content/guides/');
 
 const SCHEMA = {
   type: 'object',
   properties: {
     title: { type: 'string' },
     description: { type: 'string' },
-    categories: {
-      type: 'array',
-      items: { type: 'string' },
-    },
   },
   required: ['title', 'description'],
 };
@@ -25,23 +21,23 @@ const validMetadata = ({ data }) => {
   return ajv.validate(SCHEMA, data);
 };
 
-const snippets = {};
+const GUIDES = {};
 
-const snippetsFiles = glob.sync('**/*.md', { cwd: SNIPPETS_DIR });
+const guideFiles = glob.sync('**/*.md', { cwd: GUIDES_DIR });
 
-for (const file of snippetsFiles) {
-  const filePath = path.resolve(SNIPPETS_DIR, file);
+for (const file of guideFiles) {
+  const filePath = path.resolve(GUIDES_DIR, file);
   const contents = fs.readFileSync(filePath);
   const data = matter(contents);
   if (!validMetadata(data)) continue;
 
-  const relativePath = path.relative(SNIPPETS_DIR, filePath);
+  const relativePath = path.relative(GUIDES_DIR, filePath);
   const fileSlug = relativePath.replace('.md', '').replace('/', '-');
-  snippets[fileSlug] = data;
+  GUIDES[fileSlug] = data;
 }
 
 const virtualModules = new VirtualModulesPlugin({
-  'node_modules/Snippets.js': `module.exports = ${JSON.stringify(snippets)};`,
+  'node_modules/Guides.js': `module.exports = ${JSON.stringify(GUIDES)};`,
 });
 
 module.exports = virtualModules;
