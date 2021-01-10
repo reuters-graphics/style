@@ -42,6 +42,8 @@ The following language syntaxes are built in:
 
 Images have to be uploaded before you can use them in your markdown. One trick is uploading your image through an Issue in any GitHub repository. See [this guide](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) for more info.
 
+![](https://user-images.githubusercontent.com/499192/57450172-1a955f80-725e-11e9-9fed-267179bdab15.gif)
+
 Once you've uploaded your image, you can use it in your markdown like this:
 
 ```
