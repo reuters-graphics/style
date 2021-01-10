@@ -14,6 +14,7 @@ You should edit files **directly from GitHub** using [markdown syntax](https://g
 
 Use GitHub-style code blocks in your markdown to get reader-friendly syntax highlighting and handy copy-and-paste button for your code examples.
 
+Just write a code block and indicate which language to use for syntax highlighting like this:
 
 ~~~markdown
 ```javascript
@@ -21,13 +22,14 @@ import * as d3 from 'd3';
 ```
 ~~~
 
+... and your code will be properly formatted for its language:
 
 ```javascript
 import * as d3 from 'd3';
 
 ```
 
-The following languages are built in:
+The following language syntaxes are built in:
 - `javascript` / `js`
 - `scss`
 - `python`
@@ -40,7 +42,7 @@ The following languages are built in:
 
 Images have to be uploaded before you can use them in your markdown. One trick is uploading your image through an Issue in any GitHub repository. See [this guide](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) for more info.
 
-Once you'v uploaded your image, you can use it in your markdown like this:
+Once you've uploaded your image, you can use it in your markdown like this:
 
 ```
 ![My image alt text](https://user-images...)
