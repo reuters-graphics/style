@@ -1,6 +1,6 @@
 const path = require('path');
-const snippetsPlugin = require('./snippetsPlugin');
-const guidesPlugin = require('./guidesPlugin');
+const tipSheetsPlugin = require('./tipSheetsPlugin');
+const policiesPlugin = require('./policiesPlugin');
 
 module.exports = {
   entry: {
@@ -59,7 +59,7 @@ module.exports = {
     ],
   },
   plugins: [
-    snippetsPlugin,
-    guidesPlugin,
+    tipSheetsPlugin,
+    policiesPlugin,
   ],
 };

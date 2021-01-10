@@ -5,7 +5,7 @@ const VirtualModulesPlugin = require('webpack-virtual-modules');
 const glob = require('glob');
 const Ajv = require('ajv').default;
 
-const SNIPPETS_DIR = path.resolve(__dirname, '../content/snippets/');
+const TIP_SHEETS_DIR = path.resolve(__dirname, '../content/tip-sheets/');
 
 const SCHEMA = {
   type: 'object',
@@ -25,23 +25,23 @@ const validMetadata = ({ data }) => {
   return ajv.validate(SCHEMA, data);
 };
 
-const snippets = {};
+const tipSheets = {};
 
-const snippetsFiles = glob.sync('**/*.md', { cwd: SNIPPETS_DIR });
+const tipSheetsFiles = glob.sync('**/*.md', { cwd: TIP_SHEETS_DIR });
 
-for (const file of snippetsFiles) {
-  const filePath = path.resolve(SNIPPETS_DIR, file);
+for (const file of tipSheetsFiles) {
+  const filePath = path.resolve(TIP_SHEETS_DIR, file);
   const contents = fs.readFileSync(filePath);
   const data = matter(contents);
   if (!validMetadata(data)) continue;
 
-  const relativePath = path.relative(SNIPPETS_DIR, filePath);
+  const relativePath = path.relative(TIP_SHEETS_DIR, filePath);
   const fileSlug = relativePath.replace('.md', '').replace('/', '-');
-  snippets[fileSlug] = data;
+  tipSheets[fileSlug] = data;
 }
 
 const virtualModules = new VirtualModulesPlugin({
-  'node_modules/Snippets.js': `module.exports = ${JSON.stringify(snippets)};`,
+  'node_modules/TipSheets.js': `module.exports = ${JSON.stringify(tipSheets)};`,
 });
 
 module.exports = virtualModules;

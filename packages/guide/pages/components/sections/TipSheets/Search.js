@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FuzzySearch from 'fuzzy-search';
 import SearchItem from './SearchItem';
-import Snippets from 'Snippets';
+import TipSheets from 'TipSheets';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const searchableSnippets = Object.keys(Snippets).map((key) =>
-  Object.assign({}, Snippets[key].data, { key })
+const searchableTipSheets = Object.keys(TipSheets).map((key) =>
+  Object.assign({}, TipSheets[key].data, { key })
 );
 
 const searcher = new FuzzySearch(
-  searchableSnippets,
+  searchableTipSheets,
   ['title', 'description', 'categories'],
   { sort: true }
 );
@@ -25,13 +25,13 @@ const Search = (props) => {
     textInput.current.focus();
   };
 
-  const searchSnippets = (term) => searcher.search(term);
+  const searchTipSheets = (term) => searcher.search(term);
 
-  const getSnippets = () => {
-    return term === '' ? Object.keys(Snippets).map((key) => (
-      <SearchItem {...Snippets[key].data} path={key} key={key} />
-    )) : searchSnippets(term).map(({ key }) => (
-      <SearchItem {...Snippets[key].data} path={key} key={key} />
+  const getTipSheets = () => {
+    return term === '' ? Object.keys(TipSheets).map((key) => (
+      <SearchItem {...TipSheets[key].data} path={key} key={key} />
+    )) : searchTipSheets(term).map(({ key }) => (
+      <SearchItem {...TipSheets[key].data} path={key} key={key} />
     ));
   };
 
@@ -52,7 +52,7 @@ const Search = (props) => {
         />
       </div>
       <div className='search-results'>
-        {getSnippets()}
+        {getTipSheets()}
       </div>
     </div>
   );

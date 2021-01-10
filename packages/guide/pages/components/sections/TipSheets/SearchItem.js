@@ -6,7 +6,7 @@ const Tag = (props) => (
 );
 
 const SearchItem = (props) => (
-  <Link to={`/snippets/${props.path}/`}>
+  <Link to={`/tip-sheets/${props.path}/`}>
     <div className='search-item'>
       <h4>{props.title}</h4>
       {props.description && (

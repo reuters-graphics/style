@@ -1,9 +1,10 @@
 .component :global {
-  margin: 40px 0;
+  margin: 2rem 0;
   display: block;
   text-align: center;
 
   img {
-    max-width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }

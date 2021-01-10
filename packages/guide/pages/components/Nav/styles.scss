@@ -38,17 +38,28 @@
 
     .github-bug {
       position: fixed;
-      bottom: 5px;
-      right: 5px;
-      color: rgba(0, 0, 0, 0.1);
-      font-size: 28px;
+      bottom: 10px;
+      right: 15px;
+      color: rgba(0, 0, 0, 0.2);
+      font-size: 2rem;
+      width: 3.65rem;
+      height: 3.65rem;
+      background-color: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      padding: 5px;
+      text-align: center;
 
       @media screen and (max-width: $breakpoint) {
         display: none;
       }
 
       &:hover {
-        color: $brand-nav-active;
+        color: $brand;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+      &:active{
+        transform: translate(1px, 1px);
       }
     }
 
@@ -160,6 +171,12 @@
           color: $brand-inverted-secondary;
           font-weight: 400;
         }
+      }
+
+      hr {
+        border-top: 1px solid rgba(255,255,255,0.15);
+        margin: 8px 0 10px;
+        max-width: 50px;
       }
     }
 

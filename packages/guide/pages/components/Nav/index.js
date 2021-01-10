@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavItem from './NavItem';
@@ -8,7 +8,6 @@ import Reuters from 'Components/common/icons/Reuters';
 import Ring from 'Components/common/icons/Ring';
 import classnames from 'classnames';
 import { component } from './styles.scss';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Nav = (props) => {
   const [visible, setVisible] = useState(false);
@@ -22,8 +21,8 @@ const Nav = (props) => {
       <div className={classnames('nav-container', { visible })}>
         <a
           className='github-bug'
-          href='https://github.com/reuters-graphics/style/'
-        ><FontAwesomeIcon icon={faGithub} />
+          href='https://github.com/reuters-graphics/style/tree/master/packages/guide/content'
+        ><FontAwesomeIcon icon={faPencilAlt} />
         </a>
         <button
           className='open-menu toggle'
@@ -52,12 +51,13 @@ const Nav = (props) => {
         </NavLink>
 
         <nav className='nav flex-column'>
+          <NavItem name='Policies' link='/policies/' />
+          <NavItem name='Tip Sheets' link='/tip-sheets/' />
+          <hr />
           <NavItem name='Graphics rig' link='/graphics-rig/' />
-          <NavItem name='Guides' link='/guides/' />
           <NavItem name='Fonts' link='/fonts/' />
           <NavItem name='Colors' link='/colors/' />
           <NavItem name='Linters' link='/linters/' />
-          <NavItem name='Snippets' link='/snippets/' />
           <NavItem name='Theme: Eisbär' link='/themes/eisbaer/' />
         </nav>
       </div>

@@ -1,15 +1,15 @@
 import CodeRenderer from 'Components/common/markdown/CodeRenderer';
-import Guides from 'Guides';
 import { Helmet } from 'react-helmet';
 import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';
+import Policies from 'Policies';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 
-const Guide = (props) => {
-  const { guideId } = useParams();
-  const { title, description } = Guides[guideId].data;
+const Policy = (props) => {
+  const { policyId } = useParams();
+  const { title, description } = Policies[policyId].data;
   return (
     <>
       <Helmet>
@@ -27,11 +27,11 @@ const Guide = (props) => {
             image: ImageRenderer,
             paragraph: ParagraphRenderer,
           }}
-          source={Guides[guideId].content}
+          source={Policies[policyId].content}
         />
       </div>
     </>
   );
 };
 
-export default Guide;
+export default Policy;

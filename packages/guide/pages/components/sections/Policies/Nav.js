@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <div className={component}>
       <nav className={classnames({ home: match.isExact })}>
-        <h1><Link to='/guides/'>Guides</Link></h1>
+        <h1><Link to='/policies/'>Policies</Link></h1>
       </nav>
     </div>
   );

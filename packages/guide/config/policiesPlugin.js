@@ -5,7 +5,7 @@ const VirtualModulesPlugin = require('webpack-virtual-modules');
 const glob = require('glob');
 const Ajv = require('ajv').default;
 
-const GUIDES_DIR = path.resolve(__dirname, '../content/guides/');
+const POLICIES_DIR = path.resolve(__dirname, '../content/policies/');
 
 const SCHEMA = {
   type: 'object',
@@ -21,23 +21,23 @@ const validMetadata = ({ data }) => {
   return ajv.validate(SCHEMA, data);
 };
 
-const GUIDES = {};
+const policies = {};
 
-const guideFiles = glob.sync('**/*.md', { cwd: GUIDES_DIR });
+const guideFiles = glob.sync('**/*.md', { cwd: POLICIES_DIR });
 
 for (const file of guideFiles) {
-  const filePath = path.resolve(GUIDES_DIR, file);
+  const filePath = path.resolve(POLICIES_DIR, file);
   const contents = fs.readFileSync(filePath);
   const data = matter(contents);
   if (!validMetadata(data)) continue;
 
-  const relativePath = path.relative(GUIDES_DIR, filePath);
+  const relativePath = path.relative(POLICIES_DIR, filePath);
   const fileSlug = relativePath.replace('.md', '').replace('/', '-');
-  GUIDES[fileSlug] = data;
+  policies[fileSlug] = data;
 }
 
 const virtualModules = new VirtualModulesPlugin({
-  'node_modules/Guides.js': `module.exports = ${JSON.stringify(GUIDES)};`,
+  'node_modules/Policies.js': `module.exports = ${JSON.stringify(policies)};`,
 });
 
 module.exports = virtualModules;

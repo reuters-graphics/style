@@ -4,12 +4,12 @@ import ImageRenderer from 'Components/common/markdown/ImageRenderer';
 import ParagraphRenderer from 'Components/common/markdown/ParagraphRenderer';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import Snippets from 'Snippets';
+import TipSheets from 'TipSheets';
 import { useParams } from 'react-router-dom';
 
-const Snippet = (props) => {
-  const { snippetId } = useParams();
-  const { title, description } = Snippets[snippetId].data;
+const TipSheet = (props) => {
+  const { tipSheetId } = useParams();
+  const { title, description } = TipSheets[tipSheetId].data;
   return (
     <>
       <Helmet>
@@ -27,11 +27,11 @@ const Snippet = (props) => {
             image: ImageRenderer,
             paragraph: ParagraphRenderer,
           }}
-          source={Snippets[snippetId].content}
+          source={TipSheets[tipSheetId].content}
         />
       </div>
     </>
   );
 };
 
-export default Snippet;
+export default TipSheet;
