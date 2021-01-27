@@ -56,4 +56,4 @@ $ bluprint start
 
 ### 📽️ Video
 
-Watch a video [tutorial](TK).
+Watch a video [tutorial](https://trten.sharepoint.com/sites/Graphics-Reuters/Shared%20Documents/Westside%20Graphics/Recordings/scraper-tutorial-01-20-2021.mp4).
