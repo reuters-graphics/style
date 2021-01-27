@@ -25,5 +25,5 @@ $ bluprint add reuters-graphics/bluprint_github-action-scraper
 
 ### 📽️ Video
 
-Watch a video [tutorial](https://trten.sharepoint.com/sites/Graphics-Reuters/Shared%20Documents/Westside%20Graphics/Recordings/Westside%20Graphics%20Weekly-20210120_090533-Meeting%20Recording.mp4?web=1) of how to use the bluprint by Prasanta Kumar Dutta.
+Watch a video [tutorial](https://trten.sharepoint.com/sites/Graphics-Reuters/Shared%20Documents/Westside%20Graphics/Recordings/bluprint-tutorial-12-09-2020.mp4) of how to use the bluprint by Prasanta Kumar Dutta.
 
