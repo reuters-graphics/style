@@ -53,3 +53,7 @@ $ mkdir my-new-project
 $ cd my-new-project
 $ bluprint start
 ```
+
+### 📽️ Video
+
+Watch a video [tutorial](TK).
