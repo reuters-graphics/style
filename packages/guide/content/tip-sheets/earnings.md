@@ -1,3 +1,4 @@
+# *NOTE this is unfinished*
 # How to update company earnings
 #### Every quarter, the AMERS desk updates earnings for select companies and publishes a flat for those companies
 
@@ -33,6 +34,10 @@ Each AMERS graphics staffer is responsible for reporting on a few companies. Her
 - Link to spreadsheets containing updatable data
 
 ### How to update when companies report new earnings
-1. _Visit company's investor relations page_ and find the financial statement for the quarter you want to update. You can find this by either visiting the link in the `INVESTOR RELATIONS` column in the spreadsheet or googling something like `Tesla investor relations`
-2. Determine what figures you need to update by refering to the datapoints in the already published graphic. These commonly include EPS (earnings per share), ROE (return on investment), revenue, net income and sales/users/deliveries. So for example, if the charts in the final graphic show EPS, revenue and net income, that's what you need to search for in the investor relations financial statement.
+1. Determine what figures you need to update
+  * Look at the already published graphic to find the figures you need to update. These commonly include EPS (earnings per share), ROE (return on investment), revenue, net income and sales/users/deliveries. So for example, if the charts in the final graphic show EPS, revenue and net income, that's what you need to search for in the investor relations financial statement.
+2. Find the updated figures
+  * Visit company's investor relations page and find the financial statement for the quarter you want to update. You can find this by either visiting the link in the `INVESTOR RELATIONS` column in the spreadsheet or googling something like `Tesla investor relations`
+  * Once you find the financial statement (normally a link to a pdf), search for the figures you need to update. (Control F)
+
 3. _Update the graphic with the latest figures._ Open the spreadsheet with the figures you need to update. You can find the spreadsheet in column `SHEET-1`. If there are two sheets feeding the graphic, the second will be in `SHEET 2`.
