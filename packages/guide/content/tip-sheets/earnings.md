@@ -4,8 +4,8 @@ description: Documentation on how to update quarterly company earnings
 
 ---
    
-# How to update company earnings
-#### Every quarter, the AMERS desk updates earnings for select companies and publishes a flat for those companies
+## How to update company earnings
+Every quarter, the AMERS desk updates earnings for select companies and publishes a flat for those companies
 
 #### Here you'll find:
 - [Companies we update](#companies-tickers)
@@ -30,7 +30,7 @@ description: Documentation on how to update quarterly company earnings
 
 ### Schedule
 Each AMERS graphics staffer is responsible for reporting on a few companies.
-[Earnings reference spreadsheet](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing)  outlines:
+The [earnings reference spreadsheet](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing)  outlines:
 - Assignments
 - Day and time (before/after mkt close) company reports
 - Link to where graphic is published in the server
@@ -39,24 +39,24 @@ Each AMERS graphics staffer is responsible for reporting on a few companies.
 - Link to spreadsheets containing updatable data
 
 ### How to update
-1. Determine what figures you need to update
-    * Look at the already published graphic to find the figures you need to update. So for example, if the charts in the final graphic show EPS, revenue and net income, that's what you need to search for in the investor relations financial statement. These commonly include:
+1. __Determine what figures you need to update__
+    * Look at the already published graphic (found in `GRAPHIC` column of [spreadsheet](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing) to find the figures you need to update. So for example, if the charts in the final graphic show EPS, revenue and net income, that's what you need to search for in the investor relations financial statement. These commonly include:
         * EPS (earnings per share)
         * ROE (return on investment)
         * revenue
         * net income
         * sales/users/deliveries
      
-2. Find the updated figures
-    * Visit company's investor relations page and find the financial statement for the quarter you want to update. You can find this by either visiting the link in the `INVESTOR RELATIONS` column in the spreadsheet or googling something like "Tesla investor relations".
+2. __Find the updated figures__
+    * Visit company's investor relations page and find the financial statement for the quarter you want to update. You can find this by either visiting the link in the `INVESTOR RELATIONS` column in the [spreadsheet](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing) or googling something like "Tesla investor relations".
     * Once you find the financial statement (normally a link to a pdf), search for the figures you need to update. (Control F)
 
-3. Update the graphic with the latest figures
-    * Open the graphic's linked spreadsheet. You can find the correct spreadsheet in column `SHEET-1`. If there are two sheets feeding the graphic, the second will be in `SHEET 2`.
+3. __Update the graphic with the latest figures__
+    * Open the graphic's linked spreadsheet. You can find the correct spreadsheet in column `SHEET-1` of reference spreadsheet. If there are two sheets feeding the graphic, the second will be in `SHEET 2`.
     * Add a new row for the current quarter
     * Add the latest figures
     
-4. Make flat
+4. __Make flat__
     * Check that the numbers updated properly in the interactive graphic
     * Once the graphic has updated, copy the url into safari and add `?media=true` to convert to flat-friendly format.
     * Right click > print page > save as pdf
@@ -69,4 +69,5 @@ Each AMERS graphics staffer is responsible for reporting on a few companies.
 
 ### Best practices
 * Update the interactive and publish the flat as soon as possible after the company reports. Clients use these graphics!
-* *Add more here!*
+* First add new numbers in the `drafts` tab and double-check them before moving to the `public` tab
+* *Add more tips here!*
