@@ -1,5 +1,5 @@
 ---
-title: How to update quarterly company earnings
+title: Updating quarterly company earnings
 description: Documentation on how to update quarterly company earnings
 
 ---
