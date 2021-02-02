@@ -1,15 +1,19 @@
-# *NOTE this is unfinished*
+---
+title: <Updating quarterly company earnings> # Required!
+description: <Documentation on how to update quarterly company earnings> # Required!
+
+---
+   
 # How to update company earnings
 #### Every quarter, the AMERS desk updates earnings for select companies and publishes a flat for those companies
 
 #### Here you'll find:
-- [Companies we update](#companies)
-- [Schedule for when companies report](#schedule)
-- [How to update](#how-to-update)
-- [How to export flat and upload to server](#make-flat)
+- [Companies we update](#companies-tickers)
+- [Schedule for when companies report](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing)
+- [How to update, make flat, upload to server](#how-to-update)
 - [Best practices, things to keep in mind](#best-practices)
 
-### Companies
+### Companies, tickers
 - JP MORGAN, JPM
 - WELLS FARGO, WFC
 - CITIGROUP, C
@@ -25,12 +29,13 @@
 - ALPHABET, GOOGL
 
 ### Schedule
-Each AMERS graphics staffer is responsible for reporting on a few companies. Here is a link to the spreadsheet that outlines:
+Each AMERS graphics staffer is responsible for reporting on a few companies.
+[Earnings reference spreadsheet](https://docs.google.com/spreadsheets/d/19zzWvfTVp-JvjOlrfRRoSVSHDa1KvrFHfVNaf3xhYtU/edit?usp=sharing)  outlines:
 - Assignments
 - Day and time (before/after mkt close) company reports
 - Link to where graphic is published in the server
 - Company's investor relations page
-- Link to the 'interactive' graphic
+- Interactive graphic link
 - Link to spreadsheets containing updatable data
 
 ### How to update
@@ -62,6 +67,6 @@ Each AMERS graphics staffer is responsible for reporting on a few companies. Her
     * zip folder and upload to server (specific link to the graphic in the server can be found in column `SERVER-URL` in the spreadsheet)
     * republish - Choose "Update" option and make note "Updating with *TKyear TKquarter* numbers", or something like that.
 
-#### Best practices
+### Best practices
 * Update the interactive and publish the flat as soon as possible after the company reports. Clients use these graphics!
-* 
+* *Add more here!*
