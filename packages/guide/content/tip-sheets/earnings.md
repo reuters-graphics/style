@@ -1,6 +1,6 @@
 ---
-title: <Updating quarterly company earnings> # Required!
-description: <Documentation on how to update quarterly company earnings> # Required!
+title: How to update quarterly company earnings
+description: Documentation on how to update quarterly company earnings
 
 ---
    
