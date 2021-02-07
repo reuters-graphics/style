@@ -29,5 +29,6 @@ VS Code allows you to install extensions that add additional features to your ed
   - Package Manager: yarn
 - [sort-imports](https://marketplace.visualstudio.com/items?itemName=amatiasq.sort-imports) with the following options:
   - On-save = true
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [EJS Language Support](https://marketplace.visualstudio.com/items?itemName=DigitalBrainstem.javascript-ejs-support)
 - [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
