@@ -39,15 +39,15 @@ With the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.v
 
 From the menu, open Code > Settings, search "eslint" in the search bar and click the "ESLint" settings under Extensions.
 
-<img src="https://user-images.githubusercontent.com/2772078/107580486-886a7a00-6bee-11eb-916b-563fa9098b61.png" style="height: 150px;" />
+<img src="https://user-images.githubusercontent.com/2772078/107580486-886a7a00-6bee-11eb-916b-563fa9098b61.png" style="height: 250px; margin: 1rem auto 2.25rem;" />
 
 Set the `Eslint › Code Actions On Save: Mode` setting to "all".
 
-<img src="https://user-images.githubusercontent.com/2772078/107580104-fe221600-6bed-11eb-8f65-454130789fd0.png" style="height: 50px;" />
+<img src="https://user-images.githubusercontent.com/2772078/107580104-fe221600-6bed-11eb-8f65-454130789fd0.png" style="height: 100px; margin: 1rem auto 2.25rem;" />
 
 Now search "save" in the Settings search bar and under `Editor: Code Actions On Save` click to "Edit in settings.json".
 
-<img src="https://user-images.githubusercontent.com/2772078/107580783-0464c200-6bef-11eb-89fc-6fa140badf67.png" style="height: 150px;" />
+<img src="https://user-images.githubusercontent.com/2772078/107580783-0464c200-6bef-11eb-89fc-6fa140badf67.png" style="height: 200px; margin: 1rem auto 2.25rem;" />
 
 Hand edit the editor settings for `codeActionsOnSave` and `formatOnSave` to be these values:
 
