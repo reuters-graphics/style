@@ -32,3 +32,35 @@ VS Code allows you to install extensions that add additional features to your ed
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [EJS Language Support](https://marketplace.visualstudio.com/items?itemName=DigitalBrainstem.javascript-ejs-support)
 - [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+
+#### Formatting JavaScript on save
+
+With the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension installed, your editor can automatically fix minor issues and formatting in your JavaScript code whenever you save a file. Here's how to get it working:
+
+From the menu, open Code > Settings, search "eslint" in the search bar and click the "ESLint" settings under Extensions.
+
+<img src="https://user-images.githubusercontent.com/2772078/107580486-886a7a00-6bee-11eb-916b-563fa9098b61.png" style="height: 150px;" />
+
+Set the `Eslint › Code Actions On Save: Mode` setting to "all".
+
+<img src="https://user-images.githubusercontent.com/2772078/107580104-fe221600-6bed-11eb-8f65-454130789fd0.png" style="height: 50px;" />
+
+Now search "save" in the Settings search bar and under `Editor: Code Actions On Save` click to "Edit in settings.json".
+
+<img src="https://user-images.githubusercontent.com/2772078/107580783-0464c200-6bef-11eb-89fc-6fa140badf67.png" style="height: 150px;" />
+
+Hand edit the editor settings for `codeActionsOnSave` and `formatOnSave` to be these values:
+
+```javascript
+{
+  // ...
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": false,
+  // ...
+}
+```
+
+Now ESLint will fix formatting and style issues in your code on save, including indentation, const vs. let declarations, semicolon use and more.
