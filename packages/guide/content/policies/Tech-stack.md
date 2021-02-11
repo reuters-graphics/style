@@ -5,8 +5,6 @@ description: Recommended tools for building graphics
 
 ## Tech stack
 
-- [Code editor](#code-editor)
-
 ---
 
 ### Code editor
