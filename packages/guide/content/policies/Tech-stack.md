@@ -56,7 +56,7 @@ Hand edit the editor settings for `codeActionsOnSave` and `formatOnSave` to be t
     "source.fixAll.eslint": true,
     "source.fixAll": true
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   // ...
 }
 ```
