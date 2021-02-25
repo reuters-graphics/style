@@ -32,7 +32,7 @@ The eventual goal is for the graphics desk to publish more short stories with ti
 
 AMERS desk staff should produce one spot graphic every week. Once spot news becomes a regular habit on the desk, we may adjust or even remove this quota, but for at least 2 months, the quota is there to force us to pitch timelier graphics.
 
-#### Sources for spot graphics
+### Sources for spot graphics
 
 The two primary sources for spot graphics are the same as most other graphics: Newsroom pitches and our own enterprise ideas.
 
@@ -53,3 +53,12 @@ Jon and Chris will help negotiate deadlines and the scope of spot news and, impo
 Spot news should always be pitched within the limit of what we can do in a day and are usually pitched with a dataset in hand.
 
 We want many spot graphics to turn into larger stories. When they do, Jon will approve an expansion of the pitch.
+
+### Tools for producing spot news
+
+No holds barred.
+
+- Datawrapper
+- Illustrator
+- JavaScript ([chart modules](https://github.com/reuters-graphics/awesome-charts) or custom code!)
+- WHATEVER
