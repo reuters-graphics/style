@@ -5,14 +5,13 @@ description: Quick-turn and breaking graphics
 
 ## AMERS spot news routine
 
-
 A balanced diet of graphics includes quick bites on the news as well as more indulgent meals from deeper enterprise and investigation.
 
 The AMERS spot news routine is designed to make sure the quick bites happen and that we have a dedicated mechanism we can use to cover breaking news.
 
 ### Goals of the routine
 
-- Help us better cover breaking news
+- Help us better cover breaking news in AMERS
 - Build muscle memory for identifying timely graphics and for using graphics tools and techniques on deadline
 - Encourage more enterprise data reporting that rises through the Simon Scarr Ladder of Graphics Abstraction™
 - Publish quick-turn graphics for BOTH media clients and dot com readers
