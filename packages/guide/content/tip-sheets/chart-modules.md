@@ -6,12 +6,12 @@ description: Step by step guide to using chart modules in your projects
 
 ## List of chart modules
 
-You can find the list of chart modules here[https://github.com/reuters-graphics/awesome-charts].
+You can find the list of chart modules [here](https://github.com/reuters-graphics/awesome-charts)
 
 ## Using chart modules out of the box
 
 Follow the steps in the README of the chart module's repo.
-For example, if you want to use the categorical bar chart module[https://github.com/reuters-graphics/chart-module-categorical-bar-chart], follow the steps there.
+For example, if you want to use the [categorical bar chart module](https://github.com/reuters-graphics/chart-module-categorical-bar-chart), follow the steps there.
 
 The basic steps are:
 1. Run ``` yarn add <ADD REPO URL FOR CHART MODULE HERE>```
@@ -32,7 +32,7 @@ NOTE: If you get errors, check that the path files in the import lines -- both i
 4. 
 NOTE: When using ejector, you need to tweak the path in the ```import ``` lines that the chart module README gives you.
 
-For example, for this categorical bar chart module[https://github.com/reuters-graphics/chart-module-categorical-bar-chart], the import lines on its README are:
+For example, for this [categorical bar chart module](https://github.com/reuters-graphics/chart-module-categorical-bar-chart), the import lines on its README are:
 
 For JS: ```import barChart from '@reuters-graphics/chart-module-categorical-bar-chart';```
 
