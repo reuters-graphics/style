@@ -1,6 +1,10 @@
 ---
 title: Using chart modules
 description: Step by step guide to using chart modules in your projects
+categories:
+  - templates
+  - tools
+  - chart module
 ---
 
 
