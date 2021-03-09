@@ -20,6 +20,7 @@ The basic steps are:
 4. Use props to customise charts
 
 NOTE: If you get errors, check that the path files in the import lines -- both in app.js and css -- are correct.
+
 ``` import barChart from '@reuters-graphics/chart-module-categorical-bar-chart'; ```
 
 
@@ -28,9 +29,13 @@ NOTE: If you get errors, check that the path files in the import lines -- both i
 1. Follow the install instruction in the chart module repo's README and run ``` yarn add <ADD REPO URL FOR CHART MODULE HERE>```
 2. Run ``` ejector ``` and select the chart module you yarn-added. Select both JS and CSS.
 3. Import the js and css files into app.js and main.scss. Make sure you're using the correct path.
+4. 
 NOTE: When using ejector, you need to tweak the path in the ```import ``` lines that the chart module README gives you.
+
 For example, for this categorical bar chart module[https://github.com/reuters-graphics/chart-module-categorical-bar-chart], the import lines on its README are:
+
 For JS: ```import barChart from '@reuters-graphics/chart-module-categorical-bar-chart';```
+
 For CSS: ``` @import '~@reuters-graphics/chart-module-categorical-bar-chart/src/scss/chart';```
 
 When using ejector, these two lines should be:
