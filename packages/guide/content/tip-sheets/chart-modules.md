@@ -18,7 +18,7 @@ Follow the steps in the README of the chart module's repo.
 
 The basic steps are:
 
-1. Run ``` yarn add <ADD REPO URL FOR CHART MODULE HERE>```
+1. Run ``` yarn add <chart module repo URL>```
 2. Add a div to the .ejs file that would act as the container for the chart
 3. Import the chart module JS and CSS files into app.js and main.scss
 4. Use props to customise charts
@@ -26,7 +26,7 @@ The basic steps are:
 __NOTE: If you get errors, check that the path files in the import lines, both in app.js and css, are correct.__
 
 For example:
-If you're using the [categorical bar chart module](https://github.com/reuters-graphics/chart-module-categorical-bar-chart), double check that the path in ``` import barChart from '@reuters-graphics/chart-module-categorical-bar-chart'; ``` matches the filename in ``` node_modules/@reuters-graphics```
+If you're using the [categorical bar chart module](https://github.com/reuters-graphics/chart-module-categorical-bar-chart), double check that the path in ``` import barChart from '@reuters-graphics/chart-module-categorical-bar-chart'``` (js file) and ``` @import '~@reuters-graphics/chart-module-line-chart/src/scss/chart'``` (css) matches the filename in ``` node_modules/@reuters-graphics```
 
 ![Screenshot 2021-03-09 at 8 47 23 PM](https://user-images.githubusercontent.com/62298563/110563142-d785cb00-8118-11eb-8e81-90c36d4fa4aa.png)
 
@@ -41,7 +41,7 @@ If you're using the [categorical bar chart module](https://github.com/reuters-gr
 5. Use props to customise charts
 6. Further customise charts by tweaking ``` js/<chart module name>/index.js``` and ``` scss/<chart module name>/_chart.scss```
 
-### IMPORTANT: When using ejector, you need to tweak the paths in the ```import ``` lines.
+### IMPORTANT: When using ejector, change the paths in the ```import ``` lines
 
 For example, for this [categorical bar chart module](https://github.com/reuters-graphics/chart-module-categorical-bar-chart), the import lines on its README are:
 
@@ -55,5 +55,6 @@ When using ejector, these two lines should be:
 
 For JS: 
 ```import barChart from './chart-module-categorical-bar-chart';```
+
 For CSS:
 ``` @import './chart-module-categorical-bar-chart/_chart';```
