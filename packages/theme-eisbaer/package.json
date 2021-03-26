@@ -1,6 +1,6 @@
 {
   "name": "@reuters-graphics/style-theme-eisbaer",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "description": "Eisbär styles theme at Reuters",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
@@ -34,7 +34,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@reuters-graphics/style-color": "^1.0.0",
-    "@reuters-graphics/style-main": "^0.2.0",
+    "@reuters-graphics/style-main": "^0.2.1",
     "classnames": "*",
     "copy-to-clipboard": "^3.2.0"
   },
