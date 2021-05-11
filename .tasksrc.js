@@ -40,10 +40,9 @@ module.exports = {
         ['lerna', ['run', 'start'], { scope: '@reuters-graphics/style-guide'}],
       ],
     },
-    'dev': {
+    'dev-theme': {
       run: [
-        ['atom', ['.']],
-        'dev-guide',
+        ['lerna', ['run', 'start'], { scope: '@reuters-graphics/style-theme-eisbaer'}],
       ],
     },
   },
