@@ -1,14 +1,18 @@
+$well-regular: 660px !default;
+$well-wide: 930px !default;
+$well-wider: 1200px !default;
+
 .well {
-  max-width: 650px;
+  max-width: $well-regular;
   margin-left: auto;
   margin-right: auto;
 
   &.wide {
-    max-width: 800px;
+    max-width: $well-wide;
   }
 
   &.wider {
-    max-width: 1200px;
+    max-width: $well-wider;
   }
 
   &.widest {
