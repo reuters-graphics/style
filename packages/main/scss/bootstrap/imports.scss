@@ -1,9 +1,11 @@
+// Bootstrap overrides...
+@import "variables";
+
 // Required bootstrap
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/_mixins.scss";
 @import "~bootstrap/scss/_utilities.scss";
-
 
 // Our min bootstrap layout & components
 
@@ -20,7 +22,6 @@
 @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
-
 
 // This should go somewhere...
 $hr-border-width: $border-width !default;
