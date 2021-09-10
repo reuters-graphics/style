@@ -6,11 +6,11 @@ import { component } from './styles.scss';
 const Graphic = (props) => {
   const { Width, Borders } = props.classOptions;
   const { wide, wider, widest, fluid } = Width;
-  const { borderless } = Borders;
+  const { bordered } = Borders;
   return (
     <section
       className={classnames('graphic', {
-        wide, wider, widest, fluid, borderless,
+        wide, wider, widest, fluid, bordered,
       })}
     >
 
@@ -44,7 +44,7 @@ const Component = Copyable(Graphic, 'ejs', {
     fluid: false,
   },
   Borders: {
-    borderless: false,
+    bordered: false,
   },
 });
 
