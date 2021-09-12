@@ -1,8 +1,10 @@
 @import "~@reuters-graphics/style-color/scss/thematic/brand";
 
+$component-margin: 3rem !default;
+
 figure.photo {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: $component-margin;
+  margin-bottom: $component-margin;
 
   @extend .well;
 

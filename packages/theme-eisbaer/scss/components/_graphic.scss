@@ -8,9 +8,11 @@ $graphic-narrow: 510px !default;
 
 $grid-gutter-width: 30px !default; // The bootstrap default variable
 
+$component-margin: 3rem !default;
+
 section.graphic {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: $component-margin;
+  margin-bottom: $component-margin;
 
   @extend .well;
 
