@@ -85,6 +85,15 @@ Here is an [example of the skip class in action](https://graphics.thomsonreuters
 
 Note: You only need to "skip" well sizes smaller than the max width you are showing. So if your widest well is `wide` (the LG artboard), you don't need to "skip" the XL artboard. Larger artboards are excluded when you set the initial width of the well with the `wider`, `wide`, `narrow` and `narrower` classes.
 
+#### For Special Reports...
+Add this CSS to the very top of your main.scss (before the import statement)
+```
+$graphic-narrower: 350px;
+$graphic-narrow: 560px;
+$well-regular: 635px;
+$well-wide: 730px;
+$well-wider: 1110px;
+```
 
 ### Fluid vs. Fixed (Snap class)
 Unless you're using bootstrap, your graphic will default to scaling constantly when resizing the screen. This may be what you want! But if not...
@@ -98,6 +107,4 @@ If you don't want your graphic to consitantly scale but rather "snap" to a speci
 ```
 
 Here is an [example of the snap class in action](https://graphics.thomsonreuters.com/testfiles/2021/aO3WejrMar/en/).
-
-
 
