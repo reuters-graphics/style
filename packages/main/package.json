@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@reuters-graphics/style-color": "^1.0.0",
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^4.6.0"
   },
   "gitHead": "bd19bcc26870259a142737f6a3bcb09ca0f21dfc"
 }
