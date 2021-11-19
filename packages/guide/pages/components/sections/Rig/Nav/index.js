@@ -8,6 +8,11 @@ const Nav = () => {
   const match = useRouteMatch();
   return (
     <div className={component}>
+      <div className='alert'>
+        <p>These docs are for an outdated version of the graphics rig that will be retired in 2022.</p>
+        <p>Some features described in these docs may already be deprecated.</p>
+        <p>If you're starting a new project, check out the new <a href='https://reuters-graphics.github.io/docs_graphics-kit/'>Graphics Kit</a>.</p>
+      </div>
       <nav className={classnames({ home: match.isExact })}>
         <NavItem name='Quickstart' link='quickstart/' />
         <NavItem name='Writing code' link='writing-code/' />
