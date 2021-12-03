@@ -1,6 +1,6 @@
 ---
 title: Optimise and export statics from Illustrator # Required!
-description: Export crisp jpg/png and optimised EPS of AI flat graphics # Required!
+description: Export crisp jpg and optimised EPS of AI flat graphics # Required!
 categories: # Optional...
   - tools 
   - illustrator
@@ -17,9 +17,9 @@ This is a generic folder structure for flat graphics, which is zipped and upload
 +- [SLUG-AS-FOLDERNAME]
   +- EPS
     +- [SLUG-AS-FILENAME].eps
-    +- [SLUG-AS-FILENAME].jpg/png
+    +- [SLUG-AS-FILENAME].jpg
   +- IMG
-    +- [SLUG-AS-FILENAME].jpg/png
+    +- [SLUG-AS-FILENAME].jpg
 ```
 
 
@@ -41,11 +41,10 @@ If you do not have a template, you can get the latest [here](https://github.com/
 
 
 
-### ⚙️ Export preferences for Image
+### ⚙️ Export preferences for Image (jpg only)
  - `File` > `Export` > `Save for Web`
 
- - For JPEG - `Quality: 100%` `Size: 200%` `Rendering: Type Optimized` 
- - For PNG - `Format: PNG-24` `Transparency: Off` `Size: 200%` `Rendering: Type Optimized`
+ - `Format: jpg` `Quality: 100%` `Size: 200%` `Rendering: Type Optimized` 
 ![image](https://user-images.githubusercontent.com/7580745/144426597-1c4f7746-a3cf-4977-a5de-339625078fb4.png)
 
 
